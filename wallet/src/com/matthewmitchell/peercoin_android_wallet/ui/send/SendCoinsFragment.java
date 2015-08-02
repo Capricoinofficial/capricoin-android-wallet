@@ -17,36 +17,6 @@
 
 package com.matthewmitchell.peercoin_android_wallet.ui.send;
 
-import java.io.FileNotFoundException;
-import java.io.InputStream;
-import java.util.Arrays;
-
-import javax.annotation.CheckForNull;
-import javax.annotation.Nonnull;
-
-import com.matthewmitchell.peercoinj.protocols.payments.Protos.Payment;
-import com.matthewmitchell.peercoinj.core.Address;
-import com.matthewmitchell.peercoinj.core.AddressFormatException;
-import com.matthewmitchell.peercoinj.core.Coin;
-import com.matthewmitchell.peercoinj.core.InsufficientMoneyException;
-import com.matthewmitchell.peercoinj.core.Sha256Hash;
-import com.matthewmitchell.peercoinj.core.Transaction;
-import com.matthewmitchell.peercoinj.core.TransactionConfidence;
-import com.matthewmitchell.peercoinj.core.TransactionConfidence.ConfidenceType;
-import com.matthewmitchell.peercoinj.core.VerificationException;
-import com.matthewmitchell.peercoinj.core.VersionedChecksummedBytes;
-import com.matthewmitchell.peercoinj.core.Wallet;
-import com.matthewmitchell.peercoinj.core.Wallet.BalanceType;
-import com.matthewmitchell.peercoinj.core.Wallet.CouldNotAdjustDownwards;
-import com.matthewmitchell.peercoinj.core.Wallet.SendRequest;
-import com.matthewmitchell.peercoinj.core.Wallet.TooSmallOutput;
-import com.matthewmitchell.peercoinj.protocols.payments.PaymentProtocol;
-import com.matthewmitchell.peercoinj.utils.MonetaryFormat;
-import com.matthewmitchell.peercoinj.wallet.KeyChain.KeyPurpose;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.spongycastle.crypto.params.KeyParameter;
-
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -92,11 +62,27 @@ import android.widget.EditText;
 import android.widget.FilterQueryProvider;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.fuelcoinj.core.Address;
+import com.fuelcoinj.core.AddressFormatException;
+import com.fuelcoinj.core.Coin;
+import com.fuelcoinj.core.InsufficientMoneyException;
+import com.fuelcoinj.core.Sha256Hash;
+import com.fuelcoinj.core.Transaction;
+import com.fuelcoinj.core.TransactionConfidence;
+import com.fuelcoinj.core.VerificationException;
+import com.fuelcoinj.core.VersionedChecksummedBytes;
+import com.fuelcoinj.core.Wallet;
+import com.fuelcoinj.protocols.payments.PaymentProtocol;
+import com.fuelcoinj.protocols.payments.Protos;
+import com.fuelcoinj.utils.MonetaryFormat;
+import com.fuelcoinj.wallet.KeyChain;
 import com.matthewmitchell.peercoin_android_wallet.AddressBookProvider;
 import com.matthewmitchell.peercoin_android_wallet.Configuration;
 import com.matthewmitchell.peercoin_android_wallet.Constants;
 import com.matthewmitchell.peercoin_android_wallet.ExchangeRatesProvider;
 import com.matthewmitchell.peercoin_android_wallet.ExchangeRatesProvider.WalletExchangeRate;
+import com.matthewmitchell.peercoin_android_wallet.R;
 import com.matthewmitchell.peercoin_android_wallet.WalletApplication;
 import com.matthewmitchell.peercoin_android_wallet.data.PaymentIntent;
 import com.matthewmitchell.peercoin_android_wallet.data.PaymentIntent.Standard;
@@ -118,7 +104,17 @@ import com.matthewmitchell.peercoin_android_wallet.ui.TransactionsListAdapter;
 import com.matthewmitchell.peercoin_android_wallet.util.Bluetooth;
 import com.matthewmitchell.peercoin_android_wallet.util.Nfc;
 import com.matthewmitchell.peercoin_android_wallet.util.WalletUtils;
-import com.matthewmitchell.peercoin_android_wallet.R;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.spongycastle.crypto.params.KeyParameter;
+
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.util.Arrays;
+
+import javax.annotation.CheckForNull;
+import javax.annotation.Nonnull;
 
 /**
  * @author Andreas Schildbach
@@ -353,18 +349,18 @@ public final class SendCoinsFragment extends Fragment
 					sentTransactionListAdapter.notifyDataSetChanged();
 
 					final TransactionConfidence confidence = sentTransaction.getConfidence();
-					final ConfidenceType confidenceType = confidence.getConfidenceType();
+					final TransactionConfidence.ConfidenceType confidenceType = confidence.getConfidenceType();
 					final int numBroadcastPeers = confidence.numBroadcastPeers();
 
 					if (state == State.SENDING)
 					{
-						if (confidenceType == ConfidenceType.DEAD)
+						if (confidenceType == TransactionConfidence.ConfidenceType.DEAD)
 							setState(State.FAILED);
-						else if (numBroadcastPeers > 1 || confidenceType == ConfidenceType.BUILDING)
+						else if (numBroadcastPeers > 1 || confidenceType == TransactionConfidence.ConfidenceType.BUILDING)
 							setState(State.SENT);
 					}
 
-					if (reason == ChangeReason.SEEN_PEERS && confidenceType == ConfidenceType.PENDING)
+					if (reason == ChangeReason.SEEN_PEERS && confidenceType == TransactionConfidence.ConfidenceType.PENDING)
 					{
 						// play sound effect
 						final int soundResId = getResources().getIdentifier("send_coins_broadcast_" + numBroadcastPeers, "raw",
@@ -972,9 +968,9 @@ public final class SendCoinsFragment extends Fragment
 		final Coin finalAmount = finalPaymentIntent.getAmount();
 
 		// prepare send request
-		final SendRequest sendRequest = finalPaymentIntent.toSendRequest();
-		sendRequest.emptyWallet = paymentIntent.mayEditAmount() && finalAmount.equals(wallet.getBalance(BalanceType.ESTMINUSFEE));
-		sendRequest.feePerKb = SendRequest.DEFAULT_FEE_PER_KB;
+		final Wallet.SendRequest sendRequest = finalPaymentIntent.toSendRequest();
+		sendRequest.emptyWallet = paymentIntent.mayEditAmount() && finalAmount.equals(wallet.getBalance(Wallet.BalanceType.ESTMINUSFEE));
+		sendRequest.feePerKb = Wallet.SendRequest.DEFAULT_FEE_PER_KB;
 		sendRequest.memo = paymentIntent.memo;
 		sendRequest.aesKey = encryptionKey;
 
@@ -989,8 +985,8 @@ public final class SendCoinsFragment extends Fragment
 
 				sentTransaction.getConfidence().addEventListener(sentTransactionConfidenceListener);
 
-				final Address refundAddress = paymentIntent.standard == Standard.BIP70 ? wallet.freshAddress(KeyPurpose.REFUND) : null;
-				final Payment payment = PaymentProtocol.createPaymentMessage(Arrays.asList(new Transaction[] { sentTransaction }), finalAmount,
+				final Address refundAddress = paymentIntent.standard == Standard.BIP70 ? wallet.freshAddress(KeyChain.KeyPurpose.REFUND) : null;
+				final Protos.Payment payment = PaymentProtocol.createPaymentMessage(Arrays.asList(new Transaction[] { sentTransaction }), finalAmount,
 						refundAddress, null, paymentIntent.payeeData);
 
 				if (directPaymentEnableView.isChecked())
@@ -1011,7 +1007,7 @@ public final class SendCoinsFragment extends Fragment
 				}
 			}
 
-			private void directPay(final Payment payment)
+			private void directPay(final Protos.Payment payment)
 			{
 				final DirectPaymentTask.ResultCallback callback = new DirectPaymentTask.ResultCallback()
 				{
@@ -1062,8 +1058,8 @@ public final class SendCoinsFragment extends Fragment
 			{
 				setState(State.INPUT);
 
-				final Coin estimated = wallet.getBalance(BalanceType.ESTIMATED);
-				final Coin available = wallet.getBalance(BalanceType.AVAILABLE);
+				final Coin estimated = wallet.getBalance(Wallet.BalanceType.ESTIMATED);
+				final Coin available = wallet.getBalance(Wallet.BalanceType.AVAILABLE);
 				final Coin pending = estimated.subtract(available);
 
 				final MonetaryFormat ppcFormat = config.getFormat();
@@ -1128,7 +1124,7 @@ public final class SendCoinsFragment extends Fragment
 
 	private void handleEmpty()
 	{
-		final Coin available = wallet.getBalance(BalanceType.ESTMINUSFEE);
+		final Coin available = wallet.getBalance(Wallet.BalanceType.ESTMINUSFEE);
 		amountCalculatorLink.setPPCAmount(available);
 
 		updateView();
@@ -1157,10 +1153,10 @@ public final class SendCoinsFragment extends Fragment
 				try
 				{
 					final Address dummy = wallet.currentReceiveAddress(); // won't be used, tx is never committed
-					final SendRequest sendRequest = paymentIntent.mergeWithEditedValues(amount, dummy).toSendRequest();
+					final Wallet.SendRequest sendRequest = paymentIntent.mergeWithEditedValues(amount, dummy).toSendRequest();
 					sendRequest.signInputs = false;
-					sendRequest.emptyWallet = paymentIntent.mayEditAmount() && amount.equals(wallet.getBalance(BalanceType.ESTMINUSFEE));
-					sendRequest.feePerKb = SendRequest.DEFAULT_FEE_PER_KB;
+					sendRequest.emptyWallet = paymentIntent.mayEditAmount() && amount.equals(wallet.getBalance(Wallet.BalanceType.ESTMINUSFEE));
+					sendRequest.feePerKb = Wallet.SendRequest.DEFAULT_FEE_PER_KB;
 					wallet.completeTx(sendRequest);
 					dryrunTransaction = sendRequest.tx;
 				}
@@ -1278,12 +1274,12 @@ public final class SendCoinsFragment extends Fragment
 				{
 					hintView.setTextColor(getResources().getColor(R.color.fg_error));
 					hintView.setVisibility(View.VISIBLE);
-					if (dryrunException instanceof TooSmallOutput)
+					if (dryrunException instanceof Wallet.TooSmallOutput)
 						hintView.setText(getString(R.string.send_coins_fragment_hint_too_small_output));
 					else if (dryrunException instanceof InsufficientMoneyException)
 						hintView.setText(getString(R.string.send_coins_fragment_hint_insufficient_money,
 								ppcFormat.format(((InsufficientMoneyException) dryrunException).missing)));
-					else if (dryrunException instanceof CouldNotAdjustDownwards)
+					else if (dryrunException instanceof Wallet.CouldNotAdjustDownwards)
 						hintView.setText(getString(R.string.send_coins_fragment_hint_empty_wallet_failed));
 					else
 						hintView.setText(dryrunException.toString());

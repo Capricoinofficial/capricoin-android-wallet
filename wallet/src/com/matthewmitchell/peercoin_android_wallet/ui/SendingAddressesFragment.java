@@ -42,6 +42,13 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.SimpleCursorAdapter.ViewBinder;
 import android.widget.TextView;
+
+import com.fuelcoinj.core.Address;
+import com.fuelcoinj.core.AddressFormatException;
+import com.fuelcoinj.core.Transaction;
+import com.fuelcoinj.core.VerificationException;
+import com.fuelcoinj.uri.PeercoinURI;
+import com.fuelcoinj.uri.PeercoinURIParseException;
 import com.matthewmitchell.peercoin_android_wallet.AddressBookProvider;
 import com.matthewmitchell.peercoin_android_wallet.Constants;
 import com.matthewmitchell.peercoin_android_wallet.R;
@@ -52,12 +59,7 @@ import com.matthewmitchell.peercoin_android_wallet.util.BitmapFragment;
 import com.matthewmitchell.peercoin_android_wallet.util.Qr;
 import com.matthewmitchell.peercoin_android_wallet.util.WalletUtils;
 import com.matthewmitchell.peercoin_android_wallet.util.WholeStringBuilder;
-import com.matthewmitchell.peercoinj.core.Address;
-import com.matthewmitchell.peercoinj.core.AddressFormatException;
-import com.matthewmitchell.peercoinj.core.Transaction;
-import com.matthewmitchell.peercoinj.core.VerificationException;
-import com.matthewmitchell.peercoinj.uri.PeercoinURI;
-import com.matthewmitchell.peercoinj.uri.PeercoinURIParseException;
+
 import java.util.ArrayList;
 import javax.annotation.Nonnull;
 import org.slf4j.Logger;

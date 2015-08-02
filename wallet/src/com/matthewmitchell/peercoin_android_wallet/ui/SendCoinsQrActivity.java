@@ -19,16 +19,14 @@ package com.matthewmitchell.peercoin_android_wallet.ui;
 
 import javax.annotation.Nonnull;
 
-import com.matthewmitchell.peercoinj.core.Transaction;
-import com.matthewmitchell.peercoinj.core.VerificationException;
-import com.matthewmitchell.peercoinj.core.VersionedChecksummedBytes;
-
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.fuelcoinj.core.Transaction;
+import com.fuelcoinj.core.VerificationException;
 import com.matthewmitchell.peercoin_android_wallet.WalletApplication;
 import com.matthewmitchell.peercoin_android_wallet.data.PaymentIntent;
 import com.matthewmitchell.peercoin_android_wallet.ui.InputParser.StringInputParser;

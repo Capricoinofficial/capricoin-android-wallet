@@ -21,14 +21,15 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicLong;
 
-import com.matthewmitchell.peercoinj.core.Coin;
-import com.matthewmitchell.peercoinj.core.ECKey;
-import com.matthewmitchell.peercoinj.core.Transaction;
-import com.matthewmitchell.peercoinj.core.Wallet;
-import com.matthewmitchell.peercoinj.core.WalletEventListener;
-import com.matthewmitchell.peercoinj.script.Script;
 
 import android.os.Handler;
+
+import com.fuelcoinj.core.Coin;
+import com.fuelcoinj.core.ECKey;
+import com.fuelcoinj.core.Transaction;
+import com.fuelcoinj.core.Wallet;
+import com.fuelcoinj.core.WalletEventListener;
+import com.fuelcoinj.script.Script;
 
 /**
  * @author Andreas Schildbach

@@ -35,10 +35,9 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import com.matthewmitchell.peercoinj.core.Coin;
-import com.matthewmitchell.peercoinj.core.Wallet;
-import com.matthewmitchell.peercoinj.utils.Fiat;
 
+import com.fuelcoinj.core.Coin;
+import com.fuelcoinj.utils.Fiat;
 import com.matthewmitchell.peercoin_android_wallet.Configuration;
 import com.matthewmitchell.peercoin_android_wallet.Constants;
 import com.matthewmitchell.peercoin_android_wallet.ExchangeRatesProvider;

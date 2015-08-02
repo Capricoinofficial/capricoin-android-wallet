@@ -19,9 +19,6 @@ package com.matthewmitchell.peercoin_android_wallet.ui;
 
 import java.util.List;
 
-import com.matthewmitchell.peercoinj.core.Transaction;
-import com.matthewmitchell.peercoinj.core.Wallet;
-import com.matthewmitchell.peercoinj.wallet.DeterministicUpgradeRequiresPassword;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -33,6 +30,8 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 
+import com.fuelcoinj.core.Transaction;
+import com.fuelcoinj.wallet.DeterministicUpgradeRequiresPassword;
 import com.google.common.util.concurrent.ListenableFuture;
 
 import com.matthewmitchell.peercoin_android_wallet.WalletApplication;

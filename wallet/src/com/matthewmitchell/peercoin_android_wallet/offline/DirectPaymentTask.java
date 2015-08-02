@@ -29,9 +29,6 @@ import javax.annotation.CheckForNull;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-import com.matthewmitchell.peercoinj.protocols.payments.Protos;
-import com.matthewmitchell.peercoinj.protocols.payments.Protos.Payment;
-import com.matthewmitchell.peercoinj.protocols.payments.PaymentProtocol;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -40,6 +37,9 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.os.Handler;
 import android.os.Looper;
+
+import com.fuelcoinj.protocols.payments.PaymentProtocol;
+import com.fuelcoinj.protocols.payments.Protos;
 import com.matthewmitchell.peercoin_android_wallet.Constants;
 import com.matthewmitchell.peercoin_android_wallet.util.Bluetooth;
 import com.matthewmitchell.peercoin_android_wallet.R;
@@ -85,7 +85,7 @@ public abstract class DirectPaymentTask
 		}
 
 		@Override
-		public void send(@Nonnull final Payment payment)
+		public void send(@Nonnull final Protos.Payment payment)
 		{
 			super.backgroundHandler.post(new Runnable()
 			{
@@ -200,7 +200,7 @@ public abstract class DirectPaymentTask
 		}
 
 		@Override
-		public void send(@Nonnull final Payment payment)
+		public void send(@Nonnull final Protos.Payment payment)
 		{
 			super.backgroundHandler.post(new Runnable()
 			{
@@ -290,7 +290,7 @@ public abstract class DirectPaymentTask
 		}
 	}
 
-	public abstract void send(@Nonnull Payment payment);
+	public abstract void send(@Nonnull Protos.Payment payment);
 
 	protected void onResult(final boolean ack)
 	{

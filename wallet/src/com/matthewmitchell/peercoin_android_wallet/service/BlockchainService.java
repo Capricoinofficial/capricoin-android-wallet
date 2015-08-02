@@ -17,12 +17,13 @@
 
 package com.matthewmitchell.peercoin_android_wallet.service;
 
+import com.fuelcoinj.core.Peer;
+import com.fuelcoinj.core.StoredBlock;
+
 import java.util.List;
 
 import javax.annotation.CheckForNull;
 
-import com.matthewmitchell.peercoinj.core.Peer;
-import com.matthewmitchell.peercoinj.core.StoredBlock;
 
 /**
  * @author Andreas Schildbach

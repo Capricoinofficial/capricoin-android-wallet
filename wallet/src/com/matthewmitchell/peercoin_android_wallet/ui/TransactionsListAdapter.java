@@ -26,16 +26,6 @@ import java.util.Map;
 
 import javax.annotation.Nonnull;
 
-import com.matthewmitchell.peercoinj.core.Address;
-import com.matthewmitchell.peercoinj.core.Coin;
-import com.matthewmitchell.peercoinj.core.Sha256Hash;
-import com.matthewmitchell.peercoinj.core.Transaction;
-import com.matthewmitchell.peercoinj.core.Transaction.Purpose;
-import com.matthewmitchell.peercoinj.core.TransactionConfidence;
-import com.matthewmitchell.peercoinj.core.TransactionConfidence.ConfidenceType;
-import com.matthewmitchell.peercoinj.core.Wallet;
-import com.matthewmitchell.peercoinj.utils.MonetaryFormat;
-import com.matthewmitchell.peercoinj.wallet.DefaultCoinSelector;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -50,6 +40,14 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 
+import com.fuelcoinj.core.Address;
+import com.fuelcoinj.core.Coin;
+import com.fuelcoinj.core.Sha256Hash;
+import com.fuelcoinj.core.Transaction;
+import com.fuelcoinj.core.TransactionConfidence;
+import com.fuelcoinj.core.Wallet;
+import com.fuelcoinj.utils.MonetaryFormat;
+import com.fuelcoinj.wallet.DefaultCoinSelector;
 import com.matthewmitchell.peercoin_android_wallet.AddressBookProvider;
 import com.matthewmitchell.peercoin_android_wallet.Constants;
 import com.matthewmitchell.peercoin_android_wallet.util.CircularProgressView;
@@ -240,10 +238,10 @@ public class TransactionsListAdapter extends BaseAdapter
 	public void bindView(@Nonnull final View row, @Nonnull final Transaction tx)
 	{
 		final TransactionConfidence confidence = tx.getConfidence();
-		final ConfidenceType confidenceType = confidence.getConfidenceType();
+		final TransactionConfidence.ConfidenceType confidenceType = confidence.getConfidenceType();
 		final boolean isOwn = confidence.getSource().equals(TransactionConfidence.Source.SELF);
 		final boolean isCoinBase = tx.isCoinBase();
-		final boolean isInternal = tx.getPurpose() == Purpose.KEY_ROTATION;
+		final boolean isInternal = tx.getPurpose() == Transaction.Purpose.KEY_ROTATION;
 		final Coin fee = tx.getFee();
 		final boolean hasFee = fee != null && !fee.isZero();
 
@@ -262,7 +260,7 @@ public class TransactionsListAdapter extends BaseAdapter
 		final TextView rowConfidenceTextual = (TextView) row.findViewById(R.id.transaction_row_confidence_textual);
 
 		// confidence
-		if (confidenceType == ConfidenceType.PENDING)
+		if (confidenceType == TransactionConfidence.ConfidenceType.PENDING)
 		{
 			rowConfidenceCircular.setVisibility(View.VISIBLE);
 			rowConfidenceTextual.setVisibility(View.GONE);
@@ -273,7 +271,7 @@ public class TransactionsListAdapter extends BaseAdapter
 			rowConfidenceCircular.setMaxSize(maxConnectedPeers / 2); // magic value
 			rowConfidenceCircular.setColors(colorInsignificant, colorInsignificant);
 		}
-		else if (confidenceType == ConfidenceType.BUILDING)
+		else if (confidenceType == TransactionConfidence.ConfidenceType.BUILDING)
 		{
 			rowConfidenceCircular.setVisibility(View.VISIBLE);
 			rowConfidenceTextual.setVisibility(View.GONE);
@@ -285,7 +283,7 @@ public class TransactionsListAdapter extends BaseAdapter
 			rowConfidenceCircular.setMaxSize(1);
 			rowConfidenceCircular.setColors(colorCircularBuilding, Color.DKGRAY);
 		}
-		else if (confidenceType == ConfidenceType.DEAD)
+		else if (confidenceType == TransactionConfidence.ConfidenceType.DEAD)
 		{
 			rowConfidenceCircular.setVisibility(View.GONE);
 			rowConfidenceTextual.setVisibility(View.VISIBLE);
@@ -304,7 +302,7 @@ public class TransactionsListAdapter extends BaseAdapter
 
 		// spendability
 		final int textColor;
-		if (confidenceType == ConfidenceType.DEAD)
+		if (confidenceType == TransactionConfidence.ConfidenceType.DEAD)
 			textColor = Color.RED;
 		else
 			textColor = DefaultCoinSelector.isSelectable(tx) ? colorSignificant : colorInsignificant;
@@ -380,31 +378,31 @@ public class TransactionsListAdapter extends BaseAdapter
 				rowMessage.setText(Html.fromHtml(context.getString(R.string.transaction_row_message_purpose_key_rotation)));
 				rowMessage.setTextColor(colorSignificant);
 			}
-			else if (isOwn && confidenceType == ConfidenceType.PENDING && confidence.numBroadcastPeers() == 0)
+			else if (isOwn && confidenceType == TransactionConfidence.ConfidenceType.PENDING && confidence.numBroadcastPeers() == 0)
 			{
 				rowExtendMessage.setVisibility(View.VISIBLE);
 				rowMessage.setText(R.string.transaction_row_message_own_unbroadcasted);
 				rowMessage.setTextColor(colorInsignificant);
 			}
-			else if (!isOwn && confidenceType == ConfidenceType.PENDING && confidence.numBroadcastPeers() == 0)
+			else if (!isOwn && confidenceType == TransactionConfidence.ConfidenceType.PENDING && confidence.numBroadcastPeers() == 0)
 			{
 				rowExtendMessage.setVisibility(View.VISIBLE);
 				rowMessage.setText(R.string.transaction_row_message_received_direct);
 				rowMessage.setTextColor(colorInsignificant);
 			}
-			else if (!txCache.sent && confidenceType == ConfidenceType.PENDING && isTimeLocked)
+			else if (!txCache.sent && confidenceType == TransactionConfidence.ConfidenceType.PENDING && isTimeLocked)
 			{
 				rowExtendMessage.setVisibility(View.VISIBLE);
 				rowMessage.setText(R.string.transaction_row_message_received_unconfirmed_locked);
 				rowMessage.setTextColor(colorError);
 			}
-			else if (!txCache.sent && confidenceType == ConfidenceType.PENDING && !isTimeLocked)
+			else if (!txCache.sent && confidenceType == TransactionConfidence.ConfidenceType.PENDING && !isTimeLocked)
 			{
 				rowExtendMessage.setVisibility(View.VISIBLE);
 				rowMessage.setText(R.string.transaction_row_message_received_unconfirmed_unlocked);
 				rowMessage.setTextColor(colorInsignificant);
 			}
-			else if (!txCache.sent && confidenceType == ConfidenceType.DEAD)
+			else if (!txCache.sent && confidenceType == TransactionConfidence.ConfidenceType.DEAD)
 			{
 				rowExtendMessage.setVisibility(View.VISIBLE);
 				rowMessage.setText(R.string.transaction_row_message_received_dead);

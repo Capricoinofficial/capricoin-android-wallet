@@ -31,10 +31,10 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.matthewmitchell.peercoinj.core.Address;
-import com.matthewmitchell.peercoinj.core.AddressFormatException;
-import com.matthewmitchell.peercoinj.core.NetworkParameters;
-import com.matthewmitchell.peercoinj.script.ScriptBuilder;
+import com.fuelcoinj.core.Address;
+import com.fuelcoinj.core.AddressFormatException;
+import com.fuelcoinj.core.NetworkParameters;
+import com.fuelcoinj.script.ScriptBuilder;
 import com.google.protobuf.ByteString;
 
 import com.matthewmitchell.peercoin_android_wallet.integration.android.PeercoinIntegration;

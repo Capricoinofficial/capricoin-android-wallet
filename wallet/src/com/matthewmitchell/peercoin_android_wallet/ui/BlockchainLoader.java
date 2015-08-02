@@ -23,13 +23,13 @@ import java.io.IOException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.fuelcoinj.core.BlockChain;
+import com.fuelcoinj.core.Wallet;
+import com.fuelcoinj.store.BlockStoreException;
+import com.fuelcoinj.store.SPVBlockStore;
+import com.fuelcoinj.store.ValidHashStore;
 import com.matthewmitchell.peercoin_android_wallet.Constants;
 import com.matthewmitchell.peercoin_android_wallet.WalletApplication;
-import com.matthewmitchell.peercoinj.core.BlockChain;
-import com.matthewmitchell.peercoinj.core.Wallet;
-import com.matthewmitchell.peercoinj.store.BlockStoreException;
-import com.matthewmitchell.peercoinj.store.SPVBlockStore;
-import com.matthewmitchell.peercoinj.store.ValidHashStore;
 
 import android.content.AsyncTaskLoader;
 import android.content.Context;

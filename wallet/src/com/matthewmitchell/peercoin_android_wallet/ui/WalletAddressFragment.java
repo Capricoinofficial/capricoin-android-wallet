@@ -23,10 +23,10 @@ import java.util.concurrent.atomic.AtomicReference;
 import javax.annotation.CheckForNull;
 import javax.annotation.Nonnull;
 
-import com.matthewmitchell.peercoinj.core.Address;
-import com.matthewmitchell.peercoinj.core.Wallet;
-import com.matthewmitchell.peercoinj.uri.PeercoinURI;
-import com.matthewmitchell.peercoinj.utils.Threading;
+import com.fuelcoinj.core.Address;
+import com.fuelcoinj.core.Wallet;
+import com.fuelcoinj.uri.PeercoinURI;
+import com.fuelcoinj.utils.Threading;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

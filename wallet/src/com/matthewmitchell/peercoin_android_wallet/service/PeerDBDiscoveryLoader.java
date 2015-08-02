@@ -8,16 +8,18 @@ package com.matthewmitchell.peercoin_android_wallet.service;
 
 import android.content.AsyncTaskLoader;
 import android.content.Context;
+
+import com.fuelcoinj.core.PeerGroup;
+import com.fuelcoinj.net.discovery.PeerDBDiscovery;
 import com.matthewmitchell.peercoin_android_wallet.Constants;
-import com.matthewmitchell.peercoinj.core.PeerGroup;
-import com.matthewmitchell.peercoinj.net.discovery.PeerDBDiscovery;
+
 import java.io.File;
 
 
 public class PeerDBDiscoveryLoader extends AsyncTaskLoader<PeerDBDiscovery>  {
 
 	private final File file;
-	private final PeerGroup peerGroup; 
+	private final PeerGroup peerGroup;
 	
 	public PeerDBDiscoveryLoader(Context context, PeerGroup peerGroup) {
 		super(context);

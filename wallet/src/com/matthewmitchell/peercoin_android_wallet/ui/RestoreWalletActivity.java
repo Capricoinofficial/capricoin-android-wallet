@@ -26,8 +26,6 @@ import java.io.InputStreamReader;
 
 import javax.annotation.Nonnull;
 
-import com.matthewmitchell.peercoinj.core.Wallet;
-import com.matthewmitchell.peercoinj.core.Wallet.BalanceType;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -41,6 +39,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
+import com.fuelcoinj.core.Wallet;
 import com.google.common.base.Charsets;
 
 import com.matthewmitchell.peercoin_android_wallet.Configuration;
@@ -158,7 +157,7 @@ public final class RestoreWalletActivity extends AbstractWalletActivity
 		final AlertDialog alertDialog = (AlertDialog) dialog;
 
 		final View replaceWarningView = alertDialog.findViewById(R.id.restore_wallet_from_content_dialog_replace_warning);
-		final boolean hasCoins = wallet == null ? false : wallet.getBalance(BalanceType.ESTIMATED).signum() > 0;
+		final boolean hasCoins = wallet == null ? false : wallet.getBalance(Wallet.BalanceType.ESTIMATED).signum() > 0;
 		replaceWarningView.setVisibility(hasCoins ? View.VISIBLE : View.GONE);
 
 		final EditText passwordView = (EditText) alertDialog.findViewById(R.id.import_keys_from_content_dialog_password);

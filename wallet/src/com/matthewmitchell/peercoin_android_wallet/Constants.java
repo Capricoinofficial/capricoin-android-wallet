@@ -17,17 +17,16 @@
 
 package com.matthewmitchell.peercoin_android_wallet;
 
-import java.io.File;
-
-import com.matthewmitchell.peercoinj.core.NetworkParameters;
-import com.matthewmitchell.peercoinj.params.MainNetParams;
-import com.matthewmitchell.peercoinj.utils.MonetaryFormat;
-
 import android.os.Build;
 import android.os.Environment;
 import android.text.format.DateUtils;
 
-import com.matthewmitchell.peercoin_android_wallet.R;
+
+import com.fuelcoinj.core.NetworkParameters;
+import com.fuelcoinj.params.MainNetParams;
+import com.fuelcoinj.utils.MonetaryFormat;
+
+import java.io.File;
 
 /**
  * @author Andreas Schildbach

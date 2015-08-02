@@ -37,10 +37,6 @@ import java.math.BigInteger;
 import javax.annotation.CheckForNull;
 import javax.annotation.Nonnull;
 
-import com.matthewmitchell.peercoinj.core.Coin;
-import com.matthewmitchell.peercoinj.utils.Fiat;
-import com.matthewmitchell.peercoinj.utils.ExchangeRate;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -57,6 +53,9 @@ import android.preference.PreferenceManager;
 import android.provider.BaseColumns;
 import android.text.format.DateUtils;
 
+import com.fuelcoinj.core.Coin;
+import com.fuelcoinj.utils.ExchangeRate;
+import com.fuelcoinj.utils.Fiat;
 import com.google.common.base.Charsets;
 
 import com.matthewmitchell.peercoin_android_wallet.util.GenericUtils;

@@ -25,11 +25,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 import javax.annotation.Nonnull;
 
-import com.matthewmitchell.peercoinj.protocols.payments.Protos;
-import com.matthewmitchell.peercoinj.protocols.payments.Protos.PaymentACK;
-import com.matthewmitchell.peercoinj.protocols.payments.PaymentProtocol;
-import com.matthewmitchell.peercoinj.core.ProtocolException;
-import com.matthewmitchell.peercoinj.core.Transaction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,6 +32,10 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothServerSocket;
 import android.bluetooth.BluetoothSocket;
 
+import com.fuelcoinj.core.ProtocolException;
+import com.fuelcoinj.core.Transaction;
+import com.fuelcoinj.protocols.payments.PaymentProtocol;
+import com.fuelcoinj.protocols.payments.Protos;
 import com.matthewmitchell.peercoin_android_wallet.Constants;
 import com.matthewmitchell.peercoin_android_wallet.util.Bluetooth;
 
@@ -196,7 +195,7 @@ public abstract class AcceptBluetoothThread extends Thread
 
 					log.info("sending {} via bluetooth", memo);
 
-					final PaymentACK paymentAck = PaymentProtocol.createPaymentAck(payment, memo);
+					final Protos.PaymentACK paymentAck = PaymentProtocol.createPaymentAck(payment, memo);
 					paymentAck.writeDelimitedTo(os);
 				}
 				catch (final IOException x)

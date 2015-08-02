@@ -43,11 +43,11 @@ import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.os.Build;
 
+import com.fuelcoinj.core.Transaction;
+import com.fuelcoinj.core.TransactionOutput;
+import com.fuelcoinj.core.Wallet;
 import com.google.common.base.Charsets;
 
-import com.matthewmitchell.peercoinj.core.Transaction;
-import com.matthewmitchell.peercoinj.core.TransactionOutput;
-import com.matthewmitchell.peercoinj.core.Wallet;
 
 import com.matthewmitchell.peercoin_android_wallet.Configuration;
 import com.matthewmitchell.peercoin_android_wallet.Constants;

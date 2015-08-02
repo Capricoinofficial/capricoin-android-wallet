@@ -23,10 +23,11 @@ import javax.annotation.Nullable;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.matthewmitchell.peercoinj.core.Address;
-import com.matthewmitchell.peercoinj.core.AddressFormatException;
-import com.matthewmitchell.peercoinj.core.NetworkParameters;
-import com.matthewmitchell.peercoinj.core.WrongNetworkException;
+import com.fuelcoinj.core.Address;
+import com.fuelcoinj.core.AddressFormatException;
+import com.fuelcoinj.core.NetworkParameters;
+import com.fuelcoinj.core.WrongNetworkException;
+
 
 /**
  * @author Andreas Schildbach

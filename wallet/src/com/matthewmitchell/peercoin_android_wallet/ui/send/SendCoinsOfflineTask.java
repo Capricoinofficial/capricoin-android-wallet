@@ -19,17 +19,14 @@ package com.matthewmitchell.peercoin_android_wallet.ui.send;
 
 import javax.annotation.Nonnull;
 
-import com.matthewmitchell.peercoinj.core.Coin;
-import com.matthewmitchell.peercoinj.core.InsufficientMoneyException;
-import com.matthewmitchell.peercoinj.core.Transaction;
-import com.matthewmitchell.peercoinj.core.Wallet;
-import com.matthewmitchell.peercoinj.core.Wallet.CompletionException;
-import com.matthewmitchell.peercoinj.core.Wallet.CouldNotAdjustDownwards;
-import com.matthewmitchell.peercoinj.core.Wallet.SendRequest;
-import com.matthewmitchell.peercoinj.crypto.KeyCrypterException;
-
 import android.os.Handler;
 import android.os.Looper;
+
+import com.fuelcoinj.core.Coin;
+import com.fuelcoinj.core.InsufficientMoneyException;
+import com.fuelcoinj.core.Transaction;
+import com.fuelcoinj.core.Wallet;
+import com.fuelcoinj.crypto.KeyCrypterException;
 
 /**
  * @author Andreas Schildbach
@@ -47,7 +44,7 @@ public abstract class SendCoinsOfflineTask
 		this.callbackHandler = new Handler(Looper.myLooper());
 	}
 
-	public final void sendCoinsOffline(@Nonnull final SendRequest sendRequest)
+	public final void sendCoinsOffline(@Nonnull final Wallet.SendRequest sendRequest)
 	{
 		backgroundHandler.post(new Runnable()
 		{
@@ -89,7 +86,7 @@ public abstract class SendCoinsOfflineTask
 						}
 					});
 				}
-				catch (final CouldNotAdjustDownwards x)
+				catch (final Wallet.CouldNotAdjustDownwards x)
 				{
 					callbackHandler.post(new Runnable()
 					{
@@ -100,7 +97,7 @@ public abstract class SendCoinsOfflineTask
 						}
 					});
 				}
-				catch (final CompletionException x)
+				catch (final Wallet.CompletionException x)
 				{
 					callbackHandler.post(new Runnable()
 					{
@@ -123,7 +120,7 @@ public abstract class SendCoinsOfflineTask
 
 	protected void onEmptyWalletFailed()
 	{
-		onFailure(new CouldNotAdjustDownwards());
+		onFailure(new Wallet.CouldNotAdjustDownwards());
 	}
 
 	protected abstract void onFailure(@Nonnull Exception exception);

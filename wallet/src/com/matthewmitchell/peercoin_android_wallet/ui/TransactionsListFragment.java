@@ -30,14 +30,7 @@ import javax.annotation.CheckForNull;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-import com.matthewmitchell.peercoinj.core.Address;
-import com.matthewmitchell.peercoinj.core.Coin;
-import com.matthewmitchell.peercoinj.core.ScriptException;
-import com.matthewmitchell.peercoinj.core.Transaction;
-import com.matthewmitchell.peercoinj.core.Transaction.Purpose;
-import com.matthewmitchell.peercoinj.core.TransactionConfidence.ConfidenceType;
-import com.matthewmitchell.peercoinj.core.Wallet;
-import com.matthewmitchell.peercoinj.utils.Threading;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -70,6 +63,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 
+import com.fuelcoinj.core.Address;
+import com.fuelcoinj.core.Coin;
+import com.fuelcoinj.core.ScriptException;
+import com.fuelcoinj.core.Transaction;
+import com.fuelcoinj.core.TransactionConfidence;
+import com.fuelcoinj.core.Wallet;
+import com.fuelcoinj.utils.Threading;
 import com.matthewmitchell.peercoin_android_wallet.AddressBookProvider;
 import com.matthewmitchell.peercoin_android_wallet.Configuration;
 import com.matthewmitchell.peercoin_android_wallet.Constants;
@@ -222,7 +222,7 @@ public class TransactionsListFragment extends FancyListFragment implements Loade
 
         if (tx == null)
             handleBackupWarningClick();
-        else if (tx.getPurpose() == Purpose.KEY_ROTATION)
+        else if (tx.getPurpose() == Transaction.Purpose.KEY_ROTATION)
             handleKeyRotationClick();
         else
             handleTransactionClick(tx);
@@ -273,7 +273,7 @@ public class TransactionsListFragment extends FancyListFragment implements Loade
 
                             final String prefix = getString(sent ? R.string.symbol_to : R.string.symbol_from) + " ";
 
-                            if (tx.getPurpose() != Purpose.KEY_ROTATION)
+                            if (tx.getPurpose() != Transaction.Purpose.KEY_ROTATION)
                                 mode.setSubtitle(label != null ? prefix + label : WalletUtils.formatAddress(prefix, address,
                                             Constants.ADDRESS_FORMAT_GROUP_SIZE, Constants.ADDRESS_FORMAT_LINE_SIZE));
                             else
@@ -441,7 +441,7 @@ public class TransactionsListFragment extends FancyListFragment implements Loade
             for (final Transaction tx : transactions)
             {
                 final boolean sent = tx.getValue(wallet).signum() < 0;
-                final boolean isInternal = tx.getPurpose() == Purpose.KEY_ROTATION;
+                final boolean isInternal = tx.getPurpose() == Transaction.Purpose.KEY_ROTATION;
 
                 if ((direction == Direction.RECEIVED && !sent && !isInternal) || direction == null
                         || (direction == Direction.SENT && sent && !isInternal))
@@ -488,8 +488,8 @@ public class TransactionsListFragment extends FancyListFragment implements Loade
             @Override
             public int compare(final Transaction tx1, final Transaction tx2)
             {
-                final boolean pending1 = tx1.getConfidence().getConfidenceType() == ConfidenceType.PENDING;
-                final boolean pending2 = tx2.getConfidence().getConfidenceType() == ConfidenceType.PENDING;
+                final boolean pending1 = tx1.getConfidence().getConfidenceType() == TransactionConfidence.ConfidenceType.PENDING;
+                final boolean pending2 = tx2.getConfidence().getConfidenceType() == TransactionConfidence.ConfidenceType.PENDING;
 
                 if (pending1 != pending2)
                     return pending1 ? -1 : 1;

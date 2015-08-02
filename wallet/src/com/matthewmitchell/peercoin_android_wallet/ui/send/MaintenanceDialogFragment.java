@@ -23,12 +23,6 @@ import java.util.List;
 import javax.annotation.CheckForNull;
 import javax.annotation.Nonnull;
 
-import com.matthewmitchell.peercoinj.core.Coin;
-import com.matthewmitchell.peercoinj.core.Transaction;
-import com.matthewmitchell.peercoinj.core.Wallet;
-import com.matthewmitchell.peercoinj.crypto.KeyCrypterException;
-import com.matthewmitchell.peercoinj.utils.MonetaryFormat;
-import com.matthewmitchell.peercoinj.wallet.DeterministicUpgradeRequiresPassword;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.spongycastle.crypto.params.KeyParameter;
@@ -55,6 +49,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.fuelcoinj.core.Coin;
+import com.fuelcoinj.core.Transaction;
+import com.fuelcoinj.core.Wallet;
+import com.fuelcoinj.crypto.KeyCrypterException;
+import com.fuelcoinj.utils.MonetaryFormat;
+import com.fuelcoinj.wallet.DeterministicUpgradeRequiresPassword;
 import com.google.common.util.concurrent.ListenableFuture;
 
 import com.matthewmitchell.peercoin_android_wallet.WalletApplication;

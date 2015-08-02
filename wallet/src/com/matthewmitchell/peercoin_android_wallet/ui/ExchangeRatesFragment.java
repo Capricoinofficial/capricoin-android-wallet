@@ -20,11 +20,6 @@ package com.matthewmitchell.peercoin_android_wallet.ui;
 import java.math.BigInteger;
 
 import javax.annotation.CheckForNull;
-
-import com.matthewmitchell.peercoinj.core.Coin;
-import com.matthewmitchell.peercoinj.core.Wallet;
-import com.matthewmitchell.peercoinj.core.Wallet.BalanceType;
-
 import android.app.Activity;
 import android.app.LoaderManager;
 import android.app.LoaderManager.LoaderCallbacks;
@@ -48,6 +43,8 @@ import android.widget.SearchView;
 import android.widget.SearchView.OnQueryTextListener;
 import android.widget.TextView;
 
+import com.fuelcoinj.core.Coin;
+import com.fuelcoinj.core.Wallet;
 import com.matthewmitchell.peercoin_android_wallet.Configuration;
 import com.matthewmitchell.peercoin_android_wallet.Constants;
 import com.matthewmitchell.peercoin_android_wallet.ExchangeRatesProvider;
@@ -280,7 +277,7 @@ public final class ExchangeRatesFragment extends FancyListFragment implements On
 			@Override
 			public void run() {
 				
-				balance = application.getWallet().getBalance(BalanceType.ESTIMATED);
+				balance = application.getWallet().getBalance(Wallet.BalanceType.ESTIMATED);
 				
 				if (adapter != null) {
 					final int PPCShift = config.getPPCShift();

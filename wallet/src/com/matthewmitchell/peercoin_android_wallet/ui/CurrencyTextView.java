@@ -20,15 +20,15 @@ package com.matthewmitchell.peercoin_android_wallet.ui;
 
 import javax.annotation.Nonnull;
 
-import com.matthewmitchell.peercoinj.core.Monetary;
-import com.matthewmitchell.peercoinj.utils.MonetaryFormat;
-
 import android.content.Context;
 import android.graphics.Paint;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
 import android.util.AttributeSet;
 import android.widget.TextView;
+
+import com.fuelcoinj.core.Monetary;
+import com.fuelcoinj.utils.MonetaryFormat;
 import com.matthewmitchell.peercoin_android_wallet.Constants;
 import com.matthewmitchell.peercoin_android_wallet.util.MonetarySpannable;
 import com.matthewmitchell.peercoin_android_wallet.R;

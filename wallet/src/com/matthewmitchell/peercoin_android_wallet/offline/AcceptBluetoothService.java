@@ -17,9 +17,9 @@
 
 package com.matthewmitchell.peercoin_android_wallet.offline;
 
-import com.matthewmitchell.peercoinj.core.Transaction;
-import com.matthewmitchell.peercoinj.core.VerificationException;
-import com.matthewmitchell.peercoinj.core.Wallet;
+import com.fuelcoinj.core.Transaction;
+import com.fuelcoinj.core.VerificationException;
+import com.fuelcoinj.core.Wallet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

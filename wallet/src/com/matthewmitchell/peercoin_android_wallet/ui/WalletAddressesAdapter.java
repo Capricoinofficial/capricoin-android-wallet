@@ -34,10 +34,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.matthewmitchell.peercoinj.core.Address;
-import com.matthewmitchell.peercoinj.core.ECKey;
-import com.matthewmitchell.peercoinj.core.Wallet;
 
+import com.fuelcoinj.core.Address;
+import com.fuelcoinj.core.ECKey;
+import com.fuelcoinj.core.Wallet;
 import com.matthewmitchell.peercoin_android_wallet.AddressBookProvider;
 import com.matthewmitchell.peercoin_android_wallet.Constants;
 import com.matthewmitchell.peercoin_android_wallet.util.WalletUtils;

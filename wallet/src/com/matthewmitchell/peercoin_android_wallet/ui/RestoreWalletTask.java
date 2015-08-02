@@ -6,19 +6,21 @@
 
 package com.matthewmitchell.peercoin_android_wallet.ui;
 
-import com.matthewmitchell.peercoin_android_wallet.R;
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
+
+import com.fuelcoinj.core.Wallet;
 import com.google.common.base.Charsets;
 import com.matthewmitchell.peercoin_android_wallet.Constants;
-import com.matthewmitchell.peercoin_android_wallet.WalletApplication;
-import static com.matthewmitchell.peercoin_android_wallet.ui.AbstractWalletActivity.log;
+import com.matthewmitchell.peercoin_android_wallet.R;
 import com.matthewmitchell.peercoin_android_wallet.util.Crypto;
 import com.matthewmitchell.peercoin_android_wallet.util.Io;
 import com.matthewmitchell.peercoin_android_wallet.util.WalletUtils;
-import com.matthewmitchell.peercoinj.core.Wallet;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -26,8 +28,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class RestoreWalletTask extends AsyncTask<Void, Void, IOException> {
 

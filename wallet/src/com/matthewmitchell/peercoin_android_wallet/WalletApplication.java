@@ -29,17 +29,6 @@ import java.util.concurrent.TimeUnit;
 
 import javax.annotation.Nonnull;
 
-import com.matthewmitchell.peercoinj.core.Transaction;
-import com.matthewmitchell.peercoinj.core.VerificationException;
-import com.matthewmitchell.peercoinj.core.VersionMessage;
-import com.matthewmitchell.peercoinj.core.Wallet;
-import com.matthewmitchell.peercoinj.crypto.MnemonicCode;
-import com.matthewmitchell.peercoinj.store.UnreadableWalletException;
-import com.matthewmitchell.peercoinj.store.WalletProtobufSerializer;
-import com.matthewmitchell.peercoinj.utils.Threading;
-import com.matthewmitchell.peercoinj.wallet.Protos;
-import com.matthewmitchell.peercoinj.wallet.WalletFiles;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -65,6 +54,16 @@ import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.rolling.RollingFileAppender;
 import ch.qos.logback.core.rolling.TimeBasedRollingPolicy;
 
+import com.fuelcoinj.core.Transaction;
+import com.fuelcoinj.core.VerificationException;
+import com.fuelcoinj.core.VersionMessage;
+import com.fuelcoinj.core.Wallet;
+import com.fuelcoinj.crypto.MnemonicCode;
+import com.fuelcoinj.store.UnreadableWalletException;
+import com.fuelcoinj.store.WalletProtobufSerializer;
+import com.fuelcoinj.utils.Threading;
+import com.fuelcoinj.wallet.Protos;
+import com.fuelcoinj.wallet.WalletFiles;
 import com.matthewmitchell.peercoin_android_wallet.service.BlockchainService;
 import com.matthewmitchell.peercoin_android_wallet.service.BlockchainServiceImpl;
 import com.matthewmitchell.peercoin_android_wallet.util.CrashReporter;

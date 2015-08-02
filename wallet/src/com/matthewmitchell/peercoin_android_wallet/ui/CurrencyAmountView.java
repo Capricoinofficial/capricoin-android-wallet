@@ -39,10 +39,9 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import com.matthewmitchell.peercoinj.core.Coin;
-import com.matthewmitchell.peercoinj.core.Monetary;
-import com.matthewmitchell.peercoinj.utils.MonetaryFormat;
-
+import com.fuelcoinj.core.Coin;
+import com.fuelcoinj.core.Monetary;
+import com.fuelcoinj.utils.MonetaryFormat;
 import com.matthewmitchell.peercoin_android_wallet.util.GenericUtils;
 import com.matthewmitchell.peercoin_android_wallet.util.MonetarySpannable;
 import com.matthewmitchell.peercoin_android_wallet.R;
@@ -129,17 +128,17 @@ public final class CurrencyAmountView extends FrameLayout
 
 	public void setCurrencySymbol(@Nullable final String currencyCode)
 	{
-		if (MonetaryFormat.CODE_PPC.equals(currencyCode))
+		if (MonetaryFormat.CODE_FC2.equals(currencyCode))
 		{
 			currencySymbolDrawable = getResources().getDrawable(R.drawable.currency_symbol_ppc);
 			localCurrencyCode = null;
 		}
-		else if (MonetaryFormat.CODE_MPPC.equals(currencyCode))
+		else if (MonetaryFormat.CODE_MFC2.equals(currencyCode))
 		{
 			currencySymbolDrawable = getResources().getDrawable(R.drawable.currency_symbol_mppc);
 			localCurrencyCode = null;
 		}
-		else if (MonetaryFormat.CODE_UPPC.equals(currencyCode))
+		else if (MonetaryFormat.CODE_UFC2.equals(currencyCode))
 		{
 			currencySymbolDrawable = getResources().getDrawable(R.drawable.currency_symbol_uppc);
 			localCurrencyCode = null;

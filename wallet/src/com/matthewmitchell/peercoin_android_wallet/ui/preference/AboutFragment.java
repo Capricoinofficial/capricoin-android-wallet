@@ -17,7 +17,6 @@
 
 package com.matthewmitchell.peercoin_android_wallet.ui.preference;
 
-import com.matthewmitchell.peercoinj.core.VersionMessage;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -25,6 +24,8 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
+
+import com.fuelcoinj.core.VersionMessage;
 import com.matthewmitchell.peercoin_android_wallet.Constants;
 import com.matthewmitchell.peercoin_android_wallet.WalletApplication;
 import com.matthewmitchell.peercoin_android_wallet.R;

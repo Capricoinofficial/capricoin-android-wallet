@@ -19,11 +19,12 @@ package com.matthewmitchell.peercoin_android_wallet.ui.send;
 
 import javax.annotation.Nonnull;
 
-import com.matthewmitchell.peercoinj.core.ECKey;
-import com.matthewmitchell.peercoinj.crypto.BIP38PrivateKey;
 
 import android.os.Handler;
 import android.os.Looper;
+
+import com.fuelcoinj.core.ECKey;
+import com.fuelcoinj.crypto.BIP38PrivateKey;
 
 /**
  * @author Andreas Schildbach

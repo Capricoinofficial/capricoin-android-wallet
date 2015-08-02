@@ -58,11 +58,11 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.matthewmitchell.peercoinj.core.Block;
-import com.matthewmitchell.peercoinj.core.Sha256Hash;
-import com.matthewmitchell.peercoinj.core.StoredBlock;
-import com.matthewmitchell.peercoinj.core.Transaction;
-import com.matthewmitchell.peercoinj.core.Wallet;
+import com.fuelcoinj.core.Block;
+import com.fuelcoinj.core.Sha256Hash;
+import com.fuelcoinj.core.StoredBlock;
+import com.fuelcoinj.core.Transaction;
+import com.fuelcoinj.core.Wallet;
 
 import com.matthewmitchell.peercoin_android_wallet.Configuration;
 import com.matthewmitchell.peercoin_android_wallet.Constants;

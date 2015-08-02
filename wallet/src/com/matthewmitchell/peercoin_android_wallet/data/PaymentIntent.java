@@ -17,7 +17,29 @@
 
 package com.matthewmitchell.peercoin_android_wallet.data;
 
-import static com.google.common.base.Preconditions.checkArgument;
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import com.fuelcoinj.core.Address;
+import com.fuelcoinj.core.AddressFormatException;
+import com.fuelcoinj.core.Coin;
+import com.fuelcoinj.core.ScriptException;
+import com.fuelcoinj.core.Transaction;
+import com.fuelcoinj.core.Wallet;
+import com.fuelcoinj.core.WrongNetworkException;
+import com.fuelcoinj.protocols.payments.PaymentProtocol;
+import com.fuelcoinj.protocols.payments.PaymentProtocolException;
+import com.fuelcoinj.script.Script;
+import com.fuelcoinj.script.ScriptBuilder;
+import com.fuelcoinj.uri.PeercoinURI;
+import com.fuelcoinj.wallet.Protos;
+import com.google.common.io.BaseEncoding;
+import com.matthewmitchell.peercoin_android_wallet.Constants;
+import com.matthewmitchell.peercoin_android_wallet.util.Bluetooth;
+import com.matthewmitchell.peercoin_android_wallet.util.GenericUtils;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Arrays;
 
@@ -25,29 +47,7 @@ import javax.annotation.CheckForNull;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-import com.matthewmitchell.peercoinj.core.Address;
-import com.matthewmitchell.peercoinj.core.AddressFormatException;
-import com.matthewmitchell.peercoinj.core.Coin;
-import com.matthewmitchell.peercoinj.core.ScriptException;
-import com.matthewmitchell.peercoinj.core.Transaction;
-import com.matthewmitchell.peercoinj.core.Wallet.SendRequest;
-import com.matthewmitchell.peercoinj.core.WrongNetworkException;
-import com.matthewmitchell.peercoinj.protocols.payments.PaymentProtocol;
-import com.matthewmitchell.peercoinj.protocols.payments.PaymentProtocolException;
-import com.matthewmitchell.peercoinj.script.Script;
-import com.matthewmitchell.peercoinj.script.ScriptBuilder;
-import com.matthewmitchell.peercoinj.uri.PeercoinURI;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import android.os.Parcel;
-import android.os.Parcelable;
-
-import com.google.common.io.BaseEncoding;
-
-import com.matthewmitchell.peercoin_android_wallet.Constants;
-import com.matthewmitchell.peercoin_android_wallet.util.Bluetooth;
-import com.matthewmitchell.peercoin_android_wallet.util.GenericUtils;
+import static com.google.common.base.Preconditions.checkArgument;
 
 /**
  * @author Andreas Schildbach
@@ -276,12 +276,12 @@ public final class PaymentIntent implements Parcelable
 		return new PaymentIntent(standard, payeeName, payeeVerifiedBy, outputs, memo, null, payeeData, null, null);
 	}
 
-	public SendRequest toSendRequest()
+	public Wallet.SendRequest toSendRequest()
 	{
 		final Transaction transaction = new Transaction(Constants.NETWORK_PARAMETERS);
 		for (final PaymentIntent.Output output : outputs)
 			transaction.addOutput(output.amount, output.script);
-		return SendRequest.forTx(transaction);
+		return Wallet.SendRequest.forTx(transaction);
 	}
 
 	private static Output[] buildSimplePayTo(final Coin amount, final Address address)

@@ -21,11 +21,6 @@ import java.util.concurrent.atomic.AtomicReference;
 
 import javax.annotation.CheckForNull;
 
-import com.matthewmitchell.peercoinj.core.Address;
-import com.matthewmitchell.peercoinj.core.Coin;
-import com.matthewmitchell.peercoinj.core.Wallet;
-import com.matthewmitchell.peercoinj.protocols.payments.PaymentProtocol;
-import com.matthewmitchell.peercoinj.uri.PeercoinURI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -67,6 +62,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
+import com.fuelcoinj.core.Address;
+import com.fuelcoinj.core.Coin;
+import com.fuelcoinj.core.Wallet;
+import com.fuelcoinj.protocols.payments.PaymentProtocol;
+import com.fuelcoinj.uri.PeercoinURI;
 import com.matthewmitchell.peercoin_android_wallet.Configuration;
 import com.matthewmitchell.peercoin_android_wallet.Constants;
 import com.matthewmitchell.peercoin_android_wallet.ExchangeRatesProvider;

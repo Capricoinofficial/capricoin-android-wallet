@@ -18,13 +18,14 @@
 package com.matthewmitchell.peercoin_android_wallet.ui;
 
 import android.content.Context;
+
+import com.fuelcoinj.core.BlockChain;
+import com.fuelcoinj.store.BlockStore;
+import com.fuelcoinj.store.BlockStoreException;
+import com.fuelcoinj.store.ValidHashStore;
 import com.matthewmitchell.peercoin_android_wallet.Constants;
 import java.io.File;
 
-import com.matthewmitchell.peercoinj.core.BlockChain;
-import com.matthewmitchell.peercoinj.store.BlockStore;
-import com.matthewmitchell.peercoinj.store.BlockStoreException;
-import com.matthewmitchell.peercoinj.store.ValidHashStore;
 
 public class BlockchainData {
 	

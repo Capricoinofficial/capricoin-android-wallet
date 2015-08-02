@@ -37,20 +37,6 @@ import javax.annotation.CheckForNull;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-import com.matthewmitchell.peercoinj.core.Address;
-import com.matthewmitchell.peercoinj.core.AddressFormatException;
-import com.matthewmitchell.peercoinj.core.DumpedPrivateKey;
-import com.matthewmitchell.peercoinj.core.ECKey;
-import com.matthewmitchell.peercoinj.core.ScriptException;
-import com.matthewmitchell.peercoinj.core.Sha256Hash;
-import com.matthewmitchell.peercoinj.core.Transaction;
-import com.matthewmitchell.peercoinj.core.TransactionInput;
-import com.matthewmitchell.peercoinj.core.TransactionOutput;
-import com.matthewmitchell.peercoinj.core.Wallet;
-import com.matthewmitchell.peercoinj.script.Script;
-import com.matthewmitchell.peercoinj.store.UnreadableWalletException;
-import com.matthewmitchell.peercoinj.store.WalletProtobufSerializer;
-import com.matthewmitchell.peercoinj.wallet.KeyChainGroup;
 
 import android.text.Editable;
 import android.text.Spannable;
@@ -58,6 +44,20 @@ import android.text.SpannableStringBuilder;
 import android.text.format.DateUtils;
 import android.text.style.TypefaceSpan;
 
+import com.fuelcoinj.core.Address;
+import com.fuelcoinj.core.AddressFormatException;
+import com.fuelcoinj.core.DumpedPrivateKey;
+import com.fuelcoinj.core.ECKey;
+import com.fuelcoinj.core.ScriptException;
+import com.fuelcoinj.core.Sha256Hash;
+import com.fuelcoinj.core.Transaction;
+import com.fuelcoinj.core.TransactionInput;
+import com.fuelcoinj.core.TransactionOutput;
+import com.fuelcoinj.core.Wallet;
+import com.fuelcoinj.script.Script;
+import com.fuelcoinj.store.UnreadableWalletException;
+import com.fuelcoinj.store.WalletProtobufSerializer;
+import com.fuelcoinj.wallet.KeyChainGroup;
 import com.google.common.base.Charsets;
 
 import com.matthewmitchell.peercoin_android_wallet.Constants;

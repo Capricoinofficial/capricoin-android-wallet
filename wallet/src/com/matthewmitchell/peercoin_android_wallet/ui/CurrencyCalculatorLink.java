@@ -17,16 +17,16 @@
 
 package com.matthewmitchell.peercoin_android_wallet.ui;
 
+import android.view.View;
+
+import com.fuelcoinj.core.Coin;
+import com.fuelcoinj.utils.ExchangeRate;
+import com.fuelcoinj.utils.Fiat;
+import com.matthewmitchell.peercoin_android_wallet.ui.CurrencyAmountView.Listener;
+
 import javax.annotation.CheckForNull;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-
-import com.matthewmitchell.peercoinj.core.Coin;
-import com.matthewmitchell.peercoinj.utils.ExchangeRate;
-import com.matthewmitchell.peercoinj.utils.Fiat;
-
-import android.view.View;
-import com.matthewmitchell.peercoin_android_wallet.ui.CurrencyAmountView.Listener;
 
 /**
  * @author Andreas Schildbach

@@ -31,11 +31,10 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.support.v4.content.LocalBroadcastManager;
 
-import com.matthewmitchell.peercoinj.core.Coin;
-import com.matthewmitchell.peercoinj.core.Wallet;
-import com.matthewmitchell.peercoinj.core.Wallet.BalanceType;
-import com.matthewmitchell.peercoinj.utils.Threading;
 
+import com.fuelcoinj.core.Coin;
+import com.fuelcoinj.core.Wallet;
+import com.fuelcoinj.utils.Threading;
 import com.matthewmitchell.peercoin_android_wallet.WalletApplication;
 import com.matthewmitchell.peercoin_android_wallet.util.ThrottlingWalletChangeListener;
 
@@ -91,7 +90,7 @@ public final class WalletBalanceLoader extends AsyncTaskLoader<Coin>
 	@Override
 	public Coin loadInBackground()
 	{
-		return wallet.getBalance(BalanceType.ESTIMATED);
+		return wallet.getBalance(Wallet.BalanceType.ESTIMATED);
 	}
 
 	private final ThrottlingWalletChangeListener walletChangeListener = new ThrottlingWalletChangeListener()

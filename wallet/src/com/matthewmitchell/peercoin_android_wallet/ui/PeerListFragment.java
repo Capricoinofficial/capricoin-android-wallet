@@ -51,9 +51,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.matthewmitchell.peercoinj.core.Peer;
-import com.matthewmitchell.peercoinj.core.VersionMessage;
-
+import com.fuelcoinj.core.Peer;
+import com.fuelcoinj.core.VersionMessage;
 import com.matthewmitchell.peercoin_android_wallet.service.BlockchainService;
 import com.matthewmitchell.peercoin_android_wallet.service.BlockchainServiceImpl;
 import com.matthewmitchell.peercoin_android_wallet.util.WholeStringBuilder;

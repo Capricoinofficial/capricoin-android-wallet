@@ -33,9 +33,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.matthewmitchell.peercoinj.core.Address;
-import com.matthewmitchell.peercoinj.core.ECKey;
-
+import com.fuelcoinj.core.Address;
+import com.fuelcoinj.core.ECKey;
 import com.matthewmitchell.peercoin_android_wallet.Constants;
 import com.matthewmitchell.peercoin_android_wallet.util.ViewPagerTabs;
 import com.matthewmitchell.peercoin_android_wallet.R;

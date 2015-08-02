@@ -24,14 +24,14 @@ import java.util.regex.Matcher;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-import com.matthewmitchell.peercoinj.core.Monetary;
-import com.matthewmitchell.peercoinj.utils.MonetaryFormat;
-
 import android.graphics.Typeface;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.RelativeSizeSpan;
 import android.text.style.StyleSpan;
+
+import com.fuelcoinj.core.Monetary;
+import com.fuelcoinj.utils.MonetaryFormat;
 import com.matthewmitchell.peercoin_android_wallet.Constants;
 
 /**

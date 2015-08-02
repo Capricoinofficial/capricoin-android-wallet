@@ -17,6 +17,38 @@
 
 package com.matthewmitchell.peercoin_android_wallet.ui;
 
+import android.content.Context;
+import android.content.DialogInterface.OnClickListener;
+
+import com.fuelcoinj.core.Address;
+import com.fuelcoinj.core.AddressFormatException;
+import com.fuelcoinj.core.Base58;
+import com.fuelcoinj.core.DumpedPrivateKey;
+import com.fuelcoinj.core.NetworkParameters;
+import com.fuelcoinj.core.ProtocolException;
+import com.fuelcoinj.core.Transaction;
+import com.fuelcoinj.core.VerificationException;
+import com.fuelcoinj.core.VersionedChecksummedBytes;
+import com.fuelcoinj.crypto.BIP38PrivateKey;
+import com.fuelcoinj.crypto.TrustStoreLoader;
+import com.fuelcoinj.protocols.payments.PaymentProtocol;
+import com.fuelcoinj.protocols.payments.PaymentProtocolException;
+import com.fuelcoinj.protocols.payments.PaymentSession;
+import com.fuelcoinj.protocols.payments.Protos;
+import com.fuelcoinj.uri.PeercoinURI;
+import com.fuelcoinj.uri.PeercoinURIParseException;
+import com.google.common.hash.Hashing;
+import com.google.protobuf.InvalidProtocolBufferException;
+import com.google.protobuf.UninitializedMessageException;
+import com.matthewmitchell.peercoin_android_wallet.Constants;
+import com.matthewmitchell.peercoin_android_wallet.R;
+import com.matthewmitchell.peercoin_android_wallet.data.PaymentIntent;
+import com.matthewmitchell.peercoin_android_wallet.util.Io;
+import com.matthewmitchell.peercoin_android_wallet.util.Qr;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -29,40 +61,6 @@ import java.util.regex.Pattern;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-
-import com.matthewmitchell.peercoinj.protocols.payments.Protos;
-import com.matthewmitchell.peercoinj.core.Address;
-import com.matthewmitchell.peercoinj.core.AddressFormatException;
-import com.matthewmitchell.peercoinj.core.Base58;
-import com.matthewmitchell.peercoinj.core.DumpedPrivateKey;
-import com.matthewmitchell.peercoinj.core.NetworkParameters;
-import com.matthewmitchell.peercoinj.core.ProtocolException;
-import com.matthewmitchell.peercoinj.core.Transaction;
-import com.matthewmitchell.peercoinj.core.VerificationException;
-import com.matthewmitchell.peercoinj.core.VersionedChecksummedBytes;
-import com.matthewmitchell.peercoinj.crypto.BIP38PrivateKey;
-import com.matthewmitchell.peercoinj.crypto.TrustStoreLoader;
-import com.matthewmitchell.peercoinj.protocols.payments.PaymentProtocol;
-import com.matthewmitchell.peercoinj.protocols.payments.PaymentProtocol.PkiVerificationData;
-import com.matthewmitchell.peercoinj.protocols.payments.PaymentProtocolException;
-import com.matthewmitchell.peercoinj.protocols.payments.PaymentSession;
-import com.matthewmitchell.peercoinj.uri.PeercoinURI;
-import com.matthewmitchell.peercoinj.uri.PeercoinURIParseException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import android.content.Context;
-import android.content.DialogInterface.OnClickListener;
-
-import com.google.common.hash.Hashing;
-import com.google.protobuf.InvalidProtocolBufferException;
-import com.google.protobuf.UninitializedMessageException;
-
-import com.matthewmitchell.peercoin_android_wallet.Constants;
-import com.matthewmitchell.peercoin_android_wallet.data.PaymentIntent;
-import com.matthewmitchell.peercoin_android_wallet.util.Io;
-import com.matthewmitchell.peercoin_android_wallet.util.Qr;
-import com.matthewmitchell.peercoin_android_wallet.R;
 
 /**
  * @author Andreas Schildbach
@@ -367,7 +365,7 @@ public abstract class InputParser
 			if (!"none".equals(paymentRequest.getPkiType()))
 			{
 				final KeyStore keystore = new TrustStoreLoader.DefaultTrustStoreLoader().getKeyStore();
-				final PkiVerificationData verificationData = PaymentProtocol.verifyPaymentRequestPki(paymentRequest, keystore);
+				final PaymentProtocol.PkiVerificationData verificationData = PaymentProtocol.verifyPaymentRequestPki(paymentRequest, keystore);
 				pkiName = verificationData.displayName;
 				pkiCaName = verificationData.rootAuthorityName;
 			}

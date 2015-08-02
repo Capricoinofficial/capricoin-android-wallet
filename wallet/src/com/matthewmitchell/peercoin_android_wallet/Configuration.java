@@ -19,10 +19,6 @@ package com.matthewmitchell.peercoin_android_wallet;
 
 import javax.annotation.Nonnull;
 
-import com.matthewmitchell.peercoinj.core.Coin;
-import com.matthewmitchell.peercoinj.utils.Fiat;
-import com.matthewmitchell.peercoinj.utils.MonetaryFormat;
-import com.matthewmitchell.peercoinj.utils.ExchangeRate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,6 +26,11 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.text.format.DateUtils;
+
+import com.fuelcoinj.core.Coin;
+import com.fuelcoinj.utils.ExchangeRate;
+import com.fuelcoinj.utils.Fiat;
+import com.fuelcoinj.utils.MonetaryFormat;
 import com.matthewmitchell.peercoin_android_wallet.ExchangeRatesProvider.WalletExchangeRate;
 
 /**

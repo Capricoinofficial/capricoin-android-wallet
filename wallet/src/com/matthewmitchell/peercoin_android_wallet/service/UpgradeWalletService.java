@@ -19,13 +19,14 @@ package com.matthewmitchell.peercoin_android_wallet.service;
 
 import javax.annotation.Nonnull;
 
-import com.matthewmitchell.peercoinj.core.Wallet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import android.app.IntentService;
 import android.content.Context;
 import android.content.Intent;
+
+import com.fuelcoinj.core.Wallet;
 import com.matthewmitchell.peercoin_android_wallet.WalletApplication;
 
 /**

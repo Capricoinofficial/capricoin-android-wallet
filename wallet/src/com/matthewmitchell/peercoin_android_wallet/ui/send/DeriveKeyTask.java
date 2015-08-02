@@ -17,13 +17,14 @@
 
 package com.matthewmitchell.peercoin_android_wallet.ui.send;
 
-import javax.annotation.Nonnull;
-
-import com.matthewmitchell.peercoinj.crypto.KeyCrypter;
-import org.spongycastle.crypto.params.KeyParameter;
-
 import android.os.Handler;
 import android.os.Looper;
+
+import com.fuelcoinj.crypto.KeyCrypter;
+
+import org.spongycastle.crypto.params.KeyParameter;
+
+import javax.annotation.Nonnull;
 
 /**
  * @author Andreas Schildbach

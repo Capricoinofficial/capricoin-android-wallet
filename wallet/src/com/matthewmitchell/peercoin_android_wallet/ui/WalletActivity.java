@@ -17,43 +17,9 @@
 
 package com.matthewmitchell.peercoin_android_wallet.ui;
 
-import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
-import java.net.SocketException;
-import java.net.SocketTimeoutException;
-import java.net.UnknownHostException;
-import java.text.DateFormat;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.TimeZone;
-
-import javax.annotation.Nonnull;
-
-import com.matthewmitchell.peercoinj.core.AddressFormatException;
-import com.matthewmitchell.peercoinj.core.Transaction;
-import com.matthewmitchell.peercoinj.core.VerificationException;
-import com.matthewmitchell.peercoinj.core.VersionedChecksummedBytes;
-import com.matthewmitchell.peercoinj.core.Wallet;
-import com.matthewmitchell.peercoinj.core.Wallet.BalanceType;
-import com.matthewmitchell.peercoinj.store.WalletProtobufSerializer;
-import com.matthewmitchell.peercoinj.wallet.Protos;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
@@ -80,10 +46,16 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.fuelcoinj.core.AddressFormatException;
+import com.fuelcoinj.core.Transaction;
+import com.fuelcoinj.core.VerificationException;
+import com.fuelcoinj.core.Wallet;
+import com.fuelcoinj.store.WalletProtobufSerializer;
+import com.fuelcoinj.wallet.Protos;
 import com.google.common.base.Charsets;
-
 import com.matthewmitchell.peercoin_android_wallet.Configuration;
 import com.matthewmitchell.peercoin_android_wallet.Constants;
+import com.matthewmitchell.peercoin_android_wallet.R;
 import com.matthewmitchell.peercoin_android_wallet.WalletApplication;
 import com.matthewmitchell.peercoin_android_wallet.data.PaymentIntent;
 import com.matthewmitchell.peercoin_android_wallet.ui.InputParser.BinaryInputParser;
@@ -93,14 +65,29 @@ import com.matthewmitchell.peercoin_android_wallet.ui.send.SendCoinsActivity;
 import com.matthewmitchell.peercoin_android_wallet.util.CrashReporter;
 import com.matthewmitchell.peercoin_android_wallet.util.Crypto;
 import com.matthewmitchell.peercoin_android_wallet.util.HttpGetThread;
-import com.matthewmitchell.peercoin_android_wallet.util.Io;
 import com.matthewmitchell.peercoin_android_wallet.util.Iso8601Format;
 import com.matthewmitchell.peercoin_android_wallet.util.Nfc;
 import com.matthewmitchell.peercoin_android_wallet.util.WalletUtils;
 import com.matthewmitchell.peercoin_android_wallet.util.WholeStringBuilder;
-import com.matthewmitchell.peercoin_android_wallet.R;
 
-import static junit.framework.Assert.assertTrue;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.net.SocketException;
+import java.net.SocketTimeoutException;
+import java.net.UnknownHostException;
+import java.text.DateFormat;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.TimeZone;
+
+import javax.annotation.Nonnull;
 
 /**
  * @author Andreas Schildbach
@@ -135,7 +122,8 @@ public final class WalletActivity extends AbstractWalletActivity
 				config = application.getConfiguration();
 
 				if (savedInstanceState == null)
-					checkAlerts();
+					//TODO need to add this back in when I figure out why it was dieing........KKD
+					//checkAlerts();
 
 				config.touchLastUsed();
 
@@ -507,7 +495,7 @@ public final class WalletActivity extends AbstractWalletActivity
 		});
 
 		final View replaceWarningView = alertDialog.findViewById(R.id.restore_wallet_from_storage_dialog_replace_warning);
-		final boolean hasCoins = application.getWallet().getBalance(BalanceType.ESTIMATED).signum() > 0;
+		final boolean hasCoins = application.getWallet().getBalance(Wallet.BalanceType.ESTIMATED).signum() > 0;
 		replaceWarningView.setVisibility(hasCoins ? View.VISIBLE : View.GONE);
 
 		final Spinner fileView = (Spinner) alertDialog.findViewById(R.id.import_keys_from_storage_file);

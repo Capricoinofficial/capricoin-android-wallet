@@ -45,14 +45,13 @@ import android.widget.BaseAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
-import com.matthewmitchell.peercoinj.core.AbstractWalletEventListener;
-import com.matthewmitchell.peercoinj.core.Address;
-import com.matthewmitchell.peercoinj.core.ECKey;
-import com.matthewmitchell.peercoinj.core.Wallet;
-import com.matthewmitchell.peercoinj.core.WalletEventListener;
-import com.matthewmitchell.peercoinj.uri.PeercoinURI;
-import com.matthewmitchell.peercoinj.utils.Threading;
-
+import com.fuelcoinj.core.AbstractWalletEventListener;
+import com.fuelcoinj.core.Address;
+import com.fuelcoinj.core.ECKey;
+import com.fuelcoinj.core.Wallet;
+import com.fuelcoinj.core.WalletEventListener;
+import com.fuelcoinj.uri.PeercoinURI;
+import com.fuelcoinj.utils.Threading;
 import com.matthewmitchell.peercoin_android_wallet.AddressBookProvider;
 import com.matthewmitchell.peercoin_android_wallet.Configuration;
 import com.matthewmitchell.peercoin_android_wallet.Constants;

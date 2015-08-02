@@ -31,6 +31,11 @@ import android.text.Spannable;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.RemoteViews;
+
+import com.fuelcoinj.core.Coin;
+import com.fuelcoinj.core.Wallet;
+import com.fuelcoinj.utils.Fiat;
+import com.fuelcoinj.utils.MonetaryFormat;
 import com.matthewmitchell.peercoin_android_wallet.ExchangeRatesProvider.WalletExchangeRate;
 import com.matthewmitchell.peercoin_android_wallet.R;
 import com.matthewmitchell.peercoin_android_wallet.ui.RequestCoinsActivity;
@@ -39,11 +44,7 @@ import com.matthewmitchell.peercoin_android_wallet.ui.WalletActivity;
 import com.matthewmitchell.peercoin_android_wallet.ui.send.SendCoinsActivity;
 import com.matthewmitchell.peercoin_android_wallet.util.GenericUtils;
 import com.matthewmitchell.peercoin_android_wallet.util.MonetarySpannable;
-import com.matthewmitchell.peercoinj.core.Coin;
-import com.matthewmitchell.peercoinj.core.Wallet;
-import com.matthewmitchell.peercoinj.core.Wallet.BalanceType;
-import com.matthewmitchell.peercoinj.utils.Fiat;
-import com.matthewmitchell.peercoinj.utils.MonetaryFormat;
+
 import java.lang.reflect.Method;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -64,7 +65,7 @@ public class WalletBalanceWidgetProvider extends AppWidgetProvider
 
 			@Override
 			public void run() {
-				final Coin balance = application.getWallet().getBalance(BalanceType.ESTIMATED);
+				final Coin balance = application.getWallet().getBalance(Wallet.BalanceType.ESTIMATED);
 				updateWidgets(context, appWidgetManager, appWidgetIds, balance);
 			}
 			
@@ -84,7 +85,7 @@ public class WalletBalanceWidgetProvider extends AppWidgetProvider
 
 			@Override
 			public void run() {
-				final Coin balance = application.getWallet().getBalance(BalanceType.ESTIMATED);
+				final Coin balance = application.getWallet().getBalance(Wallet.BalanceType.ESTIMATED);
 				updateWidget(context, appWidgetManager, appWidgetId, newOptions, balance);
 			}
 		
@@ -103,7 +104,7 @@ public class WalletBalanceWidgetProvider extends AppWidgetProvider
 
 			if (appWidgetIds.length > 0)
 			{
-				final Coin balance = wallet.getBalance(BalanceType.ESTIMATED);
+				final Coin balance = wallet.getBalance(Wallet.BalanceType.ESTIMATED);
 				WalletBalanceWidgetProvider.updateWidgets(context, appWidgetManager, appWidgetIds, balance);
 			}
 		}
@@ -161,11 +162,11 @@ public class WalletBalanceWidgetProvider extends AppWidgetProvider
 		final RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.wallet_balance_widget_content);
 
 		final String currencyCode = ppcFormat.code();
-		if (MonetaryFormat.CODE_PPC.equals(currencyCode))
+		if (MonetaryFormat.CODE_FC2.equals(currencyCode))
 			views.setImageViewResource(R.id.widget_wallet_prefix, R.drawable.currency_symbol_ppc_widget);
-		else if (MonetaryFormat.CODE_MPPC.equals(currencyCode))
+		else if (MonetaryFormat.CODE_MFC2.equals(currencyCode))
 			views.setImageViewResource(R.id.widget_wallet_prefix, R.drawable.currency_symbol_mppc_widget);
-		else if (MonetaryFormat.CODE_UPPC.equals(currencyCode))
+		else if (MonetaryFormat.CODE_UFC2.equals(currencyCode))
 			views.setImageViewResource(R.id.widget_wallet_prefix, R.drawable.currency_symbol_uppc_widget);
 
 		views.setTextViewText(R.id.widget_wallet_balance_ppc, balanceStr);

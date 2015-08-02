@@ -21,11 +21,6 @@ import java.security.SecureRandom;
 
 import javax.annotation.CheckForNull;
 
-import com.matthewmitchell.peercoinj.core.Wallet;
-import com.matthewmitchell.peercoinj.crypto.KeyCrypter;
-import com.matthewmitchell.peercoinj.crypto.KeyCrypterException;
-import com.matthewmitchell.peercoinj.crypto.KeyCrypterScrypt;
-import com.matthewmitchell.peercoinj.wallet.Protos;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.spongycastle.crypto.params.KeyParameter;
@@ -52,6 +47,11 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.fuelcoinj.core.Wallet;
+import com.fuelcoinj.crypto.KeyCrypter;
+import com.fuelcoinj.crypto.KeyCrypterException;
+import com.fuelcoinj.crypto.KeyCrypterScrypt;
+import com.fuelcoinj.wallet.Protos;
 import com.google.protobuf.ByteString;
 
 import com.matthewmitchell.peercoin_android_wallet.WalletApplication;
