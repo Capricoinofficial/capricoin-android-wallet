@@ -3,24 +3,24 @@ FILES
 Your wallet contains your private keys and various transaction related metadata. It is stored in app-private
 storage:
 
-	Mainnet: /data/data/com.matthewmitchell.peercoin_android_wallet/files/wallet-protobuf (MODE_PRIVATE)
+	Mainnet: /data/data/fuelcoin.fuelcoinj_android_wallet/files/wallet-protobuf (MODE_PRIVATE)
 
-	Testnet: /data/data/com.matthewmitchell.peercoin_android_wallet_test/files/wallet-protobuf-testnet (MODE_WORLD_READABLE | MODE_WORLD_WRITEABLE)
+	Testnet: /data/data/fuelcoin.fuelcoinj_android_wallet_test/files/wallet-protobuf-testnet (MODE_WORLD_READABLE | MODE_WORLD_WRITEABLE)
 
 The wallet file format is not compatible to wallet.dat (Satoshi client). Rather, it uses a custom protobuf format
-which should be compatible between clients using peercoinj.
+which should be compatible between clients using fuelcoinjj.
 
 Certain actions cause automatic rolling backups of your wallet to app-private storage:
 
-	Mainnet: /data/data/com.matthewmitchell.peercoin_android_wallet/files/key-backup-protobuf (MODE_PRIVATE)
+	Mainnet: /data/data/fuelcoin.fuelcoinj_android_wallet/files/key-backup-protobuf (MODE_PRIVATE)
 
-	Testnet: /data/data/com.matthewmitchell.peercoin_android_wallet_test/files/key-backup-protobuf-testnet (MODE_PRIVATE)
+	Testnet: /data/data/fuelcoin.fuelcoinj_android_wallet_test/files/key-backup-protobuf-testnet (MODE_PRIVATE)
 
 Your wallet can be manually backed up to and restored from external storage:
 
-	Mainnet: /sdcard/Download/peercoin-wallet-backup-<yyyy-MM-dd>
+	Mainnet: /sdcard/Download/fuelcoinj-wallet-backup-<yyyy-MM-dd>
 
-	Testnet: /sdcard/Download/peercoin-wallet-backup-testnet-<yyyy-MM-dd>
+	Testnet: /sdcard/Download/fuelcoinj-wallet-backup-testnet-<yyyy-MM-dd>
 
 If you want to recover coins from manual backups and for whatever reason you cannot use the app
 itself to restore from the backup, see the separate README.recover guide.
@@ -30,7 +30,7 @@ DEBUGGING
 
 Wallet file for Testnet can be pulled from an (even un-rooted) device using
 
-	adb pull /data/data/com.matthewmitchell.peercoin_android_wallet_test/files/wallet-protobuf-testnet
+	adb pull /data/data/fuelcoin.fuelcoinj_android_wallet_test/files/wallet-protobuf-testnet
 
 Log messages can be viewed by
 
@@ -71,14 +71,14 @@ and switch to it. Use
 
 to download the necessary API level.
 
-Finally, you can build Peercoin Wallet and sign it with your development key. Again in your workspace,
+Finally, you can build Fuelcoin Wallet and sign it with your development key. Again in your workspace,
 use
 
 	# first time only
-	git clone -b master https://github.com/MatthewLM/peercoin-android-wallet peercoin-wallet
+	git clone -b master https://github.com/MatthewLM/fuelcoinj-android-wallet fuelcoinj-wallet
 
 	# each time
-	cd peercoin-wallet
+	cd fuelcoinj-wallet
 	git pull
 	mvn clean install
 
@@ -102,7 +102,7 @@ wallet file is protected against access from non-root users. In the code reposit
 separate 'prod' branch that gets rebased against master with each released version.
 
 	# each time
-	cd peercoin-wallet
+	cd fuelcoinj-wallet
 	git fetch origin
 	git checkout origin/prod
 	mvn clean install -Prelease -Dandroid.sdk.path=<path to your android sdk>
@@ -114,8 +114,8 @@ Make sure you've got Eclipse Luna with ADT 23 installed.
 
 Use Git to check out the project and an Android library dependency to your workspace:
 
-	# clone Peercoin Wallet project
-	git clone -b master https://github.Com.matthewmitchell/AndroidWallet.git peercoin-wallet
+	# clone Fuelcoin Wallet project
+	git clone -b master https://github.Com.matthewmitchell/AndroidWallet.git fuelcoinj-wallet
 
 	# clone ActionBarSherlock library project
 	git clone https://github.com/JakeWharton/ActionBarSherlock.git action-bar-sherlock
@@ -124,7 +124,7 @@ Use Git to check out the project and an Android library dependency to your works
 
 Use the maven-eclipse-plugin to create Eclipse project files:
 
-	cd peercoin-wallet
+	cd fuelcoinj-wallet
 	mvn clean install eclipse:eclipse
 
 Optional: In the generated .classpath, remove the org.eclipse.jdt.launching.JRE_CONTAINER
@@ -138,7 +138,7 @@ Java Compiler -> Errors/Warnings -> Annotations -> Missing @Override annotation 
 
 NFC (Near field communication)
 
-Peercoin Wallet supports reading Peercoin requests via NFC, either from a passive NFC tag or from
+Fuelcoin Wallet supports reading Fuelcoin requests via NFC, either from a passive NFC tag or from
 another NFC capable Android device that is requesting coins.
 
 For this to work, just enable NFC in your phone and hold your phone to the tag or device (with
@@ -152,25 +152,25 @@ Instructions for preparing an NFC tag with your address:
 
 - Some tags have less than 50 bytes capacity, those won't work. 1 KB tags recommended.
 
-- The tag needs to contain a Peercoin URI. You can construct one with the "Request coins" dialog,
+- The tag needs to contain a Fuelcoin URI. You can construct one with the "Request coins" dialog,
   then share with messaging or email. You can also construct the URI manually. Example for Mainnet:
-  peercoin:1G2Y2jP5YFZ5RGk2PXaeWwbeA5y1ZtFhoL
+  fuelcoinj:1G2Y2jP5YFZ5RGk2PXaeWwbeA5y1ZtFhoL
 
 - The type of the message needs to be URI or URL (not Text).
 
 - If you put your tag at a public place, don't forget to enable write protect. Otherwise, someone
-  could overwrite the tag with his own Peercoin address.
+  could overwrite the tag with his own Fuelcoin address.
 
-PEERCOINJ
+FuelcoinJ
 
-peercoinj is used for Peercoin specific logic:
+fuelcoinjj is used for Fuelcoin specific logic:
 
-    https://github.com/MatthewLM/peercoinj
+    https://github.com/MatthewLM/fuelcoinjj
 
 EXCHANGE RATES
 
 Exchange rates are taken from:
 
-    Peercoin to USD: btc-e.com
+    Fuelcoin to USD: btc-e.com
     USD to Other Fiat: yahooapis.com
 

@@ -4,7 +4,7 @@
 	android:layout_height="wrap_content" >
 
 	<ImageView
-		android:id="@+id/peercoin_address_qr"
+		android:id="@+id/fuelcoinj_address_qr"
 		android:layout_width="@dimen/wallet_address_qr_size"
 		android:layout_height="@dimen/wallet_address_qr_size"
 		android:layout_gravity="center"

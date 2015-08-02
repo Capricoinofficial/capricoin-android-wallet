@@ -3,11 +3,11 @@
   <string name="help_wallet">
 <![CDATA[
 		<p>
-			La partie supérieure gauche de l\'écran affiche votre solde en Peercoins ainsi qu\'une devise locale sélectionnée.
+			La partie supérieure gauche de l\'écran affiche votre solde en Fuelcoins ainsi qu\'une devise locale sélectionnée.
 			Tapez sur le solde pour afficher la liste de toutes les devises locales et tapez sur l\'une d\'entre elles pour en faire la devise locale par défaut.
 		</p>
 		 <p>
-			Le QR code à droite contient votre adresse peercoin et peut être utilisée pour être scannée par un tiers.
+			Le QR code à droite contient votre adresse fuelcoinj et peut être utilisée pour être scannée par un tiers.
 			Tapez sur le code QR pour l\'agrandir.
 		</p>
 		<p>
@@ -17,7 +17,7 @@
 			Balayer vers la gauche ou vers la droite pour appliquer des filtres à la liste.
 		</p>
 		<p>
-			Vous pouvez envoyer ou recevoir des peercoins en tapant les boutons dans la barre d\'action.
+			Vous pouvez envoyer ou recevoir des fuelcoinjs en tapant les boutons dans la barre d\'action.
 			Plus d\'options sont disponibles dans le menu options.
 		</p>
 	]]>
@@ -25,14 +25,14 @@
   <string name="help_request_coins">
 <![CDATA[
 		<p>
-			En utilisant cette zone de dialogue vous pouvez demander des pièces à une autre personne (qui devrait déjà avoir installé le Peercoin Wallet).
+			En utilisant cette zone de dialogue vous pouvez demander des pièces à une autre personne (qui devrait déjà avoir installé le Fuelcoin Wallet).
 		</p>
 		<p>
-			Vous pouvez d\'abord saisir un montant de peercoins à demander.
+			Vous pouvez d\'abord saisir un montant de fuelcoinjs à demander.
 		</p>
 		<p>
 			Ensuite, soit l\'autre personne numérise le code QR généré, soit vous pouvez envoyer votre demande à une personne éloignée avec le bouton Partager de la barre des actions.
-			L\'autre personne devra cliquer sur l\'URL peercoin.
+			L\'autre personne devra cliquer sur l\'URL fuelcoinj.
 		</p>
 		<p>
 			Dans les deux cas, l\'autre personne obtiendra une zone de dialogue pré-remplie pour envoyer les pièces.
@@ -43,16 +43,16 @@
   <string name="help_send_coins">
 <![CDATA[
 		<p>
-			Vous avez commencé le processus d\'envoi de peercoins.
-			Vous êtes arrivé ici depuis l\'écran principal ou en cliquant sur une URL peercoin dans votre navigateur.
+			Vous avez commencé le processus d\'envoi de fuelcoinjs.
+			Vous êtes arrivé ici depuis l\'écran principal ou en cliquant sur une URL fuelcoinj dans votre navigateur.
 		</p>
 		<p>
-			D\'abord, saisir l\'adresse Peercoin de destination.
+			D\'abord, saisir l\'adresse Fuelcoin de destination.
 			L\'adresse sera complétée automatiquement pour les adresses enregistrées dans votre carnet.
-			Vous pouvez aussi numériser des codes QR avec des adresses peercoin ou des demandes de peercoins en pressant le bouton QR dans la barre des actions.
+			Vous pouvez aussi numériser des codes QR avec des adresses fuelcoinj ou des demandes de fuelcoinjs en pressant le bouton QR dans la barre des actions.
 		</p>
 		<p>
-			Ensuite, vous pouvez voir combien de peercoins peuvent être dépensés actuellement.
+			Ensuite, vous pouvez voir combien de fuelcoinjs peuvent être dépensés actuellement.
 			Tout écart avec le solde de l\'écran principal n\'est pas encore confirmé et ne peut donc pas être dépensé.
 		</p>
 		<p>
@@ -60,7 +60,7 @@
 		</p>
 		<p>
 			Vous pouvez saisir un paiement hors-ligne.
-			Il sera envoyé au prochain lancement du Peercoin Wallet.
+			Il sera envoyé au prochain lancement du Fuelcoin Wallet.
 			Pour le traitement le plus rapide possible de votre paiement, assurez vous d\'être bien connecté (c.-à-d. sur un WLAN).
 		</p>
 		<p>
@@ -76,8 +76,8 @@
 			<b>Notes de sécurité importantes :</b>
 		</p>
 		<p>
-			Les peercoins sont stockés sur l\'appareil.
-			<b>Si vous le perdez, vous perdez vos peercoins.</b>
+			Les fuelcoinjs sont stockés sur l\'appareil.
+			<b>Si vous le perdez, vous perdez vos fuelcoinjs.</b>
 		</p>
 		<p>
 			Cela signifie que vous devez <b>sauvegarder votre portefeuille</b> !
@@ -85,12 +85,12 @@
 			Gardez votre sauvegarde en sûreté et souvenez-vous de votre mot de passe.
 		</p>
 		<p>
-			<b>Avant de désinstaller Peercoin Wallet</b> (ou d\'effacer les données de l\'appli/effacer les données de votre appareil), <b>transférez vos peercoins vers un autre portefeuille</b>.
-			Les peercoins restants seront perdus.
+			<b>Avant de désinstaller Fuelcoin Wallet</b> (ou d\'effacer les données de l\'appli/effacer les données de votre appareil), <b>transférez vos fuelcoinjs vers un autre portefeuille</b>.
+			Les fuelcoinjs restants seront perdus.
 		</p>
 		<p>
 			<b>Les paiements sont irréversibles</b>.
-			Si vous envoyez vos peercoins dans le vide, il n\'y a presque aucun moyen de les récupérer.
+			Si vous envoyez vos fuelcoinjs dans le vide, il n\'y a presque aucun moyen de les récupérer.
 		</p>
 		<p>
 			<b>Assurez la sécurité de votre appareil mobile !</b>

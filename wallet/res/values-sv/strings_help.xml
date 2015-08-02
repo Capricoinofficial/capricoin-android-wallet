@@ -3,11 +3,11 @@
   <string name="help_wallet">
 <![CDATA[
 		<p>
-			I den övre delen av skärmen visas ditt saldo i peercoin samt värdet i en vald nationell valuta.
+			I den övre delen av skärmen visas ditt saldo i fuelcoinj samt värdet i en vald nationell valuta.
 			Tryck för att lista nationella valutor, och välj en av valutorna för att visa den som standard.
 		</p>
 		<p>
-			QR-koden till höger inehåller din peercoinaddress och kan scannas av den som vill skicka peercoin till dig.
+			QR-koden till höger inehåller din fuelcoinjaddress och kan scannas av den som vill skicka fuelcoinj till dig.
 			Tryck med fingret på QR-koden för att få en större version av den.
 		</p>
 		<p>
@@ -17,7 +17,7 @@
 			Dra med fingret åt vänster eller höger för att filtrera listan.
 		</p>
 		<p>
-			Du kan skicka eller ta emot peercoin genom att trycka på knapparna i aktivitetslistan.
+			Du kan skicka eller ta emot fuelcoinj genom att trycka på knapparna i aktivitetslistan.
 			Fler val är möjliga i menyn.
 		</p>
 	]]>
@@ -25,43 +25,43 @@
   <string name="help_request_coins">
 <![CDATA[
 		<p>
-			Med denna dialog kan du ta emot peercoin från någon annan (som redan har Peercoin Wallet installerad på sin telefon).
+			Med denna dialog kan du ta emot fuelcoinj från någon annan (som redan har Fuelcoin Wallet installerad på sin telefon).
 		</p>
 		<p>
-			Först anger du hur många peercoin du vill att de skickar.
+			Först anger du hur många fuelcoinj du vill att de skickar.
 		</p>
 		<p>
 			Sedan kan den andra personen scanna QR-koden.
-			Eller så använder du \"Dela\" knappen i aktivitetslistan för att skicka din uppmaning att skicka peercoin.
-			Den andra personen behöver sedan bara klicka på den Peercoin-URL du skickat.
+			Eller så använder du \"Dela\" knappen i aktivitetslistan för att skicka din uppmaning att skicka fuelcoinj.
+			Den andra personen behöver sedan bara klicka på den Fuelcoin-URL du skickat.
 		</p>
 		<p>
 			Sedan kommer den andra personen att få se en dialogruta där alla fält redan är ifyllda.
-			Om han eller hon sedan accapterar transaktionen så skickas peercoin till dig.
+			Om han eller hon sedan accapterar transaktionen så skickas fuelcoinj till dig.
 		</p>
 	]]>
 	</string>
   <string name="help_send_coins">
 <![CDATA[
 		<p>
-			Du har påbörjat skickandet av peercoin.
-			Du kom hit från huvudskärmen eller genom att klicka på en Peercoin-URL i din webbläsare.
+			Du har påbörjat skickandet av fuelcoinj.
+			Du kom hit från huvudskärmen eller genom att klicka på en Fuelcoin-URL i din webbläsare.
 		</p>
 		<p>
-			Ange först vilken Peercoin adress du vill skicka till.
+			Ange först vilken Fuelcoin adress du vill skicka till.
 			Adressen kan automatiskt fyllas i om den börjar med någon av adresserna i din adressbok.
-			Du kan också scanna en QR-kod innehållande en Peercoin-adress, genom att trycka på QR knappen i aktivitetslistan.
+			Du kan också scanna en QR-kod innehållande en Fuelcoin-adress, genom att trycka på QR knappen i aktivitetslistan.
 		</p>
 		<p>
-			Sedan kan du se hur många peercoin du för tillfället kan skicka.
+			Sedan kan du se hur många fuelcoinj du för tillfället kan skicka.
 			Om det antalet skiljer sig från det som visas på huvudskärmen, så beror det på hittills obekräftade överföringar som du ännu inte får använda.
 		</p>
 		<p>
-			Slutligen anger du hur många peercoin du skicka.
+			Slutligen anger du hur många fuelcoinj du skicka.
 		</p>
 		<p>
 			Du kan skapa en transaktion även om du inte är online.
-			Den kommer att skickas nästa gång Peercoin Wallet startas.
+			Den kommer att skickas nästa gång Fuelcoin Wallet startas.
 			Om du vill att en transaktion ska hanteras så fort som möjligt, se till att ha bra uppkoppling till internet (exempelvis ett WLAN).
 		</p>
 		<p>
@@ -74,20 +74,20 @@
   <string name="help_safety">
 <![CDATA[
 		<p>
-			<b>Några ord om säkerhet och peercoin:</n>
+			<b>Några ord om säkerhet och fuelcoinj:</n>
 		</p>
 		<p>
-			Dina peercoin i Peercoin Wallet sparas på din Android telefon.
-			<b>Om du tappar bort din telefon, så tappar du bort dina peercoin.</b>
+			Dina fuelcoinj i Fuelcoin Wallet sparas på din Android telefon.
+			<b>Om du tappar bort din telefon, så tappar du bort dina fuelcoinj.</b>
 			Precis som pengar i din vanliga plånbok.
 		</p>
 		<p>
-			<b>Innan du avinstallerar Peercoin Wallet</b> (eller tar bort appens data/rensar din telefon), <b>skicka dina peercoin till en annan wallet</b>.
-			Alla kvarvarande peercoin kommer att försvinna.
+			<b>Innan du avinstallerar Fuelcoin Wallet</b> (eller tar bort appens data/rensar din telefon), <b>skicka dina fuelcoinj till en annan wallet</b>.
+			Alla kvarvarande fuelcoinj kommer att försvinna.
 		</p>
 		<p>
 			<b>Transaktioner kan inte stoppas</b>.
-			Efter att du skickat peercoin finns det inget sätt att få dem tillbaka, annat än om du vet vem mottagaren är, och han/hon skickar dem tillbaka.
+			Efter att du skickat fuelcoinj finns det inget sätt att få dem tillbaka, annat än om du vet vem mottagaren är, och han/hon skickar dem tillbaka.
 		</p>
 		<p>
 			<b>Se till att skydda din telefon!</b>
@@ -96,7 +96,7 @@
 		</p>
 		<p>
 			Utsätt dig inte för onödig risk!
-			<b>Använd bara Peercoin Wallet med mindre belopp</b> för daglig användning.
+			<b>Använd bara Fuelcoin Wallet med mindre belopp</b> för daglig användning.
 		</p>
 	]]>
 	</string>

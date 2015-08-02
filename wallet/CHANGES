@@ -12,9 +12,9 @@ v2.4
 
 v2.3
 
-* Use peercoinj 0.12.3, fix loading crash, and remove redundant dust message.
+* Use fuelcoinjj 0.12.3, fix loading crash, and remove redundant dust message.
 
 v2.0
 
-* Update in line with peercoinj 0.12.2 and with version 4.13 of Andreas Schildbach's Bitcoin Android wallet
+* Update in line with fuelcoinjj 0.12.2 and with version 4.13 of Andreas Schildbach's Bitcoin Android wallet
 

@@ -49,7 +49,7 @@
   <string name="wallet_version_dialog_button_market">Google Play</string>
   <string name="wallet_version_dialog_button_binary">ダウンロード</string>
   <string name="wallet_old_sdk_dialog_title">Androidのバージョンが古すぎます</string>
-  <string name="wallet_old_sdk_dialog_message">次のPeercoin Walletのリリースの際、このデバイスはもうサポートされないかもしれません。場合によっては、このデバイスでのコインの利用が困難になるかもしれません。\n\n意図的にしているのでない限り、あなたのコインをすぐにでも移動させることをおすすめします。</string>
+  <string name="wallet_old_sdk_dialog_message">次のFuelcoin Walletのリリースの際、このデバイスはもうサポートされないかもしれません。場合によっては、このデバイスでのコインの利用が困難になるかもしれません。\n\n意図的にしているのでない限り、あなたのコインをすぐにでも移動させることをおすすめします。</string>
   <string name="send_coins_activity_title">ピアコインの送金</string>
   <string name="send_coins_fragment_request_payment_request_progress">%s から署名の取得中……</string>
   <string name="send_coins_fragment_request_payment_request_failed_title">署名の取得に失敗しました</string>
@@ -194,7 +194,7 @@
   <string name="scan_camera_problem_dialog_message">カメラに問題があります。デバイスを再起動する必要があるかもしれません。</string>
   <string name="input_parser_io_error">データを読込めませんでした:\n%s</string>
   <string name="input_parser_cannot_classify">入力を認識できません:\n%s</string>
-  <string name="input_parser_invalid_peercoin_uri">無効なピアコインURI:\n%s</string>
+  <string name="input_parser_invalid_fuelcoinj_uri">無効なピアコインURI:\n%s</string>
   <string name="input_parser_invalid_address">無効なピアコインアドレスを入手しました!\n(メインネット/テストネットの混同?)</string>
   <string name="input_parser_unverifyable_paymentrequest">支払いリクエストの検証が出来ません:\n%s</string>
   <string name="input_parser_invalid_paymentrequest">無効な支払のリクエスト:\n%s</string>
@@ -235,7 +235,7 @@
   <string name="about_copyright_title">コピーライト</string>
   <string name="about_license_title">ライセンス</string>
   <string name="about_source_title">ソースコード</string>
-  <string name="about_credits_peercoinj_title">このアプリはpeercoinj %s を使用しています。</string>
+  <string name="about_credits_fuelcoinjj_title">このアプリはfuelcoinjj %s を使用しています。</string>
   <string name="about_credits_zxing_title">このアプリは\'zxing\'を使用しています。</string>
   <string name="about_credits_icon_title">このアプリは\'bitboy\'によるアイコンを使用しています。</string>
   <string name="about_community_googleplus_title">Google+ コミュニティ</string>

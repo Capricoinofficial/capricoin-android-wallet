@@ -34,9 +34,9 @@
   <string name="wallet_options_safety_menu">安全性</string>
   <string name="wallet_options_safety">安全提示</string>
   <string name="wallet_options_donate">捐贈</string>
-  <string name="wallet_donate_address_label">捐贈給Peercoin Wallet App</string>
+  <string name="wallet_donate_address_label">捐贈給Fuelcoin Wallet App</string>
   <string name="wallet_low_storage_dialog_title">儲存空間不足!</string>
-  <string name="wallet_low_storage_dialog_msg">Peercoin Wallet App 使用手機內部儲存空間來紀錄交易，如果空間不足該 App 無法正常運作而且可能導致你的點點幣不安全!\n\n你是否需要開啟應用程式頁來刪除一些較少使用 app?</string>
+  <string name="wallet_low_storage_dialog_msg">Fuelcoin Wallet App 使用手機內部儲存空間來紀錄交易，如果空間不足該 App 無法正常運作而且可能導致你的點點幣不安全!\n\n你是否需要開啟應用程式頁來刪除一些較少使用 app?</string>
   <string name="wallet_low_storage_dialog_button_apps">管理App</string>
   <string name="wallet_timeskew_dialog_title">確認你的時間設定!</string>
   <string name="wallet_timeskew_dialog_msg">你的裝置時間慢了 %d 分，你可能無法收付點點幣，\n\n你應該再確認你的時間與時區設定正確。</string>
@@ -46,7 +46,7 @@
   <string name="wallet_version_dialog_button_market">Google Play</string>
   <string name="wallet_version_dialog_button_binary">下載</string>
   <string name="wallet_old_sdk_dialog_title">Android 版本太舊</string>
-  <string name="wallet_old_sdk_dialog_message">很可能下個版本的 Peercoin Wallet App 將不再支援你的裝置，某些狀況下可能導致難以付款，\n\n除非你確認其中風險，不然建議你儘快將錢包的錢轉出。</string>
+  <string name="wallet_old_sdk_dialog_message">很可能下個版本的 Fuelcoin Wallet App 將不再支援你的裝置，某些狀況下可能導致難以付款，\n\n除非你確認其中風險，不然建議你儘快將錢包的錢轉出。</string>
   <string name="send_coins_activity_title">點點幣付款</string>
   <string name="send_coins_fragment_request_payment_request_progress">由 %s 讀取簽名…</string>
   <string name="send_coins_fragment_request_payment_request_failed_title">讀取簽名失敗</string>
@@ -145,7 +145,7 @@
   <string name="scan_camera_problem_dialog_message">照相機有問題，你可能需要重新啟動裝置</string>
   <string name="input_parser_io_error">無法讀取資料:\n%s</string>
   <string name="input_parser_cannot_classify">無法辨識輸入:\n%s</string>
-  <string name="input_parser_invalid_peercoin_uri">點點幣 URI 無效:\n%s</string>
+  <string name="input_parser_invalid_fuelcoinj_uri">點點幣 URI 無效:\n%s</string>
   <string name="input_parser_invalid_address">取得無效點點幣地址!\n(是否 Mainnet/Testnet 混用?)</string>
   <string name="input_parser_unverifyable_paymentrequest">無法驗證付款請求:\n%s</string>
   <string name="input_parser_invalid_paymentrequest">無效付款請求:\n%s</string>
@@ -186,7 +186,7 @@
   <string name="about_copyright_title">著作權</string>
   <string name="about_license_title">授權</string>
   <string name="about_source_title">原始碼</string>
-  <string name="about_credits_peercoinj_title">本 app 使用 peercoinj %s</string>
+  <string name="about_credits_fuelcoinjj_title">本 app 使用 fuelcoinjj %s</string>
   <string name="about_credits_zxing_title">本 app 使用 \'zxing\'</string>
   <string name="about_credits_icon_title">本 app 使用圖標來自\'bitboy\'</string>
   <string name="about_community_googleplus_title">Google+ 社群</string>

@@ -7,12 +7,12 @@
 	<artifactId>wallet</artifactId>
 	<packaging>apk</packaging>
 	<version>2.6</version>
-	<name>Peercoin Wallet</name>
+	<name>Fuelcoin Wallet</name>
 
 	<parent>
-		<groupId>com.matthewmitchell.peercoin_android_wallet</groupId>
+		<groupId>com.fuelcoin.fuelcoin_android_wallet</groupId>
 		<artifactId>base</artifactId>
-		<version>2.6</version>
+		<version>1.2</version>
 	</parent>
 
 	<licenses>
@@ -25,10 +25,7 @@
 
 	<repositories>
 
-	  <repository>
-	    <id>local</id>
-	    <url>file://${project.basedir}/../../peercoinj/core/target/</url>
-	  </repository>
+
 
 		<repository>
 			<id>android-support</id>
@@ -69,16 +66,16 @@
 			<version>19.1.0</version>
 		</dependency>
 
-		<!-- com.matthewmitchell.peercoinj.* -->
+		<!-- fuelcoininj.* -->
 		<dependency>
 			<groupId>com.fuelcoinj</groupId>
 			<artifactId>fuelcoinj</artifactId>
 			<version>0.12.3</version>
 		</dependency>
 
-		<!-- com.matthewmitchell.peercoin_android_wallet.integration.android.* -->
+		<!-- fuelcoinin_android_wallet.integration.android.* -->
 		<dependency>
-			<groupId>com.matthewmitchell.peercoin_android_wallet</groupId>
+			<groupId>com.fuelcoin.fuelcoin_android_wallet</groupId>
 			<artifactId>integration-android</artifactId>
 			<version>2.6</version>
 		</dependency>
@@ -172,6 +169,7 @@
 							<sdk>
                 				<platform>16</platform>
             				</sdk>
+
 						</configuration>
 						<dependencies>
 							<dependency>
@@ -227,6 +225,16 @@
 				</excludes>
 			</testResource>
 		</testResources>
+		<resources>
+			<resource>
+				<directory>lib</directory>
+				<excludes>
+					<exclude>**/*.dylib</exclude>
+					<exclude>**/*.so</exclude>
+				</excludes>
+			</resource>
+		</resources>
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -291,7 +299,7 @@
 				<artifactId>findbugs-maven-plugin</artifactId>
 				<version>2.5.2</version>
 				<configuration>
-					<onlyAnalyze>com.matthewmitchell.peercoin_android_wallet.-</onlyAnalyze>
+					<onlyAnalyze>fuelcoinin_android_wallet.-</onlyAnalyze>
 				</configuration>
 			</plugin>
 		</plugins>
