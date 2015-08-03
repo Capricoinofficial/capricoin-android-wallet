@@ -25,7 +25,10 @@
 
 	<repositories>
 
-
+		<repository>
+			<id>local</id>
+			<url>file://home/kris/.m2/repository</url>
+		</repository>
 
 		<repository>
 			<id>android-support</id>

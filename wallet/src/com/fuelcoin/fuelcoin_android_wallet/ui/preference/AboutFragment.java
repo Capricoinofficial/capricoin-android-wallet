@@ -41,7 +41,7 @@ public final class AboutFragment extends PreferenceFragment
 
 	private static final String KEY_ABOUT_VERSION = "about_version";
 	private static final String KEY_ABOUT_MARKET_APP = "about_market_app";
-	private static final String KEY_ABOUT_CREDITS_PEERCOINJ = "about_credits_fuelcoinjj";
+	private static final String KEY_ABOUT_CREDITS_PEERCOINJ = "about_credits_fuelcoinj";
 
 	@Override
 	public void onAttach(final Activity activity)
@@ -65,7 +65,7 @@ public final class AboutFragment extends PreferenceFragment
 		if (packageManager.resolveActivity(marketIntent, 0) == null)
 			marketIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(String.format(Constants.WEBMARKET_APP_URL, activity.getPackageName())));
 		findPreference(KEY_ABOUT_MARKET_APP).setIntent(marketIntent);
-		findPreference(KEY_ABOUT_CREDITS_PEERCOINJ).setTitle(getString(R.string.about_credits_fuelcoinjj_title, VersionMessage.PEERCOINJ_VERSION));
+		findPreference(KEY_ABOUT_CREDITS_PEERCOINJ).setTitle(getString(R.string.about_credits_fuelcoinjj_title, VersionMessage.FUELCOINJ_VERSION));
 	}
 }
 
