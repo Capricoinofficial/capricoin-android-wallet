@@ -2,11 +2,11 @@
 <resources>
 
 	<string-array name="preferences_precision_labels">
-		<item>PPC, 8 décimales</item>
-		<item>PPC, 6 décimales</item>
-		<item>PPC, 4 décimales</item>
-		<item>mPPC, 2 décimales</item>
-		<item>µPPC, 0 décimale</item>
+		<item>FC2, 8 décimales</item>
+		<item>FC2, 6 décimales</item>
+		<item>FC2, 4 décimales</item>
+		<item>mFC2, 2 décimales</item>
+		<item>µFC2, 0 décimale</item>
 	</string-array>
 
 </resources>

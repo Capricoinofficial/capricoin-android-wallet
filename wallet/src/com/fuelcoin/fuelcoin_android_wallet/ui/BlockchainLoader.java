@@ -17,12 +17,15 @@
 
 package com.fuelcoin.fuelcoin_android_wallet.ui;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.fuelcoinj.core.BlockChain;
+import com.fuelcoinj.core.CheckpointManager;
 import com.fuelcoinj.core.Wallet;
 import com.fuelcoinj.store.BlockStoreException;
 import com.fuelcoinj.store.SPVBlockStore;
@@ -38,6 +41,7 @@ public class BlockchainLoader extends AsyncTaskLoader<BlockchainData> {
 	WalletApplication application;
 	Context context;
 	BlockchainData bcd;
+	File checkpointsFile;
         
         boolean resetBlockchain;
 	
@@ -88,7 +92,19 @@ public class BlockchainLoader extends AsyncTaskLoader<BlockchainData> {
 			return null;
 
 		log.info("using " + bcd.blockStore.getClass().getName());
-		
+
+		try {
+			long start = System.currentTimeMillis();
+			final InputStream checkpointsInputStream = this.context.getAssets().open(Constants.CHECKPOINTS_FILENAME);
+			CheckpointManager.checkpoint(Constants.NETWORK_PARAMETERS, checkpointsInputStream, bcd.blockStore, this.application.getWallet().getEarliestKeyCreationTime());
+			log.info("checkpoints loaded from '{}', took {}ms", Constants.CHECKPOINTS_FILENAME, System.currentTimeMillis() - start);
+		} catch (IOException io) {
+			log.error("Could not load checkpoints file.");
+		} catch (BlockStoreException e) {
+			log.error("block store exception caused by checkpoint manager.");
+		}
+
+
 		try{
 			bcd.validHashStore = new ValidHashStore(bcd.validHashStoreFile);
 		}catch (IOException x){

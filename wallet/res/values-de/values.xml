@@ -2,11 +2,11 @@
 <resources>
 
 	<string-array name="preferences_precision_labels">
-		<item>PPC, 8 Dezimalen</item>
-		<item>PPC, 6 Dezimalen</item>
-		<item>PPC, 4 Dezimalen</item>
-		<item>mPPC, 2 Dezimalen</item>
-		<item>µPPC, keine Dezimalen</item>
+		<item>FC2, 8 Dezimalen</item>
+		<item>FC2, 6 Dezimalen</item>
+		<item>FC2, 4 Dezimalen</item>
+		<item>mFC2, 2 Dezimalen</item>
+		<item>µFC2, keine Dezimalen</item>
 	</string-array>
 
 </resources>

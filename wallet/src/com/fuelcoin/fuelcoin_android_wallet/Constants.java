@@ -136,4 +136,6 @@ public final class Constants
 
 	public static final int MEMORY_CLASS_LOWEND = 48;
 
+	public static final String CHECKPOINTS_FILENAME = "checkpoints";
+
 }

@@ -301,7 +301,7 @@ public class ExchangeRatesProvider extends ContentProvider
 				reader = new InputStreamReader(is, Charsets.UTF_8);
 				final StringBuilder content = new StringBuilder();
 
-				Io.copy(reader, content);	
+				Io.copy(reader, content);
 				return content.toString();
 
 			} else {
@@ -343,22 +343,22 @@ public class ExchangeRatesProvider extends ContentProvider
 		}catch (JSONException e) {
 			return null;
 		}
-			
+
 		rates.put("USD", new WalletExchangeRate(new ExchangeRate(usdPrice), BTCE_SOURCE));
 
 		// Now for USD conversions
-		
+
 		URL yahoo;
 
 		try {
 			yahoo = new URL(
-				Uri.parse("https://query.yahooapis.com/v1/public/yql")
-				.buildUpon()
-				.appendQueryParameter("q", "select * from yahoo.finance.xchange where pair=\"usdeur, usdgbp, usdcny, usdjpy, usdsgd, usdhkd, usdcad, usdnzd, usdaud, usdclp, usddkk, usdsek, usdisk, usdchf, usdbrl, usdrub, usdpln, usdthb, usdkrw, usdtwd\"")
-				.appendQueryParameter("format", "json")
-				.appendQueryParameter("env", "store://datatables.org/alltableswithkeys")
-				.build().toString()
-			);	
+					Uri.parse("https://query.yahooapis.com/v1/public/yql")
+							.buildUpon()
+							.appendQueryParameter("q", "select * from yahoo.finance.xchange where pair=\"usdeur, usdgbp, usdcny, usdjpy, usdsgd, usdhkd, usdcad, usdnzd, usdaud, usdclp, usddkk, usdsek, usdisk, usdchf, usdbrl, usdrub, usdpln, usdthb, usdkrw, usdtwd\"")
+							.appendQueryParameter("format", "json")
+							.appendQueryParameter("env", "store://datatables.org/alltableswithkeys")
+							.build().toString()
+			);
 		} catch (final MalformedURLException e) {
 			return rates;
 		}
@@ -375,8 +375,8 @@ public class ExchangeRatesProvider extends ContentProvider
 					String currency = conv.getString("id").substring(3);
 					String priceString = conv.getString("Rate");
 
-                    // Divide by 10000 as Fiat are moved 4 decimal places
-                    Fiat price = Fiat.parseFiat(currency, priceString).multiply(usdPrice.longValue()).divide(10000); 
+					// Divide by 10000 as Fiat are moved 4 decimal places
+					Fiat price = Fiat.parseFiat(currency, priceString).multiply(usdPrice.longValue()).divide(10000);
 
 					rates.put(currency, new WalletExchangeRate(new ExchangeRate(price), BTCE_SOURCE));
 				}

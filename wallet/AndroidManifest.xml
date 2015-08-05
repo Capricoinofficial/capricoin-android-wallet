@@ -3,8 +3,8 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	package="com.fuelcoin.fuelcoin_android_wallet"
 	android:installLocation="internalOnly"
-	android:versionCode="10"
-	android:versionName="2.6" >
+	android:versionCode="11"
+	android:versionName="2.7">
 
 	<uses-sdk
 		android:minSdkVersion="15"

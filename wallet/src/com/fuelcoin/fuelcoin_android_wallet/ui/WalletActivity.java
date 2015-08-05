@@ -227,7 +227,7 @@ public final class WalletActivity extends AbstractWalletActivity
 		super.onCreateOptionsMenu(menu);
 
 		getMenuInflater().inflate(R.menu.wallet_options, menu);
-		menu.findItem(R.id.wallet_options_donate).setVisible(!Constants.TEST);
+		//menu.findItem(R.id.wallet_options_donate).setVisible(!Constants.TEST);
 
 		return true;
 	}
@@ -303,9 +303,9 @@ public final class WalletActivity extends AbstractWalletActivity
 				HelpDialogFragment.page(getFragmentManager(), R.string.help_safety);
 				return true;
 
-			case R.id.wallet_options_donate:
-				handleDonate();
-				return true;
+			//case R.id.wallet_options_donate:
+			//	handleDonate();
+			//	return true;
 
 			case R.id.wallet_options_help:
 				HelpDialogFragment.page(getFragmentManager(), R.string.help_wallet);

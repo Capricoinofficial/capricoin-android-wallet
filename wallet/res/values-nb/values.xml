@@ -13,10 +13,10 @@
     <item>0/6</item>
   </string-array>
   <string-array name="preferences_precision_labels">
-    <item>PPC, 6 desimaler</item>
-    <item>PPC, 4 desimaler</item>
-    <item>mPPC, 2 desimaler</item>
-    <item>µPPC, ingen desimaler</item>
+    <item>FC2, 6 desimaler</item>
+    <item>FC2, 4 desimaler</item>
+    <item>mFC2, 2 desimaler</item>
+    <item>µFC2, ingen desimaler</item>
   </string-array>
   
 </resources>
