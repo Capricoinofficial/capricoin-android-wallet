@@ -71,7 +71,7 @@ public final class Constants
 	/** Maximum size of backups. Files larger will be rejected. */
 	public static final long BACKUP_MAX_CHARS = 10000000;
 
-	public static final String EXPLORE_BASE_URL = "https://fuelcoinjexplorer.info/";
+	public static final String EXPLORE_BASE_URL = "https://blockexperts.com/fc2/";
 
 	/** URL to fetch version alerts from. */
 	public static final String VERSION_URL = "";
@@ -95,7 +95,7 @@ public final class Constants
 	public static final String DONATION_ADDRESS = "PNY8FPHRY8NM8VG77TXZ4R3WY7QJ25ATG6";
 
 	/** Recipient e-mail address for reports. */
-	public static final String REPORT_EMAIL = "fuelcoin@thelibertyportal.com";
+	public static final String REPORT_EMAIL = "crypto.merchant.tools@gmail.com";
 
 	/** Subject line for manually reported issues. */
 	public static final String REPORT_SUBJECT_ISSUE = "Reported issue";
@@ -115,8 +115,8 @@ public final class Constants
 
 	public static final MonetaryFormat LOCAL_FORMAT = new MonetaryFormat().noCode().minDecimals(2).optionalDecimals();
 
-	public static final String SOURCE_URL = "https://github.com/MatthewLM/fuelcoinj-android-wallet";
-	public static final String BINARY_URL = "https://github.com/MatthewLM/fuelcoinj-android-wallet/releases";
+	public static final String SOURCE_URL = "https://github.com/kris-davison/fuelcoin-android-wallet";
+	public static final String BINARY_URL = "https://github.com/kris-davison/fuelcoin-android-wallet/releases";
 	public static final String MARKET_APP_URL = "market://details?id=%s";
 	public static final String WEBMARKET_APP_URL = "https://play.google.com/store/apps/details?id=%s";
 
