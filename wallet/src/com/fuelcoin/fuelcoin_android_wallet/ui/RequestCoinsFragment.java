@@ -463,7 +463,7 @@ public final class RequestCoinsFragment extends Fragment implements NfcAdapter.C
 		final int size = getResources().getDimensionPixelSize(R.dimen.bitmap_dialog_qr_size);
 		final String qrContent;
 		if (config.getQrPaymentRequestEnabled())
-			qrContent = "ppcoin:-" + Qr.encodeBinary(paymentRequest);
+			qrContent = "fuelcoin:-" + Qr.encodeBinary(paymentRequest);
 		else
 			qrContent = fuelcoinjRequest;
 		qrCodeBitmap = Qr.bitmap(qrContent, size);

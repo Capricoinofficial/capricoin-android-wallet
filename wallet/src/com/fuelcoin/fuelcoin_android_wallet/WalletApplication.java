@@ -615,11 +615,11 @@ public class WalletApplication extends Application
 				// apply some backoff
 				final long alarmInterval;
 				if (lastUsedAgo < Constants.LAST_USAGE_THRESHOLD_JUST_MS)
-					alarmInterval = AlarmManager.INTERVAL_FIFTEEN_MINUTES;
+					alarmInterval = 30000;//AlarmManager.INTERVAL_FIFTEEN_MINUTES;
 				else if (lastUsedAgo < Constants.LAST_USAGE_THRESHOLD_RECENTLY_MS)
-					alarmInterval = AlarmManager.INTERVAL_HALF_DAY;
+					alarmInterval = 600000;//AlarmManager.INTERVAL_HALF_DAY;
 				else
-					alarmInterval = AlarmManager.INTERVAL_DAY;
+					alarmInterval = 1800000;//AlarmManager.INTERVAL_DAY;
 				
 				log.info("last used {} minutes ago, rescheduling blockchain sync in roughly {} minutes", lastUsedAgo / DateUtils.MINUTE_IN_MILLIS,
 				alarmInterval / DateUtils.MINUTE_IN_MILLIS);

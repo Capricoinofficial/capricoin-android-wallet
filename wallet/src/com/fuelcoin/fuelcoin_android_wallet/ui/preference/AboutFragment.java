@@ -41,7 +41,7 @@ public final class AboutFragment extends PreferenceFragment
 
 	private static final String KEY_ABOUT_VERSION = "about_version";
 	private static final String KEY_ABOUT_MARKET_APP = "about_market_app";
-	private static final String KEY_ABOUT_CREDITS_PEERCOINJ = "about_credits_fuelcoinj";
+	private static final String KEY_ABOUT_CREDITS_PEERCOINJ = "about_credits_fuelcoin";
 
 	@Override
 	public void onAttach(final Activity activity)

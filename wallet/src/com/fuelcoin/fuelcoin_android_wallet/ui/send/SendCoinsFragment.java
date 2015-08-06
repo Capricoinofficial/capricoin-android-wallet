@@ -498,7 +498,7 @@ public final class SendCoinsFragment extends Fragment
 					final String mimeType = intent.getType();
 
 					if ((Intent.ACTION_VIEW.equals(action) || NfcAdapter.ACTION_NDEF_DISCOVERED.equals(action)) && intentUri != null
-							&& "ppcoin".equals(scheme)) {
+							&& "fuelcoin".equals(scheme)) {
 						initStateFromPeercoinUri(intentUri);
 					}else if ((NfcAdapter.ACTION_NDEF_DISCOVERED.equals(action)) && PaymentProtocol.MIMETYPE_PAYMENTREQUEST.equals(mimeType)) {
 						final NdefMessage ndefMessage = (NdefMessage) intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES)[0];

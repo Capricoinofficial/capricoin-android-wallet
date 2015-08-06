@@ -229,7 +229,7 @@ public final class FuelcoinIntegration
 
 	private static Intent makeFuelcoinUriIntent(final String address, final Long amount)
 	{
-		final StringBuilder uri = new StringBuilder("ppcoin:");
+		final StringBuilder uri = new StringBuilder("fuelcoin:");
 		if (address != null)
 			uri.append(address);
 		if (amount != null)

@@ -80,6 +80,7 @@ public class BlockchainLoader extends AsyncTaskLoader<BlockchainData> {
 		try {
 			bcd.blockStore = new SPVBlockStore(Constants.NETWORK_PARAMETERS, bcd.blockChainFile);
 			bcd.blockStore.getChainHead(); // detect corruptions as early as possible
+
 		}catch (final BlockStoreException x) {
 			bcd.blockChainFile.delete();
 
@@ -93,16 +94,27 @@ public class BlockchainLoader extends AsyncTaskLoader<BlockchainData> {
 
 		log.info("using " + bcd.blockStore.getClass().getName());
 
+
 		try {
-			long start = System.currentTimeMillis();
-			final InputStream checkpointsInputStream = this.context.getAssets().open(Constants.CHECKPOINTS_FILENAME);
-			CheckpointManager.checkpoint(Constants.NETWORK_PARAMETERS, checkpointsInputStream, bcd.blockStore, this.application.getWallet().getEarliestKeyCreationTime());
-			log.info("checkpoints loaded from '{}', took {}ms", Constants.CHECKPOINTS_FILENAME, System.currentTimeMillis() - start);
+
+			log.info("##################################################################################################");
+
+			if(bcd.blockStore.getChainHead().getHeight() < 100000) //if this is the first time its run add the checkpoint file .... every other run should already have a blockchain and .checkpoints
+			{
+				log.info("##################################################################################################");
+				log.info("Loading checkpoints file");
+				log.info("##################################################################################################");
+				long start = System.currentTimeMillis();
+				final InputStream checkpointsInputStream = this.context.getAssets().open(Constants.CHECKPOINTS_FILENAME);
+				CheckpointManager.checkpoint(Constants.NETWORK_PARAMETERS, checkpointsInputStream, bcd.blockStore, this.application.getWallet().getEarliestKeyCreationTime());
+				log.info("##########################################################################checkpoints loaded from '{}', took {}ms", Constants.CHECKPOINTS_FILENAME, System.currentTimeMillis() - start);
+			}
 		} catch (IOException io) {
-			log.error("Could not load checkpoints file.");
+			log.error("##########################################################################Could not load checkpoints file.");
 		} catch (BlockStoreException e) {
-			log.error("block store exception caused by checkpoint manager.");
+			log.error("##########################################################################block store exception caused by checkpoint manager.");
 		}
+
 
 
 		try{

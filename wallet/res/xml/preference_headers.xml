@@ -7,8 +7,8 @@
 	<header
 		android:fragment="com.fuelcoin.fuelcoin_android_wallet.ui.preference.DiagnosticsFragment"
 		android:title="@string/preferences_category_diagnostics" />
-	<header
-		android:fragment="com.fuelcoin.fuelcoin_android_wallet.ui.preference.AboutFragment"
-		android:title="@string/about_title" />
+	<!--<header-->
+		<!--android:fragment="com.fuelcoin.fuelcoin_android_wallet.ui.preference.AboutFragment"-->
+		<!--android:title="@string/about_title" />-->
 
 </preference-headers>
