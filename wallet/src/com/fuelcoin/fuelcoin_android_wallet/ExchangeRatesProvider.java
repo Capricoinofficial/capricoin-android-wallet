@@ -22,10 +22,15 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.math.RoundingMode;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Currency;
+import java.util.Date;
+import java.util.Iterator;
 import java.util.Locale;
 import java.util.Map;
 import java.util.TreeMap;
@@ -101,14 +106,16 @@ public class ExchangeRatesProvider extends ContentProvider
 	private Map<String, WalletExchangeRate> exchangeRates = null;
 	private long lastUpdated = 0;
 
-	private static final URL BTCE_URL;
+	private static final String[] BITCOINAVERAGE_FIELDS = new String[] { "24h_avg", "last" };
+	private static final URL BITCOINAVERAGE_URL;
 	private static final String BTCE_SOURCE = "btc-e.com";
 
 	// https://bitmarket.eu/api/ticker
 
 	static {
 		try {
-			BTCE_URL = new URL("https://btc-e.com/api/2/ppc_usd/ticker");
+			//BTCE_URL = new URL("https://btc-e.com/api/2/ppc_usd/ticker");
+			BITCOINAVERAGE_URL = new URL("https://api.bitcoinaverage.com/ticker/global/all");
 		} catch (final MalformedURLException x) {
 			throw new RuntimeException(x); // cannot happen
 		}
@@ -305,10 +312,10 @@ public class ExchangeRatesProvider extends ContentProvider
 				return content.toString();
 
 			} else {
-				log.warn("http status {} when fetching exchange rates from {}", responseCode, BTCE_URL);
+				log.warn("http status {} when fetching exchange rates from {}", responseCode, url);
 			}
 		} catch (final Exception x) {
-			log.warn("problem fetching exchange rates from " + BTCE_URL, x);
+			log.warn("problem fetching exchange rates from " + url, x);
 		} finally {
 			if (reader != null) {
 				try {
@@ -328,7 +335,142 @@ public class ExchangeRatesProvider extends ContentProvider
 
 	private static Map<String, WalletExchangeRate> requestExchangeRates(final String userAgent) {
 
-		final Map<String, WalletExchangeRate> rates = new TreeMap<String, WalletExchangeRate>();
+
+		final long start = System.currentTimeMillis();
+
+		HttpURLConnection connection = null;
+		Reader reader = null;
+
+		try
+		{
+
+			Double btcRate = 0.0;
+
+			Object result = getCoinValueBTC_BTER();
+
+				if(result == null)
+					return null;
+
+			btcRate = (Double)result;
+
+
+			connection = (HttpURLConnection) BITCOINAVERAGE_URL.openConnection();
+
+			connection.setInstanceFollowRedirects(false);
+			connection.setConnectTimeout(Constants.HTTP_TIMEOUT_MS);
+			connection.setReadTimeout(Constants.HTTP_TIMEOUT_MS);
+			connection.addRequestProperty("User-Agent", userAgent);
+			connection.connect();
+
+			final int responseCode = connection.getResponseCode();
+			if (responseCode == HttpURLConnection.HTTP_OK)
+			{
+				reader = new InputStreamReader(new BufferedInputStream(connection.getInputStream(), 1024), Charsets.UTF_8);
+				final StringBuilder content = new StringBuilder();
+				Io.copy(reader, content);
+
+				final Map<String, WalletExchangeRate> rates = new TreeMap<String, WalletExchangeRate>();
+
+				final JSONObject head = new JSONObject(content.toString());
+				for (final Iterator<String> i = head.keys(); i.hasNext();)
+				{
+					final String currencyCode = i.next();
+					if (!"timestamp".equals(currencyCode))
+					{
+						final JSONObject o = head.getJSONObject(currencyCode);
+
+						for (final String field : BITCOINAVERAGE_FIELDS)
+						{
+							String rateStr = o.optString(field, null);
+
+							if (rateStr != null)
+							{
+								try
+								{
+									//double rateForBTC = Double.parseDouble(rateStr);
+
+									BigDecimal rateForBTC = new BigDecimal(rateStr).divide(new BigDecimal(10000), RoundingMode.HALF_UP);
+
+									rateStr = String.format("%.8f", rateForBTC.doubleValue() * btcRate).replace(",", ".");
+
+									//TODO make sre this is correct....
+									Coin coin = Coin.parseCoin(rateStr);
+									final BigInteger rate = BigInteger.valueOf(coin.getValue());
+
+									if (rate.signum() > 0)
+									{
+										Fiat price = Fiat.valueOf(currencyCode, coin.getValue());
+										ExchangeRate exRate = new ExchangeRate(price);
+										rates.put(currencyCode, new WalletExchangeRate(exRate, BITCOINAVERAGE_URL.getHost()));
+										break;
+									}
+								}
+								catch (final ArithmeticException x)
+								{
+									log.warn("problem fetching {} exchange rate from {}: {}", new Object[] { currencyCode, BITCOINAVERAGE_URL, x.getMessage() });
+								}
+
+							}
+						}
+					}
+				}
+
+				log.info("fetched exchange rates from {}, took {} ms", BITCOINAVERAGE_URL, (System.currentTimeMillis() - start));
+
+				//Add Bitcoin information
+				if(rates.size() == 0)
+				{
+					int i = 0;
+					i++;
+				}
+				else
+				{
+					Coin fc2coin = Coin.parseCoin(btcRate.toString());
+					Fiat fc2price = Fiat.valueOf("BTC", fc2coin.getValue());
+					ExchangeRate fc2exchangerate = new ExchangeRate( fc2price);
+					rates.put("BTC",new WalletExchangeRate(fc2exchangerate , "https://bittrex.com"));
+					//rates.put("mFC2" , new ExchangeRate("mFC2", GenericUtils.toNanoCoins(String.format("%.5f", btcRate*1000).replace(",", "."), 0), cryptsyValue ? "pubapi.cryptsy.com" : "data.bter.com"));
+				}
+
+
+				return rates;
+			}
+			else
+			{
+				log.warn("http status {} when fetching {}", responseCode, BITCOINAVERAGE_URL);
+			}
+		}
+		catch (final Exception x)
+		{
+			log.warn("problem fetching exchange rates from " + BITCOINAVERAGE_URL, x);
+		}
+		finally
+		{
+
+			if (reader != null)
+			{
+				try
+				{
+					reader.close();
+				}
+				catch (final IOException x)
+				{
+					// swallow
+				}
+			}
+
+			if (connection != null)
+				connection.disconnect();
+		}
+
+		return null;
+
+
+
+
+
+
+		/*final Map<String, WalletExchangeRate> rates = new TreeMap<String, WalletExchangeRate>();
 
 		String usdPriceResult = getURLResult(BTCE_URL, userAgent);
 		if (usdPriceResult == null)
@@ -386,8 +528,86 @@ public class ExchangeRatesProvider extends ContentProvider
 			}
 		}
 
-		return rates;
+		return rates;*/
 
 	}
+
+
+
+	private static Object getCoinValueBTC_BTER()
+	{
+		Date date = new Date();
+		long now = date.getTime();
+
+
+
+		//final Map<String, ExchangeRate> rates = new TreeMap<String, ExchangeRate>();
+		// Keep the LTC rate around for a bit
+		Double btcRate = 0.0;
+		String currency = "BTC";
+		String url = "https://bittrex.com/api/v1.1/public/getticker?market=BTC-FC2";
+
+
+
+
+		HttpURLConnection connection = null;
+		try {
+			// final String currencyCode = currencies[i];
+			final URL URL_bter = new URL(url);
+			connection = (HttpURLConnection)URL_bter.openConnection();
+			connection.setConnectTimeout(Constants.HTTP_TIMEOUT_MS * 2);
+			connection.setReadTimeout(Constants.HTTP_TIMEOUT_MS * 2);
+			connection.connect();
+
+			final StringBuilder content = new StringBuilder();
+
+			Reader reader = null;
+			try
+			{
+				reader = new InputStreamReader(new BufferedInputStream(connection.getInputStream(), 1024));
+				Io.copy(reader, content);
+				final JSONObject head = new JSONObject(content.toString());
+				String success = head.getString("success");
+				if(success.equals("true"))
+				{
+					JSONObject result = head.getJSONObject("result");
+					Double averageTrade = result.getDouble("Bid");
+
+					btcRate = averageTrade;
+				}
+
+			}
+			finally
+			{
+				if (reader != null)
+				{
+					try
+					{
+						reader.close();
+					}
+					catch (final IOException x)
+					{
+						// swallow
+					}
+				}
+			}
+			return btcRate;
+		}
+		catch (final IOException x)
+		{
+			log.warn("problem fetching exchange rates from " + url, x);
+
+		}
+		catch (final JSONException x) {
+			log.warn("problem parsing json exchange rates from " + url, x);
+		}
+		finally {
+			if (connection != null)
+				connection.disconnect();
+		}
+
+		return null;
+	}
+
 }
 

@@ -36,10 +36,10 @@
 	</Preference>
 
 	<PreferenceCategory android:title="@string/preferences_category_labs" >
-		<Preference
+<!--		<Preference
 			android:icon="@drawable/ic_menu_warning"
 			android:summary="This is all unfinished stuff. Use at your own risk!"
-			android:title="Warning" />
+			android:title="Warning" />-->
 
 		<CheckBoxPreference
 			android:defaultValue="true"
