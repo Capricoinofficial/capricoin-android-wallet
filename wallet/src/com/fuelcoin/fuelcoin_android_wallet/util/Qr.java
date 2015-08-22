@@ -84,6 +84,10 @@ public class Qr
 
 	public static String encodeCompressBinary(@Nonnull final byte[] bytes)
 	{
+
+		if(bytes==null){
+			return "";
+		}
 		try
 		{
 			final ByteArrayOutputStream bos = new ByteArrayOutputStream(bytes.length);
