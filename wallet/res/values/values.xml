@@ -13,10 +13,10 @@
 		<item>0/6</item>
 	</string-array>
 	<string-array name="preferences_precision_labels">
-		<item>FC2, 6 digits</item>
-		<item>FC2, 4 digits</item>
-		<item>mFC2, 2 digits</item>
-		<item>µFC2, no digits</item>
+		<item>Fuel, 6 digits</item>
+		<item>Fuel, 4 digits</item>
+		<item>mFuel, 2 digits</item>
+		<item>µFuel, no digits</item>
 	</string-array>
 
 </resources>

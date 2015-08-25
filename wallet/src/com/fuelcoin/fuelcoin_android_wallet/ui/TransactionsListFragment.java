@@ -263,16 +263,6 @@ public class TransactionsListFragment extends FancyListFragment implements Loade
 
                             address = sent ? WalletUtils.getWalletAddressOfReceived(tx, wallet) : WalletUtils.getFirstFromAddress(tx);
 
-                            if(address==null){
-                                if(tx==null){
-                                    log.info("TX IS NULL??? :");}
-                                else {
-                                    log.info("TX address1......" + WalletUtils.getWalletAddressOfReceived(tx, wallet));
-                                    log.info("TX address2......" +  WalletUtils.getFirstFromAddress(tx));
-                                }
-                                return false;
-                            }
-
                             final String label;
                             if (tx.isCoinBase())
                                 label = getString(R.string.wallet_transactions_fragment_coinbase);
@@ -289,11 +279,11 @@ public class TransactionsListFragment extends FancyListFragment implements Loade
                             else
                                 mode.setSubtitle(null);
 
-                           // menu.findItem(R.id.wallet_transactions_context_edit_address).setVisible(address != null);
+                            menu.findItem(R.id.wallet_transactions_context_edit_address).setVisible(address != null);
 
                             serializedTx = tx.unsafePeercoinSerialize();
 
-                           // menu.findItem(R.id.wallet_transactions_context_show_qr).setVisible(serializedTx.length < SHOW_QR_THRESHOLD_BYTES);
+                            menu.findItem(R.id.wallet_transactions_context_show_qr).setVisible(serializedTx.length < SHOW_QR_THRESHOLD_BYTES);
 
                             return true;
                         }
@@ -308,7 +298,7 @@ public class TransactionsListFragment extends FancyListFragment implements Loade
                     {
                         switch (item.getItemId())
                         {
-                           /* case R.id.wallet_transactions_context_edit_address:
+                            case R.id.wallet_transactions_context_edit_address:
                                 handleEditAddress(tx);
 
                                 mode.finish();
@@ -318,7 +308,7 @@ public class TransactionsListFragment extends FancyListFragment implements Loade
                                 handleShowQr();
 
                                 mode.finish();
-                                return true;*/
+                                return true;
 
                             case R.id.wallet_transactions_context_browse:
                                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.EXPLORE_BASE_URL + "tx/" + tx.getHashAsString())));
@@ -336,11 +326,24 @@ public class TransactionsListFragment extends FancyListFragment implements Loade
 
                     private void handleEditAddress(@Nonnull final Transaction tx)
                     {
+                        /*
+                         * To make sure app does not crash on nexus 4 as for some reason sometimes this value is null
+                         */
+                        if(address==null){
+                            return;
+                        }
                         EditAddressBookEntryFragment.edit(getFragmentManager(), address.toString());
                     }
 
                     private void handleShowQr()
                     {
+                        /*
+                         * To make sure app does not crash on nexus 4 as for some reason sometimes this value is null
+                         */
+                        if(serializedTx==null){
+                            return;
+                        }
+
                         final int size = getResources().getDimensionPixelSize(R.dimen.bitmap_dialog_qr_size);
                         final Bitmap qrCodeBitmap = Qr.bitmap(Qr.encodeCompressBinary(serializedTx), size);
                         BitmapFragment.show(getFragmentManager(), qrCodeBitmap);

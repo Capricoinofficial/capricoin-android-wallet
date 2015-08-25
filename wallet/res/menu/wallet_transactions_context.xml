@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
-	<!--<item
+	<item
 		android:id="@+id/wallet_transactions_context_edit_address"
 		android:icon="@drawable/ic_action_edit"
 		android:showAsAction="ifRoom|withText"
@@ -11,7 +11,7 @@
 		android:id="@+id/wallet_transactions_context_show_qr"
 		android:icon="@drawable/ic_action_qr"
 		android:showAsAction="ifRoom|withText"
-		android:title="@string/action_show_qr"/>-->
+		android:title="@string/action_show_qr"/>
 	<item
 		android:id="@+id/wallet_transactions_context_browse"
 		android:showAsAction="ifRoom|withText"
