@@ -2,9 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
 	package="com.fuelcoin.fuelcoin_android_wallet"
+	android:debuggable="false"
 	android:installLocation="internalOnly"
-	android:versionCode="16"
-	android:versionName="2.7.6">
+	android:versionCode="18"
+	android:versionName="2.7.8"
+	tools:ignore="HardcodedDebugMode">
 
 	<uses-sdk
 		android:minSdkVersion="15"
