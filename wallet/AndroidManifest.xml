@@ -2,11 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
 	package="com.fuelcoin.fuelcoin_android_wallet"
-	android:debuggable="false"
 	android:installLocation="internalOnly"
 	android:versionCode="18"
-	android:versionName="2.7.8"
-	tools:ignore="HardcodedDebugMode">
+	android:versionName="2.7.8">
 
 	<uses-sdk
 		android:minSdkVersion="15"
@@ -60,7 +58,9 @@
 		android:allowBackup="false"
 		android:icon="@drawable/app_icon"
 		android:label="@string/app_name"
-		android:theme="@style/My.Theme">
+		android:theme="@style/My.Theme"
+		android:debuggable="false"
+		tools:ignore="HardcodedDebugMode">
 		<activity
 			android:name="com.fuelcoin.fuelcoin_android_wallet.ui.WalletActivity"
 			android:configChanges="keyboard|keyboardHidden"
