@@ -1,4 +1,4 @@
-## Welcome to _Fuelcoin Wallet_
+## Welcome to capricoin-android-wallet
 
 __What is _Fuelcoin Wallet_?__
 
@@ -22,5 +22,3 @@ __This project contains several sub-projects:__
 __You can build all sub-projects at once using Maven:__
 
 `mvn clean install`
-
-
