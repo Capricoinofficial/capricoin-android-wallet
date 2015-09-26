@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
-	package="com.fuelcoin.fuelcoin_android_wallet"
+	package="com.capricoin.capricoin_android_wallet"
 	android:installLocation="internalOnly"
 	android:versionCode="18"
 	android:versionName="2.7.8">
@@ -54,7 +54,7 @@
 		android:xlargeScreens="true" />
 
 	<application
-		android:name="com.fuelcoin.fuelcoin_android_wallet.WalletApplication"
+		android:name="com.capricoin.capricoin_android_wallet.WalletApplication"
 		android:allowBackup="false"
 		android:icon="@drawable/app_icon"
 		android:label="@string/app_name"
@@ -62,13 +62,13 @@
 		android:debuggable="false"
 		tools:ignore="HardcodedDebugMode">
 		<activity
-			android:name="com.fuelcoin.fuelcoin_android_wallet.ui.WalletActivity"
+			android:name="com.capricoin.capricoin_android_wallet.ui.WalletActivity"
 			android:configChanges="keyboard|keyboardHidden"
 			android:launchMode="singleTask" />
 
 		<activity-alias
-			android:name="com.fuelcoin.fuelcoinj_android_wallet.WalletActivity"
-			android:targetActivity="com.fuelcoin.fuelcoin_android_wallet.ui.WalletActivity" >
+			android:name="com.capricoin.capricoinj_android_wallet.WalletActivity"
+			android:targetActivity="com.capricoin.capricoin_android_wallet.ui.WalletActivity" >
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 
@@ -84,7 +84,7 @@
 		</activity-alias>
 
 		<activity
-			android:name="com.fuelcoin.fuelcoin_android_wallet.ui.send.SendCoinsActivity"
+			android:name="com.capricoin.capricoin_android_wallet.ui.send.SendCoinsActivity"
 			android:configChanges="keyboard|keyboardHidden"
 			android:label="@string/send_coins_activity_title"
 			android:screenOrientation="behind"
@@ -92,7 +92,7 @@
 			<intent-filter android:label="@string/send_coins_activity_title" >
 				<action android:name="android.intent.action.VIEW" />
 
-				<data android:scheme="fuelcoin" />
+				<data android:scheme="capricoin" />
 
 				<category android:name="android.intent.category.DEFAULT" />
 				<category android:name="android.intent.category.BROWSABLE" />
@@ -100,57 +100,57 @@
 			<intent-filter android:label="@string/send_coins_activity_title" >
 				<action android:name="android.nfc.action.NDEF_DISCOVERED" />
 
-				<data android:scheme="fuelcoin" />
+				<data android:scheme="capricoin" />
 
 				<category android:name="android.intent.category.DEFAULT" />
 			</intent-filter>
 			<intent-filter android:label="@string/send_coins_activity_title" >
 				<action android:name="android.intent.action.VIEW" />
 
-				<data android:mimeType="application/fuelcoinj-paymentrequest" />
+				<data android:mimeType="application/capricoinj-paymentrequest" />
 
 				<category android:name="android.intent.category.DEFAULT" />
 			</intent-filter>
 			<intent-filter android:label="@string/send_coins_activity_title" >
 				<action android:name="android.nfc.action.NDEF_DISCOVERED" />
 
-				<data android:mimeType="application/fuelcoinj-paymentrequest" />
+				<data android:mimeType="application/capricoinj-paymentrequest" />
 
 				<category android:name="android.intent.category.DEFAULT" />
 			</intent-filter>
 		</activity>
 		<activity
-			android:name="com.fuelcoin.fuelcoin_android_wallet.ui.SendCoinsQrActivity"
+			android:name="com.capricoin.capricoin_android_wallet.ui.SendCoinsQrActivity"
 			android:configChanges="keyboard|keyboardHidden"
 			android:theme="@android:style/Theme.Translucent.NoTitleBar" >
 		</activity>
 		<activity
-			android:name="com.fuelcoin.fuelcoin_android_wallet.ui.RequestCoinsActivity"
+			android:name="com.capricoin.capricoin_android_wallet.ui.RequestCoinsActivity"
 			android:configChanges="keyboard|keyboardHidden"
 			android:label="@string/request_coins_activity_title"
 			android:screenOrientation="behind"
 			android:windowSoftInputMode="adjustResize" />
 		<activity
-			android:name="com.fuelcoin.fuelcoin_android_wallet.ui.AddressBookActivity"
+			android:name="com.capricoin.capricoin_android_wallet.ui.AddressBookActivity"
 			android:configChanges="keyboard|keyboardHidden"
 			android:label="@string/address_book_activity_title"
 			android:screenOrientation="behind" />
 		<activity
-			android:name="com.fuelcoin.fuelcoin_android_wallet.ui.ExchangeRatesActivity"
+			android:name="com.capricoin.capricoin_android_wallet.ui.ExchangeRatesActivity"
 			android:configChanges="keyboard|keyboardHidden"
 			android:label="@string/exchange_rates_activity_title"
 			android:screenOrientation="behind" />
 		<activity
-			android:name="com.fuelcoin.fuelcoin_android_wallet.ui.NetworkMonitorActivity"
+			android:name="com.capricoin.capricoin_android_wallet.ui.NetworkMonitorActivity"
 			android:configChanges="keyboard|keyboardHidden"
 			android:label="@string/network_monitor_activity_title"
 			android:screenOrientation="behind" />
 		<activity
-			android:name="com.fuelcoin.fuelcoin_android_wallet.ui.preference.PreferenceActivity"
+			android:name="com.capricoin.capricoin_android_wallet.ui.preference.PreferenceActivity"
 			android:label="@string/preferences_activity_title"
 			android:screenOrientation="behind" />
 		<activity
-			android:name="com.fuelcoin.fuelcoin_android_wallet.ui.RestoreWalletActivity"
+			android:name="com.capricoin.capricoin_android_wallet.ui.RestoreWalletActivity"
 			android:configChanges="orientation|keyboard|keyboardHidden"
 			android:theme="@style/My.Theme.Dialog" >
 			<intent-filter android:label="@string/import_keys_intent_filter_action" >
@@ -158,12 +158,12 @@
 
 				<category android:name="android.intent.category.DEFAULT" />
 
-				<data android:mimeType="application/x-fuelcoinj-wallet-backup" />
+				<data android:mimeType="application/x-capricoinj-wallet-backup" />
 				<data android:mimeType="application/octet-stream" />
 			</intent-filter>
 		</activity>
 		<activity
-			android:name="com.fuelcoin.fuelcoin_android_wallet.ui.ScanActivity"
+			android:name="com.capricoin.capricoin_android_wallet.ui.ScanActivity"
 			android:configChanges="orientation|keyboard|keyboardHidden"
 			android:screenOrientation="landscape"
 			android:stateNotNeeded="true"
@@ -171,22 +171,22 @@
 			android:windowSoftInputMode="stateAlwaysHidden" />
 
 		<provider
-			android:name="com.fuelcoin.fuelcoin_android_wallet.AddressBookProvider"
-			android:authorities="com.fuelcoin.fuelcoin_android_wallet.address_book"
+			android:name="com.capricoin.capricoin_android_wallet.AddressBookProvider"
+			android:authorities="com.capricoin.capricoin_android_wallet.address_book"
 			android:exported="false" />
 		<provider
-			android:name="com.fuelcoin.fuelcoin_android_wallet.ExchangeRatesProvider"
-			android:authorities="com.fuelcoin.fuelcoin_android_wallet.exchange_rates"
+			android:name="com.capricoin.capricoin_android_wallet.ExchangeRatesProvider"
+			android:authorities="com.capricoin.capricoin_android_wallet.exchange_rates"
 			android:exported="false" />
 		<provider
-			android:name="com.fuelcoin.fuelcoin_android_wallet.FileAttachmentProvider"
-			android:authorities="com.fuelcoin.fuelcoin_android_wallet.file_attachment"
+			android:name="com.capricoin.capricoin_android_wallet.FileAttachmentProvider"
+			android:authorities="com.capricoin.capricoin_android_wallet.file_attachment"
 			android:exported="false"
 			android:grantUriPermissions="true" />
 
 		<receiver
-			android:name="com.fuelcoin.fuelcoin_android_wallet.WalletBalanceWidgetProvider"
-			android:label="Fuelcoin Wallet Balance" >
+			android:name="com.capricoin.capricoin_android_wallet.WalletBalanceWidgetProvider"
+			android:label="Capricoin Wallet Balance" >
 			<intent-filter>
 				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
 			</intent-filter>
@@ -197,13 +197,13 @@
 		</receiver>
 
 		<service
-			android:name="com.fuelcoin.fuelcoin_android_wallet.service.BlockchainServiceImpl"
+			android:name="com.capricoin.capricoin_android_wallet.service.BlockchainServiceImpl"
 			android:exported="false" />
 		<service
-			android:name="com.fuelcoin.fuelcoin_android_wallet.offline.AcceptBluetoothService"
+			android:name="com.capricoin.capricoin_android_wallet.offline.AcceptBluetoothService"
 			android:exported="false" />
 
-		<receiver android:name="com.fuelcoin.fuelcoin_android_wallet.service.AutosyncReceiver" >
+		<receiver android:name="com.capricoin.capricoin_android_wallet.service.AutosyncReceiver" >
 			<intent-filter>
 				<action android:name="android.intent.action.BOOT_COMPLETED" />
 			</intent-filter>
@@ -213,7 +213,7 @@
 		</receiver>
 
 		<service
-			android:name="com.fuelcoin.fuelcoin_android_wallet.service.UpgradeWalletService"
+			android:name="com.capricoin.capricoin_android_wallet.service.UpgradeWalletService"
 			android:exported="false" />
 
 		<meta-data

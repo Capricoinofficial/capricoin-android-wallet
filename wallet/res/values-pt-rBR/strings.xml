@@ -141,7 +141,7 @@
 	<string name="scan_camera_problem_dialog_message">Ocorreu um problema com a câmera. Você provavelmente precisará reiniciar o dispositivo.</string>
 	<string name="input_parser_io_error">Dados ilegíveis:\n%s</string>
 	<string name="input_parser_cannot_classify">Não é possível classificar as entradas:\n%s</string>
-	<string name="input_parser_invalid_fuelcoinj_uri">Endereços Fuelcoin inválidos:\n%s</string>
+	<string name="input_parser_invalid_capricoinj_uri">Endereços Fuelcoin inválidos:\n%s</string>
 	<string name="input_parser_invalid_address">Endereço inválido de Fuelcoin!\n(Mixing up Mainnet/Testnet?)</string>
 	<string name="input_parser_unverifyable_paymentrequest">Não foi possível verificar cobrança:\n%s</string>
 	<string name="input_parser_invalid_paymentrequest">Cobrança inválida:\n%s</string>
@@ -179,7 +179,7 @@
 	<string name="report_issue_dialog_mail_intent_failed">Envio de relatório falhou.</string>
 	<string name="about_title">Sobre</string>
 	<string name="about_license_title">Licença</string>
-	<string name="about_credits_fuelcoinjj_title">Este aplicativo utiliza fuelcoinjj %s</string>
+	<string name="about_credits_capricoinjj_title">Este aplicativo utiliza capricoinjj %s</string>
 	<string name="about_credits_zxing_title">Este aplicativo utiliza \'zxing\'</string>
 	<string name="about_credits_icon_title">Este aplicativo utiliza icones \'bitboy\'</string>
 	<string name="about_community_googleplus_title">Comunidade Google+</string>

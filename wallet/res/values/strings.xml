@@ -184,8 +184,8 @@
 	<string name="scan_camera_problem_dialog_message">The camera has a problem. You probably need to restart the device.</string>
 	<string name="input_parser_io_error">Cannot read data:\n%s</string>
 	<string name="input_parser_cannot_classify">Cannot recognize input:\n%s</string>
-	<string name="input_parser_invalid_fuelcoinj_uri">Invalid Fuelcoin URI:\n%s</string>
-	<string name="input_parser_invalid_address">Got invalid fuelcoinj address!\n(Mixing up Mainnet/Testnet?)</string>
+	<string name="input_parser_invalid_capricoinj_uri">Invalid Fuelcoin URI:\n%s</string>
+	<string name="input_parser_invalid_address">Got invalid capricoinj address!\n(Mixing up Mainnet/Testnet?)</string>
 	<string name="input_parser_unverifyable_paymentrequest">Cannot verify payment request:\n%s</string>
 	<string name="input_parser_invalid_paymentrequest">Invalid payment request:\n%s</string>
 	<string name="input_parser_invalid_transaction">Invalid transaction:\n%s</string>
@@ -225,7 +225,7 @@
 	<string name="about_copyright_title">Copyright</string>
 	<string name="about_license_title">License</string>
 	<string name="about_source_title">Source Code</string>
-	<string name="about_credits_fuelcoinjj_title">This app is using fuelcoinjj %s</string>
+	<string name="about_credits_capricoinjj_title">This app is using capricoinjj %s</string>
 	<string name="about_credits_zxing_title">This app is using \'zxing\'</string>
 	<string name="about_credits_icon_title">This app is using an icon by \'bitboy\'</string>
 	<string name="about_community_googleplus_title">Google+ community</string>

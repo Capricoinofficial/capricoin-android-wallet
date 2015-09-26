@@ -156,7 +156,7 @@
   <string name="export_keys_dialog_failure">Lompakkoasi ei voitu varmuuskopioida:\n%s</string>
   <string name="export_keys_dialog_button_archive">Arkistoi</string>
   <string name="export_keys_dialog_mail_subject">Fuelcoin-lompakon varmuuskopio</string>
-  <string name="export_keys_dialog_mail_text">Liitetty salattu tiedosto sisältää fuelcoinjiesi salaisit avaimet ja ne on aina pidettävä turvassa. Älä unohda salauksen salasanaa!</string>
+  <string name="export_keys_dialog_mail_text">Liitetty salattu tiedosto sisältää capricoinjiesi salaisit avaimet ja ne on aina pidettävä turvassa. Älä unohda salauksen salasanaa!</string>
   <string name="export_keys_dialog_mail_intent_chooser">Arkistoi lompakko käyttäen…</string>
   <string name="export_keys_dialog_mail_intent_failed">Lompakon arkistointi epäonnistui.</string>
   <string name="import_export_keys_dialog_password">Salasana</string>
@@ -181,7 +181,7 @@
   <string name="scan_camera_problem_dialog_message">Kameran kanssa on ongelma. Sinun on luultavasti uudelleenkäynnistettävä laitteesi</string>
   <string name="input_parser_io_error">Ei voida lukea dataa:\n%s</string>
   <string name="input_parser_cannot_classify">Ei voida tunnistaa syötettä:\n%s</string>
-  <string name="input_parser_invalid_fuelcoinj_uri">Epäkelpo Fuelcoin-URI:\n%s</string>
+  <string name="input_parser_invalid_capricoinj_uri">Epäkelpo Fuelcoin-URI:\n%s</string>
   <string name="input_parser_invalid_address">Saatiin epäkelpo Fuelcoin-osoite!\n(Sekoitatko mainnet/testnet?)</string>
   <string name="input_parser_unverifyable_paymentrequest">Ei voitu vahvistaa maksupyyntöä:\n%s</string>
   <string name="input_parser_invalid_paymentrequest">Epäkelpo maksupyyntö:\n%s</string>
@@ -222,7 +222,7 @@
   <string name="about_copyright_title">Tekijänoikeus</string>
   <string name="about_license_title">Lisenssi</string>
   <string name="about_source_title">Lähdekoodi</string>
-  <string name="about_credits_fuelcoinjj_title">Tämä sovellus käyttää \'fuelcoinjj\'</string>
+  <string name="about_credits_capricoinjj_title">Tämä sovellus käyttää \'capricoinjj\'</string>
   <string name="about_credits_zxing_title">Tämä sovellus käyttää \'zxing\'</string>
   <string name="about_credits_icon_title">Tämä sovellus käyttää ikonia \'bitboy\'</string>
   <string name="about_community_googleplus_title">Google+-yhteisö</string>

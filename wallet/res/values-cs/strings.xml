@@ -26,8 +26,8 @@
   <string name="wallet_transactions_fragment_tab_received">Obdrženo</string>
   <string name="wallet_transactions_fragment_tab_all">Oboje</string>
   <string name="wallet_transactions_fragment_tab_sent">Zasláno</string>
-  <string name="wallet_transactions_fragment_empty_text_received">Zatím žádné fuelcoinjy neobdrženy</string>
-  <string name="wallet_transactions_fragment_empty_text_sent">Zatím žádné fuelcoinjy neodeslány</string>
+  <string name="wallet_transactions_fragment_empty_text_received">Zatím žádné capricoinjy neobdrženy</string>
+  <string name="wallet_transactions_fragment_empty_text_sent">Zatím žádné capricoinjy neodeslány</string>
   <string name="wallet_transactions_fragment_empty_text_howto">Jak získat Fuelcoiny?\n\nSměnou za klasické pěníze,\nprodejem zboží nebo služeb\nnebo vyděláním prací.</string>
   <string name="wallet_transactions_row_warning_backup">Gratulujeme, přijal jste vaši první platbu! Už jste si &lt;u&gt;zazálohoval vaši peněženku&lt;/u&gt;, aby jste se ochránil proti ztrátě?</string>
   <string name="wallet_transactions_fragment_coinbase">vytěženo</string>
@@ -58,7 +58,7 @@
   <string name="send_coins_fragment_payee_verified_by_unknown">neznámý</string>
   <string name="send_coins_fragment_receiving_address_label">Zaplatit</string>
   <string name="send_coins_fragment_receiving_address_hint">napište adresu či jméno</string>
-  <string name="send_coins_fragment_receiving_address_error">Neplatná fuelcoinjová adresa!</string>
+  <string name="send_coins_fragment_receiving_address_error">Neplatná capricoinjová adresa!</string>
   <string name="send_coins_fragment_receiving_address_complex">komplex\nadresa</string>
   <string name="send_coins_fragment_pending">(%s čeká na konfirmaci)</string>
   <string name="send_coins_fragment_amount_label">Částka k zaplacení</string>
@@ -183,8 +183,8 @@
   <string name="scan_camera_problem_dialog_message">Problém s kamerou. Pravděpodobně je potřeba aby jste zrestartoval zařízení.</string>
   <string name="input_parser_io_error">Nelze přečíst data:\n%s</string>
   <string name="input_parser_cannot_classify">Nelze rozpoznat vstup:\n%s</string>
-  <string name="input_parser_invalid_fuelcoinj_uri">Nevalidní Fuelcoin URI:\n%s</string>
-  <string name="input_parser_invalid_address">Obdržená neplatná fuelcoinjová adresa!\n(Nemícháte mainnet/testnet?)</string>
+  <string name="input_parser_invalid_capricoinj_uri">Nevalidní Fuelcoin URI:\n%s</string>
+  <string name="input_parser_invalid_address">Obdržená neplatná capricoinjová adresa!\n(Nemícháte mainnet/testnet?)</string>
   <string name="input_parser_unverifyable_paymentrequest">Nelze ověřit požadavek na platbu:\n%s</string>
   <string name="input_parser_invalid_paymentrequest">Neplatný požadavek na platbu:\n%s</string>
   <string name="input_parser_invalid_transaction">Neplatná transakce:\n%s</string>
@@ -224,7 +224,7 @@
   <string name="about_copyright_title">Copyright</string>
   <string name="about_license_title">Licence</string>
   <string name="about_source_title">Zdrojový kód</string>
-  <string name="about_credits_fuelcoinjj_title">Aplikace používá \'fuelcoinjj\'</string>
+  <string name="about_credits_capricoinjj_title">Aplikace používá \'capricoinjj\'</string>
   <string name="about_credits_zxing_title">Aplikace používá \'zxing\'</string>
   <string name="about_credits_icon_title">Aplikace používá ikonu od \'bitboy\'</string>
   <string name="about_community_googleplus_title">Komunita Google+</string>

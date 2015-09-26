@@ -4,7 +4,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.fuelcoin.fuelcoin_android_wallet</groupId>
+	<groupId>com.capricoin.capricoin_android_wallet</groupId>
 	<artifactId>base</artifactId>
 	<name>base</name>
 	<version>1.2</version>

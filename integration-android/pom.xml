@@ -6,10 +6,10 @@
 
 	<artifactId>integration-android</artifactId>
 	<version>2.6</version>
-	<name>Fuelcoin Integration for Android</name>
+	<name>Capricoin Integration for Android</name>
 
 	<parent>
-		<groupId>com.fuelcoin.fuelcoin_android_wallet</groupId>
+		<groupId>com.capricoin.capricoin_android_wallet</groupId>
 		<artifactId>base</artifactId>
 		<version>1.2</version>
 	</parent>

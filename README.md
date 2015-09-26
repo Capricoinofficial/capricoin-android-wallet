@@ -1,8 +1,8 @@
 ## Welcome to capricoin-android-wallet
 
-__What is _Fuelcoin Wallet_?__
+__What is _capricoin Wallet_?__
 
-It is a standalone Fuelcoin payment app for your Android device!
+It is com.capricoin.a standalone capricoin payment app for your Android device!
 
 
 __This project contains several sub-projects:__
@@ -12,10 +12,10 @@ __This project contains several sub-projects:__
  * __market__:
      App description and promo material for the Google Play app store.
  * __integration-android__:
-     A tiny library for integrating Fuelcoin payments into your own Android app
+     A tiny library for integrating capricoin payments into your own Android app
      (e.g. donations, in-app purchases).
  * __sample-integration-android__:
-     A minimal example app to demonstrate integration of Fuelcoin payments into
+     A minimal example app to demonstrate integration of capricoin payments into
      your Android app.
 
 

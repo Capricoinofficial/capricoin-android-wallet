@@ -142,7 +142,7 @@
   <string name="scan_camera_problem_dialog_message">Er is een probleem met de camera. Waarschijnlijk moet je het apparaat herstarten.</string>
   <string name="input_parser_io_error">Kon gegevens niet lesen\n%s</string>
   <string name="input_parser_cannot_classify">Invoer niet herkend\n%s</string>
-  <string name="input_parser_invalid_address">Ongeldig fuelcoinjadres ontvangen!\n(Haal je Mainnet/Testnet door elkaar?)</string>
+  <string name="input_parser_invalid_address">Ongeldig capricoinjadres ontvangen!\n(Haal je Mainnet/Testnet door elkaar?)</string>
   <string name="input_parser_unverifyable_paymentrequest">Kon betalingsverzoek niet controleren.\n%s</string>
   <string name="input_parser_invalid_paymentrequest">Ongeldig betalingsverzoek.\n%s</string>
   <string name="input_parser_invalid_transaction">Ongeldige transactie:\n%s</string>
@@ -182,7 +182,7 @@
   <string name="about_copyright_title">Auteursrecht</string>
   <string name="about_license_title">Licentie</string>
   <string name="about_source_title">Broncode</string>
-  <string name="about_credits_fuelcoinjj_title">Deze app gebruikt \'fuelcoinjj\'</string>
+  <string name="about_credits_capricoinjj_title">Deze app gebruikt \'capricoinjj\'</string>
   <string name="about_credits_zxing_title">Deze app gebruikt \'zxing\'</string>
   <string name="about_credits_icon_title">Deze app gebruikt een icoon door \'bitboy\'</string>
   <string name="about_community_googleplus_title">Google+ Gemeenschap</string>

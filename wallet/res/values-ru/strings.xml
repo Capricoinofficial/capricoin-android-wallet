@@ -179,7 +179,7 @@
   <string name="scan_camera_problem_dialog_message">Проблема с камерой. Возможно, вам нужно перезагрузить устройство.</string>
   <string name="input_parser_io_error">Не могу считать данные:\n%s</string>
   <string name="input_parser_cannot_classify">Не могу распознать ввод:\n%s</string>
-  <string name="input_parser_invalid_fuelcoinj_uri">Неверный Fuelcoin URI:\n%s</string>
+  <string name="input_parser_invalid_capricoinj_uri">Неверный Fuelcoin URI:\n%s</string>
   <string name="input_parser_invalid_address">Неверный адрес Fuelcoin!\n(Путаем основную сеть с тестовой?)</string>
   <string name="input_parser_unverifyable_paymentrequest">Не могу проверить платежный запрос:\n%s</string>
   <string name="input_parser_invalid_paymentrequest">Неверный платежный запрос:\n%s</string>
@@ -220,7 +220,7 @@
   <string name="about_copyright_title">Авторское право</string>
   <string name="about_license_title">Лицензия</string>
   <string name="about_source_title">Исходный код</string>
-  <string name="about_credits_fuelcoinjj_title">Это приложение использует fuelcoinjj %s</string>
+  <string name="about_credits_capricoinjj_title">Это приложение использует capricoinjj %s</string>
   <string name="about_credits_zxing_title">Это приложение использует \'zxing\'</string>
   <string name="about_credits_icon_title">Это приложение использует иконку от \'bitboy\'</string>
   <string name="about_community_googleplus_title">Сообщество Google+</string>

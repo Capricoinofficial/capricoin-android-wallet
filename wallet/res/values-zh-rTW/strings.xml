@@ -145,7 +145,7 @@
   <string name="scan_camera_problem_dialog_message">照相機有問題，你可能需要重新啟動裝置</string>
   <string name="input_parser_io_error">無法讀取資料:\n%s</string>
   <string name="input_parser_cannot_classify">無法辨識輸入:\n%s</string>
-  <string name="input_parser_invalid_fuelcoinj_uri">點點幣 URI 無效:\n%s</string>
+  <string name="input_parser_invalid_capricoinj_uri">點點幣 URI 無效:\n%s</string>
   <string name="input_parser_invalid_address">取得無效點點幣地址!\n(是否 Mainnet/Testnet 混用?)</string>
   <string name="input_parser_unverifyable_paymentrequest">無法驗證付款請求:\n%s</string>
   <string name="input_parser_invalid_paymentrequest">無效付款請求:\n%s</string>
@@ -186,7 +186,7 @@
   <string name="about_copyright_title">著作權</string>
   <string name="about_license_title">授權</string>
   <string name="about_source_title">原始碼</string>
-  <string name="about_credits_fuelcoinjj_title">本 app 使用 fuelcoinjj %s</string>
+  <string name="about_credits_capricoinjj_title">本 app 使用 capricoinjj %s</string>
   <string name="about_credits_zxing_title">本 app 使用 \'zxing\'</string>
   <string name="about_credits_icon_title">本 app 使用圖標來自\'bitboy\'</string>
   <string name="about_community_googleplus_title">Google+ 社群</string>

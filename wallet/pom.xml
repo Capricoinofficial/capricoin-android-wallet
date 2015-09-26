@@ -10,7 +10,7 @@
 	<name>Fuelcoin Wallet</name>
 
 	<parent>
-		<groupId>com.fuelcoin.fuelcoin_android_wallet</groupId>
+		<groupId>com.capricoin.capricoin_android_wallet</groupId>
 		<artifactId>base</artifactId>
 		<version>1.2</version>
 	</parent>
@@ -69,16 +69,16 @@
 			<version>19.1.0</version>
 		</dependency>
 
-		<!-- fuelcoininj.* -->
+		<!-- capricoinj.* -->
 		<dependency>
-			<groupId>com.fuelcoinj</groupId>
-			<artifactId>fuelcoinj</artifactId>
+			<groupId>com.capricoinj</groupId>
+			<artifactId>capricoinj</artifactId>
 			<version>0.12.3</version>
 		</dependency>
 
-		<!-- fuelcoinin_android_wallet.integration.android.* -->
+		<!-- capricoin_android_wallet.integration.android.* -->
 		<dependency>
-			<groupId>com.fuelcoin.fuelcoin_android_wallet</groupId>
+			<groupId>com.capricoin.capricoin_android_wallet</groupId>
 			<artifactId>integration-android</artifactId>
 			<version>2.6</version>
 		</dependency>
@@ -282,7 +282,7 @@
 					</additionalBuildcommands>
 					<classpathContainers>
 						<classpathContainer>com.android.ide.eclipse.adt.ANDROID_FRAMEWORK</classpathContainer>
-						<!-- This is a workaround: we do not want JRE_CONTAINER, however if we remove it, it will be automatically added, and 
+						<!-- This is com.capricoin.a workaround: we do not want JRE_CONTAINER, however if we remove it, it will be automatically added, and
 							placed first. So we add it in the second position, so that the project is recognized as an Android project. -->
 						<classpathContainer>org.eclipse.jdt.launching.JRE_CONTAINER</classpathContainer>
 					</classpathContainers>
@@ -303,7 +303,7 @@
 				<artifactId>findbugs-maven-plugin</artifactId>
 				<version>2.5.2</version>
 				<configuration>
-					<onlyAnalyze>fuelcoinin_android_wallet.-</onlyAnalyze>
+					<onlyAnalyze>capricoinin_android_wallet.-</onlyAnalyze>
 				</configuration>
 			</plugin>
 		</plugins>

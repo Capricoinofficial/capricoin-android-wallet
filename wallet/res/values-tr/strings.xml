@@ -49,7 +49,7 @@
   <string name="wallet_version_dialog_button_market">Google Play</string>
   <string name="wallet_version_dialog_button_binary">İndir</string>
   <string name="wallet_old_sdk_dialog_title">Android sürümü eski</string>
-  <string name="wallet_old_sdk_dialog_message">Gelecek Fuelcoin Wallet sürümünün cihazınızı desteklememesi mümkündür. Bazı durumlarda bu cihazla fuelcoinj harcamak zor olabilir.\n\nFuelcoinlerinizi güvenli bir yere aktarmanız tavsiye edilir.</string>
+  <string name="wallet_old_sdk_dialog_message">Gelecek Fuelcoin Wallet sürümünün cihazınızı desteklememesi mümkündür. Bazı durumlarda bu cihazla capricoinj harcamak zor olabilir.\n\nFuelcoinlerinizi güvenli bir yere aktarmanız tavsiye edilir.</string>
   <string name="send_coins_activity_title">Fuelcoin gönder</string>
   <string name="send_coins_fragment_request_payment_request_progress">%s unsurundan imza alınıyor…</string>
   <string name="send_coins_fragment_request_payment_request_failed_title">İmza alımı başarısız oldu</string>
@@ -64,7 +64,7 @@
   <string name="send_coins_fragment_amount_label">Ödenecek miktar</string>
   <string name="send_coins_fragment_hint_fee">%s tutarında düşük bir şebeke ücreti ödenecektir.</string>
   <string name="send_coins_fragment_hint_too_small_output">Bu meblağ göndermek için çok düşüktür.</string>
-  <string name="send_coins_fragment_hint_insufficient_money">Kafi derecede fuelcoinjiniz yoktur. %s eksiktir.</string>
+  <string name="send_coins_fragment_hint_insufficient_money">Kafi derecede capricoinjiniz yoktur. %s eksiktir.</string>
   <string name="send_coins_fragment_direct_payment_enable">Ödemeyi doğrudan alacaklıya gönder.</string>
   <string name="send_coins_fragment_direct_payment_ack">Ödemeniz başarıyla doğrudan gönderilmiştir.</string>
   <string name="send_coins_fragment_direct_payment_nack">Ödemeniz doğrudan bağlantı vasıtasıyla reddedilmiştir.</string>
@@ -87,7 +87,7 @@
   <string name="send_coins_options_empty">Boş cüzdan</string>
   <string name="send_coins_address_context_clear_title">Yeni adres gir</string>
   <string name="maintenance_dialog_title">Bakım tavsiye edilir</string>
-  <string name="maintenance_dialog_message">Güvensiz adreslere %1$s aldınız. Bu fuelcoinjleri güvenli adreslere taşımak ister misiniz? %2$s tutarında düşük bir şebeke ücreti ödenecektir.</string>
+  <string name="maintenance_dialog_message">Güvensiz adreslere %1$s aldınız. Bu capricoinjleri güvenli adreslere taşımak ister misiniz? %2$s tutarında düşük bir şebeke ücreti ödenecektir.</string>
   <string name="maintenance_dialog_private_key_password">PIN</string>
   <string name="maintenance_dialog_private_key_bad_password">Yanlış PIN!</string>
   <string name="maintenance_dialog_state_decrypting">Şifre çözülüyor…</string>
@@ -115,7 +115,7 @@
   <string name="address_book_options_paste_from_clipboard_invalid">Panodaki veriler tanınamadı</string>
   <string name="address_book_options_scan_title">Adresi tara</string>
   <string name="address_book_options_scan_invalid">Taranan veriler tanınamadı</string>
-  <string name="address_book_row_message_compromised_key">Bu adres tehlikededir. Onu artık fuelcoinj almak için kullanmamalısınız.</string>
+  <string name="address_book_row_message_compromised_key">Bu adres tehlikededir. Onu artık capricoinj almak için kullanmamalısınız.</string>
   <string name="edit_address_book_entry_dialog_title_add">Adres ekle</string>
   <string name="edit_address_book_entry_dialog_title_edit">Adres düzenle</string>
   <string name="edit_address_book_entry_dialog_address_label">Adres</string>
@@ -182,8 +182,8 @@
   <string name="scan_camera_problem_dialog_message">Fotoğraf makinesinde bir problem var. Muhtemelen cihazınızı yeniden başlatmanız gerekiyor.</string>
   <string name="input_parser_io_error">Veri okunamadı:\n%s</string>
   <string name="input_parser_cannot_classify">Girdi tanınamadı:\n%s</string>
-  <string name="input_parser_invalid_fuelcoinj_uri">Geçersiz Fuelcoin URI\'si:\n%s</string>
-  <string name="input_parser_invalid_address">Geçersiz fuelcoinj adresi alındı!\n(esas ağ ile deneme ağı karışmış olmasın?)</string>
+  <string name="input_parser_invalid_capricoinj_uri">Geçersiz Fuelcoin URI\'si:\n%s</string>
+  <string name="input_parser_invalid_address">Geçersiz capricoinj adresi alındı!\n(esas ağ ile deneme ağı karışmış olmasın?)</string>
   <string name="input_parser_unverifyable_paymentrequest">Ödeme talebi denetlenemedi:\n%s</string>
   <string name="input_parser_invalid_paymentrequest">Geçersiz ödeme talebi:\n%s</string>
   <string name="input_parser_invalid_transaction">Geçersiz muamele:\n%s</string>
@@ -223,7 +223,7 @@
   <string name="about_copyright_title">Telif hakkı</string>
   <string name="about_license_title">Lisans</string>
   <string name="about_source_title">Kaynak kodu</string>
-  <string name="about_credits_fuelcoinjj_title">Bu uygulama fuelcoinjj %s kullanmaktadır</string>
+  <string name="about_credits_capricoinjj_title">Bu uygulama capricoinjj %s kullanmaktadır</string>
   <string name="about_credits_zxing_title">Bu uygulama \'zxing\' kullanmaktadır</string>
   <string name="about_credits_icon_title">Bu uygulama \'bitboy\' tarafından oluşturulan bir ikon kullanır</string>
   <string name="about_community_googleplus_title">Google+ topluluğu</string>

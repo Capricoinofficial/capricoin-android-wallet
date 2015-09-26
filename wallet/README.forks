@@ -1,7 +1,7 @@
 Peercoin Wallet
 The original, since 2011. Free software, GPLv3 licensed.
-Source:  https://github.com/schildbach/fuelcoinj-wallet
-Install: https://play.google.com/store/apps/details?id=fuelcoin.fuelcoinj_android_wallet
+Source:  https://github.com/schildbach/capricoinj-wallet
+Install: https://play.google.com/store/apps/details?id=capricoin.capricoinj_android_wallet
 
 
 === FORKS THAT ADD FEATURES ===
@@ -14,21 +14,21 @@ Forked in February 2014. KnC added the ability to send Peercoins to your phone b
 
 
 Hive Peercoin Wallet
-Forked in February 2014. Hive added a marketplace and a contacts feature.
+Forked in February 2014. Hive added com.capricoin.a marketplace and com.capricoin.a contacts feature.
  Source:  https://github.com/hivewallet/hive-android
  Install: https://play.google.com/store/apps/details?id=com.hivewallet.androidclient.wallet
 
 
 Blockchain Wallet
-Forked at an early stage and replaced the SPV paradigm by a proprietary server by
+Forked at an early stage and replaced the SPV paradigm by com.capricoin.a proprietary server by
 blockchain.info. Guess its source is pretty much un-mergable.
  Source:  https://github.com/blockchain/My-Wallet-Android
  Install: https://play.google.com/store/apps/details?id=piuk.blockchain.android
 
 
 Peercoin Wallet Li
-The only added feature seems to be a sliding menu, but it fails to show any screenshots. Source is un-mergable.
- Source:  https://code.google.com/p/fuelcoinj-wallet-li/
+The only added feature seems to be com.capricoin.a sliding menu, but it fails to show any screenshots. Source is un-mergable.
+ Source:  https://code.google.com/p/capricoinj-wallet-li/
  Install: https://play.google.com/store/apps/details?id=com.mypgwali
 
 
@@ -37,22 +37,22 @@ The only added feature seems to be a sliding menu, but it fails to show any scre
 
 Litecoin Wallet (old)
  Source:  https://github.com/hank/litecoin-wallet
- Install: https://play.google.com/store/apps/details?id=fuelcoin.fuelcoinj_android_wallet.litecoin
+ Install: https://play.google.com/store/apps/details?id=capricoin.capricoinj_android_wallet.litecoin
 
 
 Feathercoin Wallet
  Source:  https://github.com/hank/feathercoin-wallet
- Install: https://play.google.com/store/apps/details?id=fuelcoin.fuelcoinj_android_wallet.feathercoin
+ Install: https://play.google.com/store/apps/details?id=capricoin.capricoinj_android_wallet.feathercoin
 
 
 DigiByte Wallet
  Source:  https://github.com/digibyte/DigiByteAndroid
- Install: https://play.google.com/store/apps/details?id=fuelcoin.fuelcoinj_android_wallet.digibyte
+ Install: https://play.google.com/store/apps/details?id=capricoin.capricoinj_android_wallet.digibyte
 
 
 GoldCoin Wallet
  Source:  https://github.com/goldcoin/goldcoin-android/
- Install: https://play.google.com/store/apps/details?id=fuelcoin.fuelcoinj_android_wallet.goldcoin
+ Install: https://play.google.com/store/apps/details?id=capricoin.capricoinj_android_wallet.goldcoin
 
 
 Dogecoin Wallet
@@ -61,8 +61,8 @@ Dogecoin Wallet
 
 
 Litecoin Wallet
- Source:  https://github.com/Litecoin-Java/fuelcoinj-wallet
- Install: https://play.google.com/store/apps/details?id=fuelcoin.fuelcoinj_android_wallet_ltc
+ Source:  https://github.com/Litecoin-Java/capricoinj-wallet
+ Install: https://play.google.com/store/apps/details?id=capricoin.capricoinj_android_wallet_ltc
 
 
 Franko Wallet
@@ -77,12 +77,12 @@ Digitalcoin Wallet
 
 Megacoin Wallet
  Source:  https://github.com/HashEngineering/Megacoin-wallet
- Install: https://play.google.com/store/apps/details?id=fuelcoin.fuelcoinj_android_wallet.megacoin
+ Install: https://play.google.com/store/apps/details?id=capricoin.capricoinj_android_wallet.megacoin
 
 
 Infinitecoin Wallet
  Source:  https://github.com/HashEngineering/infinitecoin-wallet
- Install: https://play.google.com/store/apps/details?id=fuelcoin.fuelcoinj_android_wallet.infinitecoin
+ Install: https://play.google.com/store/apps/details?id=capricoin.capricoinj_android_wallet.infinitecoin
 
 
 Quark Wallet
@@ -112,7 +112,7 @@ Fedoracoin Wallet
 
 Earthcoin Wallet
  Source:  https://github.com/l0rdicon/EarthcoinAndroid
- Install: https://play.google.com/store/apps/details?id=fuelcoin.fuelcoinj_android_wallet.earthcoin
+ Install: https://play.google.com/store/apps/details?id=capricoin.capricoinj_android_wallet.earthcoin
 
 
 Reddcoin Wallet
@@ -127,7 +127,7 @@ DopeCoin Wallet
 
 Vertcoin Wallet
  Source:  https://github.com/dayreiner/vertcoin-wallet
- Install: https://play.google.com/store/apps/details?id=fuelcoin.fuelcoinj_android_wallet.vertcoin
+ Install: https://play.google.com/store/apps/details?id=capricoin.capricoinj_android_wallet.vertcoin
 
 
 Zetacoin Wallet
@@ -156,8 +156,8 @@ Casinocoin Wallet
 
 
 Machinecoin Wallet
- Source:  https://github.com/Gitju/fuelcoinj-wallet
- Install: https://play.google.com/store/apps/details?id=fuelcoin.fuelcoinj_android_wallet_mac
+ Source:  https://github.com/Gitju/capricoinj-wallet
+ Install: https://play.google.com/store/apps/details?id=capricoin.capricoinj_android_wallet_mac
 
 
 Monacoin Wallet
@@ -175,8 +175,8 @@ Rimbit Wallet
  Install: https://play.google.com/store/apps/details?id=com.rimbit.android_wallet
  
 Peercoin Wallet
- Source:  https://github.com/MatthewLM/fuelcoinj-android-wallet
- Install: https://play.google.com/store/apps/details?id=fuelcoin.fuelcoinj_android_wallet
+ Source:  https://github.com/MatthewLM/capricoinj-android-wallet
+ Install: https://play.google.com/store/apps/details?id=capricoin.capricoinj_android_wallet
 
 Lemurcoin Wallet
  Source:  https://github.com/esotericizm/Lemurcoin-wallet

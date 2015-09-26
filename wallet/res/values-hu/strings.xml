@@ -119,8 +119,8 @@
 	<string name="scan_camera_problem_dialog_title">Sajnáljuk</string>
 	<string name="scan_camera_problem_dialog_message">A kamera nem válaszol. Próbáld meg újraindítani az eszközt.</string>
 	<string name="input_parser_cannot_classify">Nem osztályozható bemenet:\n%s</string>
-	<string name="input_parser_invalid_fuelcoinj_uri">Érvénytelen Fuelcoin URI:\n%s</string>
-	<string name="input_parser_invalid_address">Érvénytelen fuelcoinj cím!\n(Keveredés a Mainnet/Testnet-tel?)</string>
+	<string name="input_parser_invalid_capricoinj_uri">Érvénytelen Fuelcoin URI:\n%s</string>
+	<string name="input_parser_invalid_address">Érvénytelen capricoinj cím!\n(Keveredés a Mainnet/Testnet-tel?)</string>
 	<string name="input_parser_invalid_transaction">Érvénytelen tranzakció:\n%s</string>
 	<string name="preferences_activity_title">Beállítások</string>
 	<string name="preferences_category_diagnostics">Diagnosztika</string>
@@ -154,7 +154,7 @@
 	<string name="report_issue_dialog_mail_intent_chooser">Hiba küldése ezzel…</string>
 	<string name="about_title">Rólunk</string>
 	<string name="about_license_title">Licensz</string>
-	<string name="about_credits_fuelcoinjj_title">Az applikáció fuelcoinjj %s-t használ</string>
+	<string name="about_credits_capricoinjj_title">Az applikáció capricoinjj %s-t használ</string>
 	<string name="about_credits_zxing_title">Ez az app \'zxing\'-et használ</string>
 	<string name="about_credits_icon_title">Az app \'bitboy\' ikonját használja</string>
 	<string name="about_community_googleplus_title">Google+ közösség</string>

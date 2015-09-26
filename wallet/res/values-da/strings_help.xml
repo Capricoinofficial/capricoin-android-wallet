@@ -3,11 +3,11 @@
   <string name="help_wallet">
 <![CDATA[
 		<p>
-			Den øverste venstre del af skærmen viser din saldo i fuelcoinj og én valgt national valuta.
+			Den øverste venstre del af skærmen viser din saldo i capricoinj og én valgt national valuta.
 			Berør for at gå til listen over nationale valutaer og berør en af disse valutaer for at sætte den som standard.
 		</p>
 		<p>
-			QR-koden til højre indeholder din fuelcoinj-adresse og kan scannes af en anden person.
+			QR-koden til højre indeholder din capricoinj-adresse og kan scannes af en anden person.
 			Berør QR-koden for at få en større version af den.
 		</p>
 		<p>
@@ -17,7 +17,7 @@
 			Swipe venstre eller højre for at anvende filtre på listen.
 		</p>
 		<p>
-			Du kan sende eller anmode om fuelcoinj ved at berøre knapperne i handlingsbjælken.
+			Du kan sende eller anmode om capricoinj ved at berøre knapperne i handlingsbjælken.
 			Flere indstillinger kan findes i menuen Opsætning.
 		</p>
 	]]>

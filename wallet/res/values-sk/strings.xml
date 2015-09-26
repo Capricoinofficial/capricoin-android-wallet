@@ -138,7 +138,7 @@
 	<string name="scan_camera_problem_dialog_message">Problém s fotoaparátom. Pravdepodobne je potrebný reštart zariadenia.</string>
 	<string name="input_parser_io_error">Nepodarilo sa prečítať:\n%s</string>
 	<string name="input_parser_cannot_classify">Nepodarilo sa zaradiť vstup:\n%s</string>
-	<string name="input_parser_invalid_fuelcoinj_uri">Neplatná Fuelcoin URI:\n%s</string>
+	<string name="input_parser_invalid_capricoinj_uri">Neplatná Fuelcoin URI:\n%s</string>
 	<string name="input_parser_invalid_address">Neplatná Fuelcoin adresa!\n(Zamenené Mainnet/Testnet?)</string>
 	<string name="input_parser_invalid_paymentrequest">Neplatná žiadosť o platbu:\n%s</string>
 	<string name="input_parser_invalid_transaction">Neplatná transakcia:\n%s</string>
@@ -175,7 +175,7 @@
 	<string name="report_issue_dialog_mail_intent_failed">Odosielanie hlásenia zlyhalo.</string>
 	<string name="about_title">O aplikácií</string>
 	<string name="about_license_title">Licencia</string>
-	<string name="about_credits_fuelcoinjj_title">Táto aplikácia používa fuelcoinjj %s</string>
+	<string name="about_credits_capricoinjj_title">Táto aplikácia používa capricoinjj %s</string>
 	<string name="about_credits_zxing_title">Táto aplikácia používa \'zxing\'</string>
 	<string name="about_credits_icon_title">Táto aplikácia používa ikonu od \'bitboy\'</string>
 	<string name="about_community_googleplus_title">Google+ Komunita</string>

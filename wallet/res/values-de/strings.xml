@@ -202,7 +202,7 @@
 
 	<string name="input_parser_io_error">Kann Daten nicht lesen:\n%s</string>
 	<string name="input_parser_cannot_classify">Eingabe nicht erkannt:\n%s</string>
-	<string name="input_parser_invalid_fuelcoinj_uri">Ungültige Fuelcoin-URI:\n%s</string>
+	<string name="input_parser_invalid_capricoinj_uri">Ungültige Fuelcoin-URI:\n%s</string>
 	<string name="input_parser_invalid_address">Ungültige Fuelcoin-Adresse gelesen!\n(Versuchst Du Mainnet/Testnet zu mischen?)</string>
 	<string name="input_parser_unverifyable_paymentrequest">Kann Zahlungsanforderung nicht verifizieren:\n%s</string>
 	<string name="input_parser_invalid_paymentrequest">Ungültige Zahlungsanforderung:\n%s</string>
@@ -246,7 +246,7 @@
 	<string name="about_copyright_title">Urheberrecht</string>
 	<string name="about_license_title">Lizenz</string>
 	<string name="about_source_title">Quellcode</string>
-	<string name="about_credits_fuelcoinjj_title">Diese App nutzt fuelcoinjj %s</string>
+	<string name="about_credits_capricoinjj_title">Diese App nutzt capricoinjj %s</string>
 	<string name="about_credits_zxing_title">Diese App nutzt \'zxing\'</string>
 	<string name="about_credits_icon_title">Diese App nutzt ein Icon von \'bitboy\'</string>
 	<string name="about_community_googleplus_title">Google+ Community</string>

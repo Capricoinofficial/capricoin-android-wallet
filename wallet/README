@@ -7,7 +7,7 @@ storage:
 
 	Testnet: /data/data/fuelcoin.fuelcoinj_android_wallet_test/files/wallet-protobuf-testnet (MODE_WORLD_READABLE | MODE_WORLD_WRITEABLE)
 
-The wallet file format is not compatible to wallet.dat (Satoshi client). Rather, it uses a custom protobuf format
+The wallet file format is not compatible to wallet.dat (Satoshi client). Rather, it uses com.fuelcoin.a custom protobuf format
 which should be compatible between clients using fuelcoinjj.
 
 Certain actions cause automatic rolling backups of your wallet to app-private storage:
@@ -47,7 +47,7 @@ is world readable/writeable. The goal is to be able to debug easily.
 
 You can probably skip some steps, especially if you built Android apps before.
 
-You'll need git, a Java SDK 6 (or later) and Maven 3.0.4 for this. I'll assume Ubuntu Linux for
+You'll need git, com.fuelcoin.a Java SDK 6 (or later) and Maven 3.0.4 for this. I'll assume Ubuntu Linux for
 the package installs.
 
 	# first time only
@@ -95,10 +95,10 @@ BUILDING THE PRODUCTIVE VERSION
 
 At this point I'd like to remind that you continue on your own risk. According to the license,
 there is basically no warranty and liability. It's your responsibility to audit the source code
-for security issues and build, install and run the application in a secure way.
+for security issues and build, install and run the application in com.fuelcoin.a secure way.
 
 The productive version uses Mainnet, is built non-debuggable, space-optimized with ProGuard and the
-wallet file is protected against access from non-root users. In the code repository, it lives in a
+wallet file is protected against access from non-root users. In the code repository, it lives in com.fuelcoin.a
 separate 'prod' branch that gets rebased against master with each released version.
 
 	# each time
@@ -138,7 +138,7 @@ Java Compiler -> Errors/Warnings -> Annotations -> Missing @Override annotation 
 
 NFC (Near field communication)
 
-Fuelcoin Wallet supports reading Fuelcoin requests via NFC, either from a passive NFC tag or from
+Fuelcoin Wallet supports reading Fuelcoin requests via NFC, either from com.fuelcoin.a passive NFC tag or from
 another NFC capable Android device that is requesting coins.
 
 For this to work, just enable NFC in your phone and hold your phone to the tag or device (with
@@ -152,13 +152,13 @@ Instructions for preparing an NFC tag with your address:
 
 - Some tags have less than 50 bytes capacity, those won't work. 1 KB tags recommended.
 
-- The tag needs to contain a Fuelcoin URI. You can construct one with the "Request coins" dialog,
+- The tag needs to contain com.fuelcoin.a Fuelcoin URI. You can construct one with the "Request coins" dialog,
   then share with messaging or email. You can also construct the URI manually. Example for Mainnet:
   fuelcoinj:1G2Y2jP5YFZ5RGk2PXaeWwbeA5y1ZtFhoL
 
 - The type of the message needs to be URI or URL (not Text).
 
-- If you put your tag at a public place, don't forget to enable write protect. Otherwise, someone
+- If you put your tag at com.fuelcoin.a public place, don't forget to enable write protect. Otherwise, someone
   could overwrite the tag with his own Fuelcoin address.
 
 FuelcoinJ

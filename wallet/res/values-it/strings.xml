@@ -154,8 +154,8 @@
   <string name="scan_camera_problem_dialog_message">La videocamera ha un problema. Probabilmente è necessario riavviare il dispositivo.</string>
   <string name="input_parser_io_error">Impossibile leggere i dati:\n%s</string>
   <string name="input_parser_cannot_classify">Impossibile classificare l\'input:\n%s</string>
-  <string name="input_parser_invalid_fuelcoinj_uri">URI Fuelcoin errato:\n%s</string>
-  <string name="input_parser_invalid_address">Ricevuto indirizzo fuelcoinj non valido!\n(Hai mescolato la mainnet con la testnet?)</string>
+  <string name="input_parser_invalid_capricoinj_uri">URI Fuelcoin errato:\n%s</string>
+  <string name="input_parser_invalid_address">Ricevuto indirizzo capricoinj non valido!\n(Hai mescolato la mainnet con la testnet?)</string>
   <string name="input_parser_unverifyable_paymentrequest">Impossibile verificare la richiesta di pagamento:\%s</string>
   <string name="input_parser_invalid_paymentrequest">Richiesta di pagamento invalida:\n%s</string>
   <string name="input_parser_invalid_transaction">Transazione non valida:\n%s</string>
@@ -195,7 +195,7 @@
   <string name="about_copyright_title">Copyright</string>
   <string name="about_license_title">Licenza</string>
   <string name="about_source_title">Codice Sorgente</string>
-  <string name="about_credits_fuelcoinjj_title">Questa applicazione fa uso di \'fuelcoinjj\'</string>
+  <string name="about_credits_capricoinjj_title">Questa applicazione fa uso di \'capricoinjj\'</string>
   <string name="about_credits_zxing_title">Questa applicazione fa uso di \'zxing\'</string>
   <string name="about_credits_icon_title">Questa applicazione fa uso di una icona di \'bitboy\'</string>
   <string name="about_community_googleplus_title">Comunità Google+</string>
