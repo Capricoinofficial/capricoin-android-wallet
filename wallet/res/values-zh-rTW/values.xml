@@ -2,11 +2,11 @@
 <resources>
 
 	<string-array name="preferences_precision_labels">
-		<item>Fuel, 8位數</item>
-		<item>Fuel, 6位數</item>
-		<item>Fuel, 4位數</item>
-		<item>mFuel, 2位數</item>
-		<item>µFuel, 0位數</item>
+		<item>CPC, 8位數</item>
+		<item>CPC, 6位數</item>
+		<item>CPC, 4位數</item>
+		<item>mCPC, 2位數</item>
+		<item>µCPC, 0位數</item>
 	</string-array>
 
 </resources>

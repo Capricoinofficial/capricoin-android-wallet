@@ -6,8 +6,8 @@
 
 	<artifactId>wallet</artifactId>
 	<packaging>apk</packaging>
-	<version>2.7.8</version>
-	<name>Fuelcoin Wallet</name>
+	<version>2.7.9</version>
+	<name>Capricoin Wallet</name>
 
 	<parent>
 		<groupId>com.capricoin.capricoin_android_wallet</groupId>

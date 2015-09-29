@@ -1,0 +1,15 @@
+first open wallet-unaligned.apk with archive manager
+delete the lib folder
+delete the meta-inf files and certs
+
+use android studio to create new keystore - build -> Generate Signed APK...
+
+sign the apk to create new cert (as below)
+jarsigner -sigalg SHA1withRSA -digestalg SHA1 -keystore /home/kris/keystore/capricoin.keystore.jks wallet.unaligned.apk capricoin.keystore
+
+then zip align the apk (as below)
+
+/home/kris/Android/Sdk/build-tools/22.0.1/zipalign -v 4 wallet.unaligned.apk capricoin-wallet-v2.7.8.apk
+
+
+

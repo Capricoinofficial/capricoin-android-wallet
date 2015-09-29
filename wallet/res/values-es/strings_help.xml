@@ -3,11 +3,11 @@
   <string name="help_wallet">
 <![CDATA[
 		<p>
-			La parte superior izquierda de la pantalla muestra su balance en Fuelcoins y en una moneda nacional que elija.
+			La parte superior izquierda de la pantalla muestra su balance en Capricoins y en una moneda nacional que elija.
 			Toque para ir a la lista de monedas nacionales, y toque en una de las monedas para seleccionarla como predeterminada.
 		</p>
 		<p>
-			El código QR en la derecha contiene su dirección de Fuelcoin y se puede usar para ser escaneada por alguien más.
+			El código QR en la derecha contiene su dirección de Capricoin y se puede usar para ser escaneada por alguien más.
 			Toque en el código QR para ver una versión más grande.
 		</p>
 		<p>
@@ -25,7 +25,7 @@
   <string name="help_request_coins">
 <![CDATA[
 		<p>
-			Mediante este cuadro de diálogo puedes solicitar capricoinjs de otra persona (que debería tener instalada Fuelcoin Wallet).
+			Mediante este cuadro de diálogo puedes solicitar capricoinjs de otra persona (que debería tener instalada Capricoin Wallet).
 		</p>
 		<p>
 			En primer lugar, puedes introducir la cantidad de capricoinjs que se desea solicitar.
@@ -33,7 +33,7 @@
 		<p>
 			A continuación, puedes hacer que la otra persona explore el código QR generado,
 			o bien enviar tu solicitud a una persona remota mediante el botón de compartir de la barra de acciones.
-			La otra persona tendrá que acceder a la URL de Fuelcoin.
+			La otra persona tendrá que acceder a la URL de Capricoin.
 		</p>
 		<p>
 			En ambos casos, a la otra persona se le mostrará un cuadro de diálogo para enviar capricoinjs con todos los campos completados.
@@ -45,12 +45,12 @@
 <![CDATA[
 		<p>
 			Has iniciado el proceso de enviar capricoinjs.
-			Has llegado aquí bien a través de la pantalla principal o bien al acceder a una URL Fuelcoin en tu navegador móvil.
+			Has llegado aquí bien a través de la pantalla principal o bien al acceder a una URL Capricoin en tu navegador móvil.
 		</p>
 		<p>
-			En primer lugar, debes introducir la dirección Fuelcoin receptora del pago.
+			En primer lugar, debes introducir la dirección Capricoin receptora del pago.
 			La dirección se irá autocompletando con las entradas conocidas de la libreta de direcciones.
-			También puedes explorar códigos QR con direcciones Fuelcoin o solicitudes de capricoinjs pulsando el botón QR de la barra de acciones.
+			También puedes explorar códigos QR con direcciones Capricoin o solicitudes de capricoinjs pulsando el botón QR de la barra de acciones.
 		</p>
 		<p>
 			A continuación, podrás ver cuántos capricoinjs puedes gastar en este momento.
@@ -61,7 +61,7 @@
 		</p>
 		<p>
 			Puedes llevar a cabo una transacción sin conexión.
-			Se enviará la siguiente vez que se reinicie Fuelcoin Wallet.
+			Se enviará la siguiente vez que se reinicie Capricoin Wallet.
 			Si quieres que se procese una transacción lo más rápido posible, asegúrate de tener una buena conexión (WLAN).
 		</p>
 		<p>
@@ -77,12 +77,12 @@
 			<b>Algunos comentarios sobre la seguridad de tus capricoinjs:</b>
 		</p>
 		<p>
-			Los capricoinjs en Fuelcoin Wallet se almacenan en el dispositivo.
+			Los capricoinjs en Capricoin Wallet se almacenan en el dispositivo.
 			<b>Si pierdes tu dispositivo, pierdes tus capricoinjs.</b>
 			Esto es lo mismo que ocurriría con tu dinero en una cartera convencional.
 		</p>
 		<p>
-			<b>Antes de desinstalar Fuelcoin Wallet</b> (o de eliminar los datos de aplicación o el almacenamiento del dispositivo), <b>transfiere tus capricoinjs a otra cartera</b>.
+			<b>Antes de desinstalar Capricoin Wallet</b> (o de eliminar los datos de aplicación o el almacenamiento del dispositivo), <b>transfiere tus capricoinjs a otra cartera</b>.
 			Los capricoinjs que queden en el dispositivo se perderán.
 		</p>
 		<p>
@@ -96,7 +96,7 @@
 		</p>
 		<p>
 			¡Minimiza el riesgo!
-			<b>Utiliza Fuelcoin Wallet solamente para cantidades pequeñas</b> de uso diario.
+			<b>Utiliza Capricoin Wallet solamente para cantidades pequeñas</b> de uso diario.
 		</p>
 	]]>
 	</string>

@@ -4,11 +4,11 @@
 	<string name="help_wallet">
 <![CDATA[
 		<p>
-			Po lewej górnej stronie ekranu wyświetlany jest Twój aktualnie wybrany adres Fuelcoin, który inne osoby muszą znać żeby wysłać Ci Fuelcoin.
+			Po lewej górnej stronie ekranu wyświetlany jest Twój aktualnie wybrany adres Capricoin, który inne osoby muszą znać żeby wysłać Ci Capricoin.
 			Naciśnij żeby, go zmienić.
 		</p>
 		<p>
-			Kod QR po prawej zawiera Twój adres Fuelcoin i może zeskanowany przez inną osobę.
+			Kod QR po prawej zawiera Twój adres Capricoin i może zeskanowany przez inną osobę.
 			Naciśnij na kod QR żeby otrzymać jego większą wersje.
 		</p>
 		<p>
@@ -31,18 +31,18 @@
 	<string name="help_request_coins">
 <![CDATA[
 		<p>
-			Przy pomocy tego dialogu, możesz wysłać prośbę o Fuelcoiny do innej osoby, tak jakbyś wystawił jej rachunek do zapłacenia. Osoba ta powinna mieć zainstalowany Fuelcoin Wallet.
+			Przy pomocy tego dialogu, możesz wysłać prośbę o Capricoiny do innej osoby, tak jakbyś wystawił jej rachunek do zapłacenia. Osoba ta powinna mieć zainstalowany Capricoin Wallet.
 		</p>
 		<p>
-			U góry, wpisz kwotę Fuelcoin, o którą chcesz zapytać.
+			U góry, wpisz kwotę Capricoin, o którą chcesz zapytać.
 		</p>
 		<p>
 			Potem osoba wczyta wytworzony kod QR,
 			albo Ty możesz wysłać rachunek za pomocą guzika Opublikuj na listwie menu.
-			Odbiorca będzie musiał otworzyć Fuelcoin URL zawarty w wysłanej wiadomości.
+			Odbiorca będzie musiał otworzyć Capricoin URL zawarty w wysłanej wiadomości.
 		</p>
 		<p>
-			Osoba, która otrzymała wysłane zapytanie otrzyma gotowy i wypełniony formularz wysyłania Fuelcoinów.
+			Osoba, która otrzymała wysłane zapytanie otrzyma gotowy i wypełniony formularz wysyłania Capricoinów.
 			Jedyne co będzie musiała zrobić to potwierdzenie transakcji.
 		</p>
 	]]>
@@ -51,15 +51,15 @@
 <![CDATA[
 		<p>
 			Zainicjowałeś proces wysyłania monet.
-			Przyszedłeś tutaj przez główny ekran albo naciskając na Fuelcoin URL w Twojej mobilnej przeglądarce.
+			Przyszedłeś tutaj przez główny ekran albo naciskając na Capricoin URL w Twojej mobilnej przeglądarce.
 		</p>
 		<p>
-			Wpisz adres Fuelcoin na który ma wpłynąć zapłata.
+			Wpisz adres Capricoin na który ma wpłynąć zapłata.
 			Wyświetlone zostaną podpowiedzi adresu z danych Twojej książki adresowej.
-			Możesz też skanować kody QR z adresami Fuelcoin albo zapytaniami Fuelcoin naciskając guzik QR w menu.
+			Możesz też skanować kody QR z adresami Capricoin albo zapytaniami Capricoin naciskając guzik QR w menu.
 		</p>
 		<p>
-			Poniżej widzisz ile Fuelcoin możesz wydać w tym momencie.
+			Poniżej widzisz ile Capricoin możesz wydać w tym momencie.
 			Rożnica ze stanem konta na głównym ekranie wynika z jeszcze nie potwierdzonych monet, które nie mogą jeszcze zostać wydane.
 		</p>
 		<p>
@@ -80,20 +80,20 @@
 	<string name="help_safety">
 <![CDATA[
 		<p>
-			<b>Pare słów o bezpieczeństwie twoich Fuelcoin:</b>
+			<b>Pare słów o bezpieczeństwie twoich Capricoin:</b>
 		</p>
 		<p>
-			Fuelcoin w Fuelcoin Wallet są magazynowane na urządzeniu.
-			<b>Jak zgubisz swoje urządzenie, zgubisz też swój portfel i Fuelcoiny.</b>
+			Capricoin w Capricoin Wallet są magazynowane na urządzeniu.
+			<b>Jak zgubisz swoje urządzenie, zgubisz też swój portfel i Capricoiny.</b>
 			Zupełnie jak pieniądze w Twoim fizycznym portfelu.
 		</p>
 		<p>
-			<b>Zanim odinstalujesz Fuelcoin Wallet</b> (albo wymażesz dane aplikacji/wyczyścisz swoje urządzenie), <b>przetransferuj twoje Fuelcoin na inny portfel</b>.
-			Każdy pozostały Fuelcoin będzie stracony.
+			<b>Zanim odinstalujesz Capricoin Wallet</b> (albo wymażesz dane aplikacji/wyczyścisz swoje urządzenie), <b>przetransferuj twoje Capricoin na inny portfel</b>.
+			Każdy pozostały Capricoin będzie stracony.
 		</p>
 		<p>
 			<b>Żadne transakcje nie mogą zostać cofnięte</b>.
-			Jeżeli wyślesz swoje Fuelcoiny, nie będzie już możliwości żeby je odzyskać, dopóki nie znasz odbiorcy, który musi godzić się na ich odesłanie.
+			Jeżeli wyślesz swoje Capricoiny, nie będzie już możliwości żeby je odzyskać, dopóki nie znasz odbiorcy, który musi godzić się na ich odesłanie.
 		</p>
 		<p>
 			<b>Uważaj na swoje urządzenie Android!</b>
@@ -102,7 +102,7 @@
 		</p>
 		<p>
 			Utrzymuj niskie ryzyko!
-			<b>Używaj Fuelcoin Wallet do przetrzymywania jedynie małych ilości Fuelcoin</b> do użytku codziennego.
+			<b>Używaj Capricoin Wallet do przetrzymywania jedynie małych ilości Capricoin</b> do użytku codziennego.
 		</p>
 	]]>
 	</string>

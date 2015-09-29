@@ -2,11 +2,11 @@
 <resources>
 
 	<string-array name="preferences_precision_labels">
-		<item>Fuel, 8 decimaler</item>
-		<item>Fuel, 6 decimaler</item>
-		<item>Fuel, 4 decimaler</item>
-		<item>mFuel, 2 decimaler</item>
-		<item>µFuel, uden decimaler</item>
+		<item>CPC, 8 decimaler</item>
+		<item>CPC, 6 decimaler</item>
+		<item>CPC, 4 decimaler</item>
+		<item>mCPC, 2 decimaler</item>
+		<item>µCPC, uden decimaler</item>
 	</string-array>
 
 </resources>

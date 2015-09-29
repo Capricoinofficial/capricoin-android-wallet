@@ -25,15 +25,15 @@
   <string name="help_request_coins">
 <![CDATA[
 		<p>
-			Ved at bruge denne dialog kan du forespørge mønter fra en anden person (som allerede skal have installeret Fuelcoin Wallet).
+			Ved at bruge denne dialog kan du forespørge mønter fra en anden person (som allerede skal have installeret Capricoin Wallet).
 		</p>
 		<p>
-			First kan du indtaste et antal Fuelcoins til forespørgslen.
+			First kan du indtaste et antal Capricoins til forespørgslen.
 		</p>
 		<p>
 			Bagefter får du enten QR-koden scannet af den anden person,
 			eller du kan sende din forespørgsel til en person over længere afstand med Del-knappen i action-bjælken.
-			Den anden person skal klikke på Fuelcoin-URL\'en.
+			Den anden person skal klikke på Capricoin-URL\'en.
 		</p>
 		<p>
 			Den anden person vil præsenteres for en dialog for afsendelse af mønter med alle felter forudfyldt.
@@ -45,15 +45,15 @@
 <![CDATA[
 		<p>
 			Du har startet processen for at sende mønter.
-			Du kom hertil enten via hovedsskærmen eller ved at klikke på en Fuelcoin-URL i din molbilbrowser.
+			Du kom hertil enten via hovedsskærmen eller ved at klikke på en Capricoin-URL i din molbilbrowser.
 		</p>
 		<p>
-			Først skriver du den Fuelcoin-adresse, du vil betale til.
+			Først skriver du den Capricoin-adresse, du vil betale til.
 			Adressen vil autoudfyldes ud fra kendte indgange i din adressebog.
-			Du kan også scanne QR-koder med Fuelcoin-adresser eller Fuelcoin-forespørgsler ved at klikke på QR-knappen i action-bjælken.
+			Du kan også scanne QR-koder med Capricoin-adresser eller Capricoin-forespørgsler ved at klikke på QR-knappen i action-bjælken.
 		</p>
 		<p>
-			Dernæst kan du se, hvor mange Fuelcoins du kan bruge i øjeblikket.
+			Dernæst kan du se, hvor mange Capricoins du kan bruge i øjeblikket.
 			En evt. difference til saldoen fra hovedskærmen er stadig ubekræftet og kan dermed ikke bruges.
 		</p>
 		<p>
@@ -61,7 +61,7 @@
 		</p>
 		<p>
 			Du kan indtaste et beløb, mens du er offline.
-			Det vil blive sendt, næste gang Fuelcoin Wallet genstartes.
+			Det vil blive sendt, næste gang Capricoin Wallet genstartes.
 			Hvis du vil have, at en betaling går igennem så hurtigt som muligt, så vær sikker på, at du er ordentligt forbundet (dvs. på et WLAN).
 		</p>
 		<p>
@@ -77,8 +77,8 @@
 			<b>Vigtige bemærkninger om sikkerhed:</b>
 		</p>
 		<p>
-			Fuelcoins gemmes på enheden.
-			<b>Hvis du mister den, mister du dine Fuelcoins.</b>
+			Capricoins gemmes på enheden.
+			<b>Hvis du mister den, mister du dine Capricoins.</b>
 		</p>
 		<p>
 			Dette betyder, at du er nødt til at <b>sikkerhedskopiere din tegnebog</b>!
@@ -86,12 +86,12 @@
 			Opbevar din sikkerhedskopi sikkert og husk kodeordet.
 		</p>
 		<p>
-			<b>Før afinstallering</b> (eller sletning af appdata/nulstilling af enheden til fabriksindstillinger), <b>overfør dine Fuelcoins til en anden tegnebog</b>.
-			Tilbageværende Fuelcoins mistes.
+			<b>Før afinstallering</b> (eller sletning af appdata/nulstilling af enheden til fabriksindstillinger), <b>overfør dine Capricoins til en anden tegnebog</b>.
+			Tilbageværende Capricoins mistes.
 		</p>
 		<p>
 			<b>Betalinger kan ikke fortrydes</b>.
-			Hvis du sender dine Fuelcoins ud i det blå, er der stort set ingen måde at få dem tilbage.
+			Hvis du sender dine Capricoins ud i det blå, er der stort set ingen måde at få dem tilbage.
 		</p>
 		<p>
 			<b>Opbevar din mobile enhed sikkert!</b>

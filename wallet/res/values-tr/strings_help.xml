@@ -3,7 +3,7 @@
   <string name="help_wallet">
 <![CDATA[
 		<p>
-			Ekranın sol üst köşesi bakiyenizi Fuelcoin olarak ve seçilen bir para biriminde gösterir.
+			Ekranın sol üst köşesi bakiyenizi Capricoin olarak ve seçilen bir para biriminde gösterir.
 			Milli para birimleri listesine gitmek için dokununuz ve ardından herhangi bir para birimini varsayılan olarak seçmek için yine dokununuz.
 		</p>
 		<p>
@@ -17,7 +17,7 @@
 			Listeye filtre uygulamak için sağa ya da sola doğru kaydırınız.
 		</p>
 		<p>
-			Fuelcoin göndermek ya da talepte bulunmak için eylem çubuğundaki düğmelere dokunabilirsiniz.
+			Capricoin göndermek ya da talepte bulunmak için eylem çubuğundaki düğmelere dokunabilirsiniz.
 			Seçenekler menüsünde daha fazla seçenek bulabilirsiniz.
 		</p>
 	]]>
@@ -25,18 +25,18 @@
   <string name="help_request_coins">
 <![CDATA[
 		<p>
-			Bu diyaloğu kullanarak başka bir kişiden Fuelcoin talep edebilirsiniz (bu kişinin Fuelcoin Wallet uygulamasını cihazında kurmuş olması gerekir).
+			Bu diyaloğu kullanarak başka bir kişiden Capricoin talep edebilirsiniz (bu kişinin Capricoin Wallet uygulamasını cihazında kurmuş olması gerekir).
 		</p>
 		<p>
-			İlk olarak talep edilen Fuelcoin miktarını girebilirsiniz.
+			İlk olarak talep edilen Capricoin miktarını girebilirsiniz.
 		</p>
 		<p>
 			Ardından ya diğer kişi tarafından taranacak bir QR code oluşturmanız,
 			ya da uzaktaki bir kişiye etkinlik çubuğunda paylaş düğmesiyle talebinizi göndermeniz gerekir.
-			Bu kişinin Fuelcoin bağlantısını tıklaması gerekecektir.
+			Bu kişinin Capricoin bağlantısını tıklaması gerekecektir.
 		</p>
 		<p>
-			Her durumda diğer kişiye Fuelcoin göndermesi için tüm seçenekleri doldurulmuş bir diyalog gösterilecektir.
+			Her durumda diğer kişiye Capricoin göndermesi için tüm seçenekleri doldurulmuş bir diyalog gösterilecektir.
 			Kabul ederse tüm yapması gereken muameleyi yollamaktır.
 		</p>
 	]]>
@@ -44,16 +44,16 @@
   <string name="help_send_coins">
 <![CDATA[
 		<p>
-			Fuelcoin gönderme prosedürünü başlattınız.
-			Buraya ya ana ekrandan ya da mobil ağ tarayıcınızda bir Fuelcoin bağlantısına tıklayarak geldiniz.
+			Capricoin gönderme prosedürünü başlattınız.
+			Buraya ya ana ekrandan ya da mobil ağ tarayıcınızda bir Capricoin bağlantısına tıklayarak geldiniz.
 		</p>
 		<p>
-			İlk olarak ödeme yapacağınız Fuelcoin adresini girmelisiniz.
+			İlk olarak ödeme yapacağınız Capricoin adresini girmelisiniz.
 			Adres defterinizde bilinen adreslere dayanılarak adres otomatik olarak tamamlanacaktır.
-			Ayrıca etkinlik çubuğunda QR düğmesine dokunarak Fuelcoin adresi ya da talebi içeren QR kodlarını tarayabilirsiniz.
+			Ayrıca etkinlik çubuğunda QR düğmesine dokunarak Capricoin adresi ya da talebi içeren QR kodlarını tarayabilirsiniz.
 		</p>
 		<p>
-			Bunun ardından o anda ne kadar Fuelcoin harcayabileceğinizi görüntüleyebilirsiniz.
+			Bunun ardından o anda ne kadar Capricoin harcayabileceğinizi görüntüleyebilirsiniz.
 			Varsa ana ekrandaki bakiye ile farklılıklar henüz teyit edilmemiştir ve dolayısıyla henüz harcanamaz.
 		</p>
 		<p>
@@ -61,7 +61,7 @@
 		</p>
 		<p>
 			Çevrimdışı olduğunuz sırada bir muamele girebilirsiniz.
-			Fuelcoin Wallet uygulamasının sonraki açılışında gönderilir.
+			Capricoin Wallet uygulamasının sonraki açılışında gönderilir.
 			Bir muamelenin mümkün olduğu kadar çabuk işlenmesini istiyorsanız bağlantınızın iyi olduğundan (mesela WLAN ile).
 		</p>
 		<p>
@@ -74,20 +74,20 @@
   <string name="help_safety">
 <![CDATA[
 		<p>
-			<b>Fuelcoinlerinizin güvenliği hakkında önemli noktalar:</b>
+			<b>Capricoinlerinizin güvenliği hakkında önemli noktalar:</b>
 		</p>
 		<p>
-			Fuelcoin cüzdanınızdaki Fuelcoinler cihazınızda saklanır.
-			<b>Cihazınızı kaybederseniz Fuelcoinlerinizi de kaybedersiniz.</b>
+			Capricoin cüzdanınızdaki Capricoinler cihazınızda saklanır.
+			<b>Cihazınızı kaybederseniz Capricoinlerinizi de kaybedersiniz.</b>
 			Tıpkı fiziki cüzdanınızdaki para gibi.
 		</p>
 		<p>
-			<b>Fuelcoin Wallet</b> uygulamasını kaldırmadan önce (ya da uygulama verilerini/cihazınızı sıfırlamadan önce) <b>tüm Fuelcoinlerinizi başka bir cüzdana aktarınız</b>.
-			Kalan tüm Fuelcoinler kaybolacaktır.
+			<b>Capricoin Wallet</b> uygulamasını kaldırmadan önce (ya da uygulama verilerini/cihazınızı sıfırlamadan önce) <b>tüm Capricoinlerinizi başka bir cüzdana aktarınız</b>.
+			Kalan tüm Capricoinler kaybolacaktır.
 		</p>
 		<p>
 			<b>Muameleler geri alınamaz</b>.
-			Fuelcoinlerinizi yanlış bir adrese yollarsanız, bunları geri almak için alıcıyı tanımanız ve onun geri yollamayı kabul etmeniz dışında hiçbir yol yoktur.
+			Capricoinlerinizi yanlış bir adrese yollarsanız, bunları geri almak için alıcıyı tanımanız ve onun geri yollamayı kabul etmeniz dışında hiçbir yol yoktur.
 		</p>
 		<p>
 			<b>Android cihazınızı güvenli kullanın!</b>
@@ -96,7 +96,7 @@
 		</p>
 		<p>
 			Riski sınırlayın!
-			<b>Fuelcoin Wallet uygulamasını sadece küçük tutarlar için kullanınız</b>.
+			<b>Capricoin Wallet uygulamasını sadece küçük tutarlar için kullanınız</b>.
 		</p>
 	]]>
 	</string>

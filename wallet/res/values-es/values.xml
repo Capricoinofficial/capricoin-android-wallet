@@ -2,11 +2,11 @@
 <resources>
 
 	<string-array name="preferences_precision_labels">
-		<item>Fuel, 8 dígitos</item>
-		<item>Fuel, 6 dígitos</item>
-		<item>Fuel, 4 dígitos</item>
-		<item>mFuel, 2 dígitos</item>
-		<item>µFuel, sin dígitos</item>
+		<item>CPC, 8 dígitos</item>
+		<item>CPC, 6 dígitos</item>
+		<item>CPC, 4 dígitos</item>
+		<item>mCPC, 2 dígitos</item>
+		<item>µCPC, sin dígitos</item>
 	</string-array>
 
 </resources>

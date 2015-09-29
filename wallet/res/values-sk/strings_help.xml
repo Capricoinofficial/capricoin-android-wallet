@@ -4,16 +4,16 @@
 	<string name="help_wallet">
 <![CDATA[
 		<p>
-			V ľavej hornej časti obrazovky je Vaša aktuálna Fuelcoin adresa, túto adresu potrebuje poznať odosielateľ, aby Vám mohol poslať Fuelcoiny.
+			V ľavej hornej časti obrazovky je Vaša aktuálna Capricoin adresa, túto adresu potrebuje poznať odosielateľ, aby Vám mohol poslať Capricoiny.
 			Kliknutím na adresu ju môžte zmeniť.
 		</p>
 		<p>
-			QR kód na pravej strane obsahuje Vašu Fuelcoin adresu, odosielateľ ho môže jednoducho naskenovať.
+			QR kód na pravej strane obsahuje Vašu Capricoin adresu, odosielateľ ho môže jednoducho naskenovať.
 			Kliknite na QR kód, aby ste ho zväčšili.
 		</p>
 		<p>
 			V strede obrazovky je zobrazený aktuálny zostatok.
-			Hodnota Vašich Fuelcoinov je zobrazená aj v inej zvolenej mene.
+			Hodnota Vašich Capricoinov je zobrazená aj v inej zvolenej mene.
 			Kliknutím na zostatok zobrazíte zoznam cudzích mien, následným kliknutím na menu ju môžte nastaviť ako predvolenú.
 		</p>
 		<p>
@@ -23,7 +23,7 @@
 			Ťahom vľavo a vpravo môžte filtrovať prijaté a odoslané platby.
 		</p>
 		<p>
-			Kliknutím na tlačidlá naspodku môžte poslať alebo vyžiadať Fuelcoiny.
+			Kliknutím na tlačidlá naspodku môžte poslať alebo vyžiadať Capricoiny.
 			Ďalšie možnosti sú v ponuke nastavení.
 		</p>
 	]]>
@@ -31,18 +31,18 @@
 	<string name="help_request_coins">
 <![CDATA[
 		<p>
-			Na tejto obrazovke môžete vyžiadať Fuelcoiny od niekoho iného (kto má nainštalovanú aplikáciu Fuelcoin Wallet).
+			Na tejto obrazovke môžete vyžiadať Capricoiny od niekoho iného (kto má nainštalovanú aplikáciu Capricoin Wallet).
 		</p>
 		<p>
-			Najprv zadajte sumu Fuelcoinov, ktoré chcete vyžiadať.
+			Najprv zadajte sumu Capricoinov, ktoré chcete vyžiadať.
 		</p>
 		<p>
 			Potom dajte druhej strane naskenovať vygenerovaný QR kód
 			alebo môžte svoju žiadosť poslať použitím tlačidla zdieľať.
-			Druhá strana potom klikne na Fuelcoin URL.
+			Druhá strana potom klikne na Capricoin URL.
 		</p>
 		<p>
-			V oboch prípadoch druhá strana uvidí predvyplnenú obrazovku na odosielanie Fuelcoinov.
+			V oboch prípadoch druhá strana uvidí predvyplnenú obrazovku na odosielanie Capricoinov.
 			Ak s transakciou súhlasí, tak ju iba potvrdí.
 		</p>
 	]]>
@@ -50,17 +50,17 @@
 	<string name="help_send_coins">
 <![CDATA[
 		<p>
-			Práve ste začali proces odosielania Fuelcoinov.
-			Dostali ste sa sem z hlavnej obrazovky alebo kliknutím na Fuelcoin adresu v prehliadači.
+			Práve ste začali proces odosielania Capricoinov.
+			Dostali ste sa sem z hlavnej obrazovky alebo kliknutím na Capricoin adresu v prehliadači.
 		</p>
 		<p>
 			Najprv zadajte adresu, na ktorú chcete odoslať platbu.
 			Ak sa adresa nachádza v adresári, tak sa automaticky doplní.
-			Kliknutím na ikonu fotoaparátu môžete naskenovať QR kód s Fuelcoin adresou alebo požiadavkou na zaplatenie.
+			Kliknutím na ikonu fotoaparátu môžete naskenovať QR kód s Capricoin adresou alebo požiadavkou na zaplatenie.
 		</p>
 		<p>
-			Ďalej vidíte koľko Fuelcoinov môžete aktuálne minúť.
-			Rozdiel medzi zostatkom na hlavnej obrazovke a počtom Fuelcoinov, ktoré môžete minúť tvoria nepotvrdené transakcie.
+			Ďalej vidíte koľko Capricoinov môžete aktuálne minúť.
+			Rozdiel medzi zostatkom na hlavnej obrazovke a počtom Capricoinov, ktoré môžete minúť tvoria nepotvrdené transakcie.
 		</p>
 		<p>
 			Nakoniec zadajte sumu platby.
@@ -83,8 +83,8 @@
 			<b>Dôležité informácie o bezpečnosti:</b>
 		</p>
 		<p>
-			Fuelcoiny sú uložené na Vašom zariadení.
-			<b>Ak zariadenie stratíte, prídete o všetky svoje Fuelcoiny.</b>
+			Capricoiny sú uložené na Vašom zariadení.
+			<b>Ak zariadenie stratíte, prídete o všetky svoje Capricoiny.</b>
 		</p>
 		<p>
 			To znamená, že by ste mali <b>zálohovať svoju peňaženku</b>!
@@ -92,12 +92,12 @@
 			Svoju zálohu bezpečne uchovajte a nezabudnite heslo.
 		</p>
 		<p>
-			<b>Pred odinštalovaním</b> (alebo vymazaním dát/obnovením továrenských nastavení), <b>odošlite svoje Fuelcoiny do inej peňaženky</b>.
-			Inak o svoje Fuelcoiny prídete.
+			<b>Pred odinštalovaním</b> (alebo vymazaním dát/obnovením továrenských nastavení), <b>odošlite svoje Capricoiny do inej peňaženky</b>.
+			Inak o svoje Capricoiny prídete.
 		</p>
 		<p>
 			<b>Platby sa nedajú stornovať</b>.
-			Ak pošlete svoje Fuelcoiny na nesprávnu adresu, je takmer nemožné získať ich späť.
+			Ak pošlete svoje Capricoiny na nesprávnu adresu, je takmer nemožné získať ich späť.
 		</p>
 		<p>
 			<b>Chráňte si svoje zariadenie!</b>

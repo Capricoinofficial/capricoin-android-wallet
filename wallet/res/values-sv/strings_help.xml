@@ -25,7 +25,7 @@
   <string name="help_request_coins">
 <![CDATA[
 		<p>
-			Med denna dialog kan du ta emot capricoinj från någon annan (som redan har Fuelcoin Wallet installerad på sin telefon).
+			Med denna dialog kan du ta emot capricoinj från någon annan (som redan har Capricoin Wallet installerad på sin telefon).
 		</p>
 		<p>
 			Först anger du hur många capricoinj du vill att de skickar.
@@ -33,7 +33,7 @@
 		<p>
 			Sedan kan den andra personen scanna QR-koden.
 			Eller så använder du \"Dela\" knappen i aktivitetslistan för att skicka din uppmaning att skicka capricoinj.
-			Den andra personen behöver sedan bara klicka på den Fuelcoin-URL du skickat.
+			Den andra personen behöver sedan bara klicka på den Capricoin-URL du skickat.
 		</p>
 		<p>
 			Sedan kommer den andra personen att få se en dialogruta där alla fält redan är ifyllda.
@@ -45,12 +45,12 @@
 <![CDATA[
 		<p>
 			Du har påbörjat skickandet av capricoinj.
-			Du kom hit från huvudskärmen eller genom att klicka på en Fuelcoin-URL i din webbläsare.
+			Du kom hit från huvudskärmen eller genom att klicka på en Capricoin-URL i din webbläsare.
 		</p>
 		<p>
-			Ange först vilken Fuelcoin adress du vill skicka till.
+			Ange först vilken Capricoin adress du vill skicka till.
 			Adressen kan automatiskt fyllas i om den börjar med någon av adresserna i din adressbok.
-			Du kan också scanna en QR-kod innehållande en Fuelcoin-adress, genom att trycka på QR knappen i aktivitetslistan.
+			Du kan också scanna en QR-kod innehållande en Capricoin-adress, genom att trycka på QR knappen i aktivitetslistan.
 		</p>
 		<p>
 			Sedan kan du se hur många capricoinj du för tillfället kan skicka.
@@ -61,7 +61,7 @@
 		</p>
 		<p>
 			Du kan skapa en transaktion även om du inte är online.
-			Den kommer att skickas nästa gång Fuelcoin Wallet startas.
+			Den kommer att skickas nästa gång Capricoin Wallet startas.
 			Om du vill att en transaktion ska hanteras så fort som möjligt, se till att ha bra uppkoppling till internet (exempelvis ett WLAN).
 		</p>
 		<p>
@@ -77,12 +77,12 @@
 			<b>Några ord om säkerhet och capricoinj:</n>
 		</p>
 		<p>
-			Dina capricoinj i Fuelcoin Wallet sparas på din Android telefon.
+			Dina capricoinj i Capricoin Wallet sparas på din Android telefon.
 			<b>Om du tappar bort din telefon, så tappar du bort dina capricoinj.</b>
 			Precis som pengar i din vanliga plånbok.
 		</p>
 		<p>
-			<b>Innan du avinstallerar Fuelcoin Wallet</b> (eller tar bort appens data/rensar din telefon), <b>skicka dina capricoinj till en annan wallet</b>.
+			<b>Innan du avinstallerar Capricoin Wallet</b> (eller tar bort appens data/rensar din telefon), <b>skicka dina capricoinj till en annan wallet</b>.
 			Alla kvarvarande capricoinj kommer att försvinna.
 		</p>
 		<p>
@@ -96,7 +96,7 @@
 		</p>
 		<p>
 			Utsätt dig inte för onödig risk!
-			<b>Använd bara Fuelcoin Wallet med mindre belopp</b> för daglig användning.
+			<b>Använd bara Capricoin Wallet med mindre belopp</b> för daglig användning.
 		</p>
 	]]>
 	</string>

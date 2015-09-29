@@ -4,7 +4,7 @@
 	<string name="symbol_to">→</string>
 	<string name="symbol_from">←</string>
 	<string name="symbol_internal">⇄</string>
-	<string name="app_name">Fuelcoin</string>
+	<string name="app_name">Capricoin</string>
 
 	<string-array name="preferences_precision_values">
 		<item>6</item>
@@ -13,10 +13,10 @@
 		<item>0/6</item>
 	</string-array>
 	<string-array name="preferences_precision_labels">
-		<item>Fuel, 6 digits</item>
-		<item>Fuel, 4 digits</item>
-		<item>mFuel, 2 digits</item>
-		<item>µFuel, no digits</item>
+		<item>CPC, 6 digits</item>
+		<item>CPC, 4 digits</item>
+		<item>mCPC, 2 digits</item>
+		<item>µCPC, no digits</item>
 	</string-array>
 
 </resources>

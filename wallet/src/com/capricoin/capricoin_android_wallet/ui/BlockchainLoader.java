@@ -99,7 +99,7 @@ public class BlockchainLoader extends AsyncTaskLoader<BlockchainData> {
 
 			log.info("##################################################################################################");
 
-			if(bcd.blockStore.getChainHead().getHeight() < 100000) //if this is the first time its run add the checkpoint file .... every other run should already have a blockchain and .checkpoints
+			if(bcd.blockStore.getChainHead().getHeight() < 50000) //if this is the first time its run add the checkpoint file .... every other run should already have a blockchain and .checkpoints
 			{
 				log.info("##################################################################################################");
 				log.info("Loading checkpoints file");

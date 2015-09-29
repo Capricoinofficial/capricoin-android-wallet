@@ -4,7 +4,7 @@
 	<string name="help_wallet">
 <![CDATA[
 		<p>
-			The upper left part of the screen displays your balance in Fuelcoins and one selected national currency.
+			The upper left part of the screen displays your balance in Capricoins and one selected national currency.
 			Tap to go to the list of national currencies, and tap on one of the currencies to select it as default.
 		</p>
 		<p>
@@ -26,15 +26,15 @@
 	<string name="help_request_coins">
 <![CDATA[
 		<p>
-			Using this dialog, you can request coins from another person (who should already have installed Fuelcoin Wallet).
+			Using this dialog, you can request coins from another person (who should already have installed Capricoin Wallet).
 		</p>
 		<p>
-			First, you can enter an amount of Fuelcoins to request.
+			First, you can enter an amount of Capricoins to request.
 		</p>
 		<p>
 			Then, you either have the generated QR code scanned by the other person.
 			Or, you can send your request to a remote person with the share button in the action bar.
-			The other person will have to click the Fuelcoin URL.
+			The other person will have to click the Capricoin URL.
 		</p>
 		<p>
 			Either way, the other person will be presented a dialog for sending coins with all fields pre-populated.
@@ -46,15 +46,15 @@
 <![CDATA[
 		<p>
 			You have initiated the process of sending coins.
-			You came here either through the main screen or by clicking on a Fuelcoin URL in your mobile browser.
+			You came here either through the main screen or by clicking on a Capricoin URL in your mobile browser.
 		</p>
 		<p>
-			First, you enter the Fuelcoin address to pay to.
+			First, you enter the Capricoin address to pay to.
 			The address will autocomplete from known entries in your address book.
-			You can also scan QR codes with Fuelcoin addresses or Fuelcoin requests by pressing the QR button in the action bar.
+			You can also scan QR codes with Capricoin addresses or Capricoin requests by pressing the QR button in the action bar.
 		</p>
 		<p>
-			Next, you can see how many Fuelcoins you can spend at the moment.
+			Next, you can see how many Capricoins you can spend at the moment.
 			Any difference to the balance from the main screen is still unconfirmed and can thus not yet be spent.
 		</p>
 		<p>
@@ -62,7 +62,7 @@
 		</p>
 		<p>
 			You can enter a payment while being offline.
-			It will be sent on next restart of Fuelcoin Wallet.
+			It will be sent on next restart of Capricoin Wallet.
 			If you want a payment to be processed as fast as possible, make sure you are well connected (i.e. on a WLAN).
 		</p>
 		<p>
@@ -78,8 +78,8 @@
 			<b>Important safety notes:</b>
 		</p>
 		<p>
-			Fuelcoins are stored on the device.
-			<b>If you lose it, you\'ll lose your Fuelcoins.</b>
+			Capricoins are stored on the device.
+			<b>If you lose it, you\'ll lose your Capricoins.</b>
 		</p>
 		<p>
 			This means you need to <b>back up your wallet</b>!
@@ -87,12 +87,12 @@
 			Keep your backup safe and remember the password.
 		</p>
 		<p>
-			<b>Before uninstalling</b> (or clearing app data/wiping your device), <b>transfer your Fuelcoins to another wallet</b>.
-			Remaining Fuelcoins will be lost.
+			<b>Before uninstalling</b> (or clearing app data/wiping your device), <b>transfer your Capricoins to another wallet</b>.
+			Remaining Capricoins will be lost.
 		</p>
 		<p>
 			<b>Payments are irreversible</b>.
-			If you send your Fuelcoins into the void, there is almost no way to get them back.
+			If you send your Capricoins into the void, there is almost no way to get them back.
 		</p>
 		<p>
 			<b>Keep your mobile device safe!</b>
